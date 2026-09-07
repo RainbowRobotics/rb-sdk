@@ -1,0 +1,228 @@
+name: publish-apt-repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: rb-sdk Release tag version, e.g. 1.2.3 or 1.2.3.dev1
+        required: true
+      channel:
+        description: APT channel
+        required: true
+        type: choice
+        options:
+          - stable
+          - dev
+      debver:
+        description: Debian package version, e.g. 1.2.3 or 1.2.3~dev1
+        required: true
+
+concurrency:
+  group: publish-apt-repo
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    env:
+      VERSION: ${{ inputs.version }}
+      CHANNEL: ${{ inputs.channel }}
+      DEBVER: ${{ inputs.debver }}
+      KEY_FINGERPRINT: 605E83645698465E1452CBF0C7491A44F2FB92C6
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check inputs
+        run: |
+          set -euo pipefail
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(\.dev[0-9]+)?$ ]] || { echo "invalid version: $VERSION"; exit 1; }
+          [[ "$DEBVER" =~ ^[0-9]+\.[0-9]+\.[0-9]+(~dev[0-9]+)?$ ]] || { echo "invalid debver: $DEBVER"; exit 1; }
+          case "$CHANNEL" in
+            dev) [[ "$DEBVER" == *~dev* ]] || { echo "dev channel requires ~dev debver"; exit 1; } ;;
+            stable) [[ "$DEBVER" != *~dev* ]] || { echo "stable channel cannot publish ~dev debver"; exit 1; } ;;
+            *) echo "invalid channel: $CHANNEL"; exit 1 ;;
+          esac
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends apt-utils dpkg-dev gnupg
+          for bin in gh jq curl apt-ftparchive dpkg-scanpackages dpkg-deb gpg; do
+            command -v "$bin" >/dev/null || { echo "missing command: $bin"; exit 1; }
+          done
+
+      - name: Download deb bundle from Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/rb-sdk-debs
+          for attempt in 1 2 3; do
+            if gh release download "$VERSION" -R "$GITHUB_REPOSITORY" \
+                -p "rb-sdk-deb-${VERSION}.tar" -D /tmp/rb-sdk-debs; then
+              break
+            fi
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done
+          tar -C /tmp/rb-sdk-debs -xf "/tmp/rb-sdk-debs/rb-sdk-deb-${VERSION}.tar"
+          find /tmp/rb-sdk-debs -maxdepth 1 -type f -name '*.deb' -print | sort
+
+      - name: Validate deb metadata
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          debs=(/tmp/rb-sdk-debs/*.deb)
+          shopt -u nullglob
+          [ "${#debs[@]}" -eq 4 ] || { echo "expected 4 debs, got ${#debs[@]}"; exit 1; }
+
+          for pkg in rainbow-rb-sdk rainbow-rb-sdk-dev; do
+            for arch in amd64 arm64; do
+              found=0
+              for deb in "${debs[@]}"; do
+                control_pkg="$(dpkg-deb -f "$deb" Package)"
+                control_ver="$(dpkg-deb -f "$deb" Version)"
+                control_arch="$(dpkg-deb -f "$deb" Architecture)"
+                if [ "$control_pkg" = "$pkg" ] && [ "$control_arch" = "$arch" ]; then
+                  [ "$control_ver" = "$DEBVER" ] || { echo "$deb version mismatch: $control_ver"; exit 1; }
+                  found=$((found + 1))
+                fi
+              done
+              [ "$found" -eq 1 ] || { echo "expected exactly one package/arch, got $found: $pkg $arch"; exit 1; }
+            done
+          done
+
+      - name: Import signing key
+        env:
+          RB_SDK_APT_GPG_PRIVATE_KEY: ${{ secrets.RB_SDK_APT_GPG_PRIVATE_KEY }}
+          RB_SDK_APT_GPG_PASSPHRASE: ${{ secrets.RB_SDK_APT_GPG_PASSPHRASE }}
+        run: |
+          set -euo pipefail
+          [ -n "${RB_SDK_APT_GPG_PRIVATE_KEY:-}" ] || { echo "RB_SDK_APT_GPG_PRIVATE_KEY is not set"; exit 1; }
+          mkdir -p ~/.gnupg
+          chmod 700 ~/.gnupg
+          printf 'allow-loopback-pinentry\n' > ~/.gnupg/gpg-agent.conf
+          gpgconf --kill gpg-agent || true
+          printf '%s\n' "$RB_SDK_APT_GPG_PRIVATE_KEY" | gpg --batch --import
+          gpg --batch --list-keys --with-colons "$KEY_FINGERPRINT" \
+            | awk -F: '$1 == "fpr" { print $10 }' \
+            | grep -Fxq "$KEY_FINGERPRINT"
+          # A passphrase-protected key drops a file the signing step keys off.
+          if [ -n "${RB_SDK_APT_GPG_PASSPHRASE:-}" ]; then
+            printf '%s' "$RB_SDK_APT_GPG_PASSPHRASE" > /tmp/gpg-passphrase
+            chmod 600 /tmp/gpg-passphrase
+          fi
+
+      - name: Checkout gh-pages
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git checkout -B gh-pages origin/gh-pages
+
+      - name: Verify committed public key
+        run: |
+          set -euo pipefail
+          [ -f rb-sdk-apt-repo.gpg.key ] || { echo "gh-pages is missing rb-sdk-apt-repo.gpg.key"; exit 1; }
+          gpg --show-keys --with-colons rb-sdk-apt-repo.gpg.key \
+            | awk -F: '$1 == "fpr" { print $10 }' \
+            | grep -Fxq "$KEY_FINGERPRINT" \
+            || { echo "committed rb-sdk-apt-repo.gpg.key does not match the signing key"; exit 1; }
+
+      - name: Update pool and prune old debs
+        run: |
+          set -euo pipefail
+          mkdir -p "pool/${CHANNEL}"
+          install -m 0644 /tmp/rb-sdk-debs/*.deb "pool/${CHANNEL}/"
+
+          keep=3
+          [ "$CHANNEL" = "stable" ] && keep=5
+          for pkg in rainbow-rb-sdk rainbow-rb-sdk-dev; do
+            for arch in amd64 arm64; do
+              mapfile -t old < <(
+                for deb in "pool/${CHANNEL}/${pkg}"_*_"${arch}.deb"; do
+                  [ -e "$deb" ] || continue
+                  ver="$(dpkg-deb -f "$deb" Version)"
+                  printf '%s\t%s\n' "$ver" "$deb"
+                done | sort -k1,1V | head -n -"${keep}" | cut -f2-
+              )
+              [ "${#old[@]}" -eq 0 ] || rm -f "${old[@]}"
+            done
+          done
+
+      - name: Generate APT metadata
+        run: |
+          set -euo pipefail
+          for arch in amd64 arm64; do
+            out="dists/${CHANNEL}/main/binary-${arch}"
+            mkdir -p "$out"
+            dpkg-scanpackages --multiversion --arch "$arch" "pool/${CHANNEL}" /dev/null > "${out}/Packages"
+            gzip -9kf "${out}/Packages"
+            grep -q '^Package: rainbow-rb-sdk$' "${out}/Packages"
+            grep -q '^Package: rainbow-rb-sdk-dev$' "${out}/Packages"
+            if grep '^Architecture:' "${out}/Packages" | grep -v "Architecture: ${arch}$"; then
+              echo "wrong Architecture field in ${out}/Packages"
+              exit 1
+            fi
+          done
+          apt-ftparchive \
+            -c apt-ftparchive.conf \
+            -o "APT::FTPArchive::Release::Suite=${CHANNEL}" \
+            -o "APT::FTPArchive::Release::Codename=${CHANNEL}" \
+            release "dists/${CHANNEL}" > "dists/${CHANNEL}/Release"
+
+      - name: Sign APT metadata
+        run: |
+          set -euo pipefail
+          pass=()
+          [ -f /tmp/gpg-passphrase ] && pass=(--pinentry-mode loopback --passphrase-file /tmp/gpg-passphrase)
+          gpg --batch --yes --default-key "$KEY_FINGERPRINT" "${pass[@]}" \
+            --clearsign -o "dists/${CHANNEL}/InRelease" "dists/${CHANNEL}/Release"
+          gpg --batch --yes --default-key "$KEY_FINGERPRINT" "${pass[@]}" \
+            -abs -o "dists/${CHANNEL}/Release.gpg" "dists/${CHANNEL}/Release"
+          gpg --verify "dists/${CHANNEL}/Release.gpg" "dists/${CHANNEL}/Release"
+
+      - name: Rewrite gh-pages as single commit
+        run: |
+          set -euo pipefail
+          touch .nojekyll
+          git checkout --orphan _apt_publish
+          git rm -rf --cached . >/dev/null 2>&1 || true
+          git add -A
+          git status --short
+          git commit -m "apt repo ${DEBVER} (${CHANNEL})"
+          git branch -M gh-pages
+          git push -f origin gh-pages
+
+      - name: Send Slack notification
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_DEPLOY_WEBHOOK_URL }}
+          JOB_STATUS: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "SLACK_DEPLOY_WEBHOOK_URL is not set; skipping notification"
+            exit 0
+          fi
+          if [ "$JOB_STATUS" = "success" ]; then
+            title=":rocket: [SDK/apt] 게시 완료 \`${DEBVER}\` (${CHANNEL})"
+          else
+            title=":x: [SDK/apt] 게시 실패 \`${DEBVER}\` (${CHANNEL})"
+          fi
+          apt_url="https://rainbowrobotics.github.io/rb-sdk/dists/${CHANNEL}/Release"
+          payload="$(jq -n \
+            --arg title "$title" \
+            --arg apt_url "$apt_url" \
+            --arg run_url "$RUN_URL" \
+            '{text: $title, blocks: [
+              {type:"section", text:{type:"mrkdwn", text:$title}},
+              {type:"section", text:{type:"mrkdwn", text:("*APT Release*\n<" + $apt_url + "|" + $apt_url + ">\nPages 반영에는 몇 분 걸릴 수 있습니다.")}},
+              {type:"context", elements:[{type:"mrkdwn", text:("<" + $run_url + "|Workflow 로그 보기>")}]}
+            ]}')"
+          curl -sS -X POST -H 'Content-type: application/json' --data "$payload" "$SLACK_WEBHOOK_URL" || true
