@@ -96,6 +96,61 @@ jobs:
             done
           done
 
+      # 버전별 산출물 브랜치: 이 버전의 .deb 4개 + binary tarball 2개 + README 만 담은
+      # orphan 브랜치 release/cpp/<version>. apt 저장소가 아니라 버전별 다운로드/보관용.
+      # (설치는 아래 gh-pages 저장소를 그대로 쓴다.)
+      - name: Push version artifacts branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for pat in "rb-sdk-cpp-${VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+                     "rb-sdk-cpp-${VERSION}-aarch64-unknown-linux-gnu.tar.gz"; do
+            for attempt in 1 2 3; do
+              gh release download "$VERSION" -R "$GITHUB_REPOSITORY" -p "$pat" -D /tmp/rb-sdk-debs && break
+              [ "$attempt" -lt 3 ] || exit 1
+              sleep 5
+            done
+          done
+
+          R="$(mktemp -d)"
+          cp /tmp/rb-sdk-debs/*.deb /tmp/rb-sdk-debs/rb-sdk-cpp-"${VERSION}"-*.tar.gz "$R/"
+          printf '*.deb binary\n*.tar.gz binary\n' > "$R/.gitattributes"
+          {
+            echo "# rb-sdk C++ SDK ${VERSION} (${CHANNEL})"
+            echo
+            echo "이 브랜치는 \`${VERSION}\` 배포 산출물 보관용입니다 (apt 저장소 아님)."
+            echo "설치는 gh-pages APT 저장소를 쓰세요:"
+            echo
+            echo '```bash'
+            echo "curl -fsSL https://rainbowrobotics.github.io/rb-sdk/rb-sdk-apt-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/rb-sdk-apt.gpg"
+            echo "echo 'deb [signed-by=/usr/share/keyrings/rb-sdk-apt.gpg] https://rainbowrobotics.github.io/rb-sdk ${CHANNEL} main' | sudo tee /etc/apt/sources.list.d/rb-sdk.list"
+            echo "sudo apt update && sudo apt install rainbow-rb-sdk-dev=${DEBVER}"
+            echo '```'
+            echo
+            echo "- release: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/releases/tag/${VERSION}"
+            echo
+            echo '## sha256'
+            echo '```'
+            ( cd "$R" && sha256sum ./*.deb ./*.tar.gz )
+            echo '```'
+          } > "$R/README.md"
+
+          cd "$R"
+          git init -q
+          git checkout -q --orphan "release/cpp/${VERSION}"
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              -c commit.gpgsign=false \
+              commit -qm "rb-sdk cpp ${VERSION} (${CHANNEL}) artifacts"
+          for attempt in 1 2 3; do
+            git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+              "release/cpp/${VERSION}" && exit 0
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done
+
       - name: Import signing key
         env:
           RB_SDK_APT_GPG_PRIVATE_KEY: ${{ secrets.RB_SDK_APT_GPG_PRIVATE_KEY }}
