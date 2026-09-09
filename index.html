@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rainbow Robotics C++ SDK</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1b1f24;
+    --fg-dim: #57606a;
+    --border: #d8dee4;
+    --card: #f6f8fa;
+    --code-bg: #f6f8fa;
+    --code-fg: #1b1f24;
+    --accent: #0969da;
+    --accent-fg: #ffffff;
+    --tag-bg: #ddf4ff;
+    --tag-fg: #0969da;
+    --pre-bg: #0d1117;
+    --pre-fg: #e6edf3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --fg-dim: #8b949e;
+      --border: #30363d;
+      --card: #161b22;
+      --code-bg: #161b22;
+      --code-fg: #e6edf3;
+      --accent: #2f81f7;
+      --accent-fg: #ffffff;
+      --tag-bg: #121d2f;
+      --tag-fg: #2f81f7;
+      --pre-bg: #010409;
+      --pre-fg: #e6edf3;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 32px; }
+  h1 { font-size: 1.7rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--fg-dim); }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; }
+  h3 { font-size: 0.95rem; margin: 22px 0 8px; color: var(--fg-dim); font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  p { margin: 0 0 12px; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.87em;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.1em 0.35em;
+  }
+  .codeblock {
+    position: relative;
+    margin: 12px 0;
+  }
+  pre {
+    background: var(--pre-bg);
+    color: var(--pre-fg);
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.83rem;
+    line-height: 1.55;
+  }
+  pre code { background: none; border: none; padding: 0; font-size: inherit; color: inherit; }
+  .copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.08);
+    color: #e6edf3;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    font: 600 0.72rem/1 inherit;
+    padding: 6px 9px;
+    cursor: pointer;
+  }
+  .copy:hover { background: rgba(255,255,255,0.16); }
+  .muted { color: var(--fg-dim); font-size: 0.9rem; }
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-fg);
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    vertical-align: middle;
+  }
+  .tag.pre { background: #fff1e5; color: #bc4c00; }
+  @media (prefers-color-scheme: dark) { .tag.pre { background: #2b1d12; color: #e0823d; } }
+
+  /* downloads */
+  #releases { display: flex; flex-direction: column; gap: 14px; }
+  .rel {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    padding: 16px 18px;
+  }
+  .rel-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+  .rel-head .v { font-weight: 700; font-size: 1.02rem; }
+  .rel-head .date { color: var(--fg-dim); font-size: 0.82rem; margin-left: auto; }
+  .assets { display: flex; flex-direction: column; gap: 2px; margin-top: 10px; }
+  .asset {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+  }
+  .asset:hover { border-color: var(--border); background: var(--bg); }
+  .asset .name { font-weight: 600; font-size: 0.9rem; }
+  .asset .sub { color: var(--fg-dim); font-size: 0.8rem; }
+  .asset .size { margin-left: auto; color: var(--fg-dim); font-size: 0.8rem; white-space: nowrap; }
+  .asset .dl {
+    flex: none;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 7px;
+    background: var(--accent); color: var(--accent-fg);
+    font-size: 0.95rem;
+  }
+  .asset .dl:hover { text-decoration: none; filter: brightness(1.08); }
+  details.more summary {
+    cursor: pointer; color: var(--accent); font-size: 0.9rem; font-weight: 600;
+    padding: 6px 0;
+  }
+  #rel-status { color: var(--fg-dim); font-size: 0.9rem; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--fg-dim); font-size: 0.85rem; }
+  .warn {
+    border-left: 3px solid var(--accent);
+    padding: 6px 0 6px 14px;
+    color: var(--fg-dim);
+    margin: 16px 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Rainbow Robotics C++ SDK</h1>
+    <p>APT repository &amp; release archives &mdash; <code>librb_sdk.so</code> for Ubuntu / Debian (amd64, arm64)</p>
+  </header>
+
+  <h2>Install from APT</h2>
+  <p>Add the repository once, then install with <code>apt</code>. Replace <code>stable</code> with
+     <code>dev</code> for prerelease builds, and <code>amd64</code> with <code>arm64</code> on 64-bit ARM hosts.</p>
+  <div class="codeblock">
+    <button class="copy" type="button">Copy</button>
+<pre><code>curl -fsSL https://rainbowrobotics.github.io/rb-sdk/rb-sdk-apt-repo.gpg.key \
+  | sudo gpg --dearmor -o /usr/share/keyrings/rb-sdk-apt.gpg
+
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/rb-sdk-apt.gpg] https://rainbowrobotics.github.io/rb-sdk stable main" \
+  | sudo tee /etc/apt/sources.list.d/rb-sdk.list
+
+sudo apt update
+sudo apt install rainbow-rb-sdk-dev</code></pre>
+  </div>
+  <p class="muted"><code>rainbow-rb-sdk-dev</code> pulls in the matching <code>rainbow-rb-sdk</code> runtime automatically.</p>
+
+  <h3>Pin an exact version</h3>
+  <div class="codeblock">
+    <button class="copy" type="button">Copy</button>
+<pre><code>apt-cache madison rainbow-rb-sdk-dev
+sudo apt install rainbow-rb-sdk-dev=1.2.3 rainbow-rb-sdk=1.2.3
+# dev channel: sudo apt install rainbow-rb-sdk-dev=1.2.3~dev4 rainbow-rb-sdk=1.2.3~dev4</code></pre>
+  </div>
+
+  <h2>Downloads</h2>
+  <p class="muted">Binary tarballs, source, and the <code>.deb</code> bundle from
+     <a href="https://github.com/RainbowRobotics/rb-sdk/releases">GitHub Releases</a>.
+     CI pipelines should prefer these over APT (APT traffic counts against the Pages bandwidth limit).</p>
+  <div id="rel-status">Loading releases&hellip;</div>
+  <div id="releases" hidden></div>
+
+  <h3>Use a tarball</h3>
+  <div class="codeblock">
+    <button class="copy" type="button">Copy</button>
+<pre><code>V=1.2.3
+TRIPLE=x86_64-unknown-linux-gnu   # arm64: aarch64-unknown-linux-gnu
+curl -fL "https://github.com/RainbowRobotics/rb-sdk/releases/download/$V/rb-sdk-cpp-$V-$TRIPLE.tar.gz" \
+  | sudo tar -xzf - -C /usr/local
+# CMake: find_package(rb_sdk PATHS /usr/local/lib/cmake/rb_sdk REQUIRED)
+# pkg-config: PKG_CONFIG_PATH=/usr/local/lib/pkgconfig pkg-config --cflags --libs rb_sdk</code></pre>
+  </div>
+
+  <div class="warn">
+    Do not load <code>librb_sdk.so.&lt;version&gt;</code> and the Python package
+    <code>rainbow.rb_sdk</code> in the same process.
+  </div>
+
+  <footer>
+    <p>Repository layout: <code>dists/{stable,dev}/</code> (Release / InRelease / Packages),
+       <code>pool/{stable,dev}/*.deb</code>, <code>rb-sdk-apt-repo.gpg.key</code> (signing key,
+       fingerprint <code>605E 8364 5698 465E 1452 CBF0 C749 1A44 F2FB 92C6</code>).</p>
+    <p>Metadata is regenerated on every publish by <code>publish-apt-repo.yml</code>.
+       New versions can take a few minutes to appear while <code>pages-build-deployment</code> runs.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var REPO = "RainbowRobotics/rb-sdk";
+
+  // copy buttons
+  document.querySelectorAll(".copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var pre = btn.parentElement.querySelector("pre");
+      if (!pre) return;
+      var text = pre.innerText;
+      var done = function () {
+        var old = btn.textContent;
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = old; }, 1400);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () {});
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  // releases
+  var status = document.getElementById("rel-status");
+  var box = document.getElementById("releases");
+
+  function fmtSize(n) {
+    if (!n && n !== 0) return "";
+    var u = ["B", "KB", "MB", "GB"], i = 0;
+    while (n >= 1024 && i < u.length - 1) { n /= 1024; i++; }
+    return (i === 0 ? n : n.toFixed(1)) + " " + u[i];
+  }
+  function fmtDate(s) {
+    try { return new Date(s).toISOString().slice(0, 10); } catch (e) { return ""; }
+  }
+  function describe(name) {
+    if (/-x86_64-unknown-linux-gnu\.tar\.gz$/.test(name)) return "Linux x86_64 · binary tarball (prefix-relocatable)";
+    if (/-aarch64-unknown-linux-gnu\.tar\.gz$/.test(name)) return "Linux aarch64 · binary tarball (prefix-relocatable)";
+    if (/-source-.*\.tar\.gz$/.test(name)) return "Source · C++ SDK + generated headers";
+    if (/^rb-sdk-deb-.*\.tar$/.test(name)) return ".deb bundle · runtime + dev, amd64 + arm64";
+    return "";
+  }
+  function rank(name) {
+    if (/-x86_64-/.test(name)) return 0;
+    if (/-aarch64-/.test(name)) return 1;
+    if (/^rb-sdk-deb-/.test(name)) return 2;
+    if (/-source-/.test(name)) return 3;
+    return 4;
+  }
+
+  function renderRelease(r) {
+    var el = document.createElement("div");
+    el.className = "rel";
+
+    var head = document.createElement("div");
+    head.className = "rel-head";
+    var v = document.createElement("span");
+    v.className = "v";
+    v.textContent = r.tag_name || r.name || "";
+    head.appendChild(v);
+    if (r.prerelease) {
+      var t = document.createElement("span");
+      t.className = "tag pre";
+      t.textContent = "prerelease";
+      head.appendChild(t);
+    }
+    var d = document.createElement("span");
+    d.className = "date";
+    d.textContent = fmtDate(r.published_at || r.created_at);
+    head.appendChild(d);
+    el.appendChild(head);
+
+    var link = document.createElement("a");
+    link.href = r.html_url;
+    link.className = "muted";
+    link.textContent = "release notes →";
+    el.appendChild(link);
+
+    var assets = (r.assets || []).slice().sort(function (a, b) {
+      return rank(a.name) - rank(b.name) || a.name.localeCompare(b.name);
+    });
+    if (assets.length) {
+      var list = document.createElement("div");
+      list.className = "assets";
+      assets.forEach(function (a) {
+        var row = document.createElement("div");
+        row.className = "asset";
+        var dl = document.createElement("a");
+        dl.className = "dl";
+        dl.href = a.browser_download_url;
+        dl.setAttribute("aria-label", "Download " + a.name);
+        dl.textContent = "↓";
+        row.appendChild(dl);
+        var meta = document.createElement("div");
+        var nm = document.createElement("div");
+        nm.className = "name";
+        nm.textContent = a.name;
+        meta.appendChild(nm);
+        var sub = describe(a.name);
+        if (sub) {
+          var s = document.createElement("div");
+          s.className = "sub";
+          s.textContent = sub;
+          meta.appendChild(s);
+        }
+        row.appendChild(meta);
+        var sz = document.createElement("span");
+        sz.className = "size";
+        sz.textContent = fmtSize(a.size);
+        row.appendChild(sz);
+        list.appendChild(row);
+      });
+      el.appendChild(list);
+    } else {
+      var none = document.createElement("p");
+      none.className = "muted";
+      none.style.margin = "10px 0 0";
+      none.textContent = "No attached assets.";
+      el.appendChild(none);
+    }
+    return el;
+  }
+
+  fetch("https://api.github.com/repos/" + REPO + "/releases?per_page=20", {
+    headers: { "Accept": "application/vnd.github+json" }
+  })
+    .then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(function (releases) {
+      if (!Array.isArray(releases) || !releases.length) {
+        status.innerHTML = 'No releases yet. See <a href="https://github.com/' + REPO + '/releases">GitHub Releases</a>.';
+        return;
+      }
+      status.hidden = true;
+      box.hidden = false;
+      var shown = releases.slice(0, 3);
+      var rest = releases.slice(3);
+      shown.forEach(function (r) { box.appendChild(renderRelease(r)); });
+      if (rest.length) {
+        var det = document.createElement("details");
+        det.className = "more";
+        var sum = document.createElement("summary");
+        sum.textContent = "Older releases (" + rest.length + ")";
+        det.appendChild(sum);
+        rest.forEach(function (r) { det.appendChild(renderRelease(r)); });
+        box.appendChild(det);
+      }
+    })
+    .catch(function () {
+      status.innerHTML =
+        'Could not load the release list (GitHub API rate limit or network). ' +
+        'Browse them directly at <a href="https://github.com/' + REPO + '/releases">github.com/' + REPO + '/releases</a>.';
+    });
+})();
+</script>
+</body>
+</html>
