@@ -100,6 +100,7 @@ jobs:
       # orphan 브랜치 release/cpp/<version>. apt 저장소가 아니라 버전별 다운로드/보관용.
       # (설치는 아래 gh-pages 저장소를 그대로 쓴다.)
       - name: Push version artifacts branch
+        id: push_branch
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -144,9 +145,26 @@ jobs:
               -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
               -c commit.gpgsign=false \
               commit -qm "rb-sdk cpp ${VERSION} (${CHANNEL}) artifacts"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           for attempt in 1 2 3; do
             git push -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
               "release/cpp/${VERSION}" && exit 0
+            [ "$attempt" -lt 3 ] || exit 1
+            sleep 5
+          done
+
+      # 릴리스 태그를 release/cpp/<version> 브랜치 커밋으로 재지정한다.
+      # GitHub이 릴리스 페이지에서 자동 생성하는 "Source code (zip/tar.gz)"가
+      # main이 아니라 이 버전 산출물 브랜치 내용을 담도록 하기 위함.
+      - name: Retarget release tag to artifacts branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            gh api --method PATCH -H "Accept: application/vnd.github+json" \
+              "repos/${GITHUB_REPOSITORY}/git/refs/tags/${VERSION}" \
+              -f sha="${{ steps.push_branch.outputs.sha }}" -F force=true && exit 0
             [ "$attempt" -lt 3 ] || exit 1
             sleep 5
           done
