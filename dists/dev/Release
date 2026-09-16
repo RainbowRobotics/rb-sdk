@@ -1,0 +1,31 @@
+Architectures: amd64 arm64
+Codename: dev
+Components: main
+Date: Wed, 16 Sep 2026 09:01:53 +0000
+Label: rb-sdk
+Origin: RainbowRobotics
+Suite: dev
+MD5Sum:
+ 6ecb47b58d3845a92cec89a9effc7afd              145 Release
+ b796d80ca54a983922631557730340b9             4426 main/binary-amd64/Packages
+ e31a5bf6710c1aa64476c8958c321c4e             1208 main/binary-amd64/Packages.gz
+ ee9737f6a62c05a83b4d49556d4a3ce4             4426 main/binary-arm64/Packages
+ 3a1af803515ceb63f29b5869dc5f9341             1216 main/binary-arm64/Packages.gz
+SHA1:
+ e381db01c15b0b2f72d7e9ea1d4087888d3427ce              145 Release
+ 2fc94142625410c2d2c54e2a34e0262ccb8df2f8             4426 main/binary-amd64/Packages
+ 397a3e0bf3063f78b538cd028fe988f86b1d5a4c             1208 main/binary-amd64/Packages.gz
+ e77305d1d3bbc9b35a751712b69f268e45721fce             4426 main/binary-arm64/Packages
+ b780347ffd9df24082b9668a075badda7bb49404             1216 main/binary-arm64/Packages.gz
+SHA256:
+ 304fd0b45d8158f7d70f2902d2d8bcb58a58f36f29605abfbeb6db7a05ad9e60              145 Release
+ 0c2c7ba7cc7be0fcfd92456a410dbc182f6208e53a4535720ecc5323d24991d4             4426 main/binary-amd64/Packages
+ 27bc5caca5a5a90ae97cc94f7000ff6fef9cee8e10de18ed126130be5f06f394             1208 main/binary-amd64/Packages.gz
+ 83df891bc02104e086e07896d566ba88d437d43bb41945873efb5fdbb4757426             4426 main/binary-arm64/Packages
+ 80fc40052ef2fbc15c51a132458f32d8cc29de752331a9cdc1658a67e21d45e5             1216 main/binary-arm64/Packages.gz
+SHA512:
+ 02915c2f452839b860e66870e40753e618c2022d31a1a083e43f749335a748912f8aac07f5775eb7b1e33f6abbc461c30e4fbae4bb29e714842898159c7c071f              145 Release
+ 9cadd16a534dd3757fe656e58579842ba9fa00905b035fa46bade776952a7157425c83ce8abb1351030cd6540966fd0d43abaaabf5de8fbb9a72a13bc1de3772             4426 main/binary-amd64/Packages
+ 6188c59f70e404ccbd1391a709e13b25a774e2b8c1050bee892c822d2ba407a31a6a8285f57af9e110ded53caed86dcbeb233c8dd6b512fb29c447c3596d4409             1208 main/binary-amd64/Packages.gz
+ 75807570e72c03c5008f471f8afb77f42af6842b78ca78fb7ded0cf6f5efb1cc2876e0cf65e11028d1bb3535b40759e72d47d14c0a63bc327e7ed936c36bee6f             4426 main/binary-arm64/Packages
+ a38c472ce05b7fc8f4f27af54baefbb9fa3638a4267fcbd87952d9f637ef97231f614593a90b17125bf66025e61305ce57532e6223275da7871f3ab859fd2f71             1216 main/binary-arm64/Packages.gz
