@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Program &#8212; rb-sdk 0.1.5 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../_static/documentation_options.js?v=59fadc99"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/rb_sdk.rb_sdk_cpp.program';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.5';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plugin Program Context" href="rb_sdk.rb_sdk_cpp.plugin_program_context.html" />
+    <link rel="prev" title="Manipulate" href="rb_sdk.rb_sdk_cpp.manipulate.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.5" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.5 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rb_sdk.html">rb_sdk package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.base.html">Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.manipulate.html">Manipulate</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.plugin_program_context.html">Plugin Program Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.amr.html">Amr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.plugin_call.html">Plugin Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.rby1.html">Rby1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.exceptions.html">Exceptions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="rb_sdk.amr_sdk.html">rb_sdk.amr_sdk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="rb_sdk.amr_sdk.schema.html">rb_sdk.amr_sdk.schema package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.base_sdk.html">rb_sdk.base_sdk package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.schema.html">rb_sdk.schema package</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">rb_sdk</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="rb_sdk.html" class="nav-link">rb_sdk package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Program</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="program">
+<h1>Program<a class="headerlink" href="#program" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">RBProgramSDK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="rb_sdk.rb_sdk_cpp.base.html#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><code class="xref py py-class docutils literal notranslate"><span class="pre">RBBaseSDK</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm">
+<span class="sig-name descname"><span class="pre">alarm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm" title="Link to this definition">#</a></dt>
+<dd><p>Publishes a program dialog alarm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – Dialog title. Falls back to “No Title” when empty.</p></li>
+<li><p><strong>content</strong> – Dialog content.</p></li>
+<li><p><strong>robot_model</strong> – Name of the robot model.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done immediately after the alarm
+is published.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm_or_halt">
+<span class="sig-name descname"><span class="pre">alarm_or_halt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_only_at_ui</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pause_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm_or_halt" title="Link to this definition">#</a></dt>
+<dd><p>Raises an alarm and/or halts execution, depending on <code class="docutils literal notranslate"><span class="pre">option.</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>robot_model</strong> – Name of the robot model.</p></li>
+<li><p><strong>option</strong> – “ALARM” (publish an alarm dialog), “HALT” (stop the step’s
+context), “FOLDER_HALT” (break out of the enclosing
+folder), or “SUB_PROGRAM_HALT” (halt the enclosing sub
+task).</p></li>
+<li><p><strong>save_log</strong> – If true, also emits a USER-level log entry with
+<code class="docutils literal notranslate"><span class="pre">content</span></code> (or <code class="docutils literal notranslate"><span class="pre">title</span></code> if <code class="docutils literal notranslate"><span class="pre">content</span></code> is None).</p></li>
+<li><p><strong>is_only_at_ui</strong> – If true and the step is not running from a UI
+execution, the step is marked done and this call is
+a no-op.</p></li>
+<li><p><strong>pause_option</strong> – “ALL” (pause every process) or “CURRENT” (pause only
+this context). Only consulted when <code class="docutils literal notranslate"><span class="pre">option</span></code>
+resolves to a pause.</p></li>
+<li><p><strong>title</strong> – Alarm dialog title (used when <code class="docutils literal notranslate"><span class="pre">option</span></code> is “ALARM”, and as
+the log fallback content when <code class="docutils literal notranslate"><span class="pre">save_log</span></code> is set and
+<code class="docutils literal notranslate"><span class="pre">content</span></code> is None).</p></li>
+<li><p><strong>content</strong> – Alarm dialog / log content.</p></li>
+<li><p><strong>flow_manager_args</strong> – PyFM step context. Required; the step is marked
+done after the alarm/halt/pause sequence
+completes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.all_pause">
+<span class="sig-name descname"><span class="pre">all_pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.all_pause" title="Link to this definition">#</a></dt>
+<dd><p>Pauses every running program process on this robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step’s own execution context is paused too,
+after the broadcast pause request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.all_stop">
+<span class="sig-name descname"><span class="pre">all_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.all_stop" title="Link to this definition">#</a></dt>
+<dd><p>Stops every running program process on this robot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done after the broadcast stop
+request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.before_close">
+<span class="sig-name descname"><span class="pre">before_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.before_close" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.call_event_tree">
+<span class="sig-name descname"><span class="pre">call_event_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">trees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_step_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_post_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.call_event_tree" title="Link to this definition">#</a></dt>
+<dd><p>Execute one event-sub-task tree from a list[rb_flow_manager.step.Step].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trees</strong> (<em>list</em><em>[</em><em>'rb_flow_manager.step.Step'</em><em>]</em>)</p></li>
+<li><p><strong>index</strong> (<em>int</em>)</p></li>
+<li><p><strong>task_id</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>target_step_id</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_post_run</strong> (<em>bool</em>)</p></li>
+<li><p><strong>flow_manager_args</strong> (<em>rb_schemas.sdk.FlowManagerArgs</em><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.change_program">
+<span class="sig-name descname"><span class="pre">change_program</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">program_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">program_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.change_program" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.debug_variables">
+<span class="sig-name descname"><span class="pre">debug_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_only_at_ui</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pause_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ALL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.debug_variables" title="Link to this definition">#</a></dt>
+<dd><p>Reports the current values of <code class="docutils literal notranslate"><span class="pre">variables</span></code> for debugging, then
+pauses.</p>
+<p>Compares each variable’s raw (pre-evaluation) string against its
+evaluated JSON value; numeric values/lists are rounded to 3 decimals
+for display, and unchanged variables are reported as “Undefined”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>robot_model</strong> – Name of the robot model.</p></li>
+<li><p><strong>option</strong> – “DIALOG” (publish a single alarm dialog listing every
+variable) or “LOG” (emit one USER-level log entry per
+variable).</p></li>
+<li><p><strong>is_only_at_ui</strong> – If true and the step is not running from a UI
+execution, the step is marked done and this call is
+a no-op.</p></li>
+<li><p><strong>variables</strong> – Evaluated current variable values, in the same order as
+<code class="docutils literal notranslate"><span class="pre">flow_manager_args's</span></code> raw “variables” list.</p></li>
+<li><p><strong>log_content</strong> – Optional extra USER-level log entry (any value; non-
+str is JSON-encoded) appended after the per-variable
+LOG entries.</p></li>
+<li><p><strong>pause_option</strong> – “ALL” (pause every process) or “CURRENT” (pause only
+this context).</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. Required for this
+call to do anything; the step is marked done
+after pausing.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.get_digital_input">
+<span class="sig-name descname"><span class="pre">get_digital_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.get_digital_input" title="Link to this definition">#</a></dt>
+<dd><p>Queries the digital input state of <code class="docutils literal notranslate"><span class="pre">robot_model.</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>robot_model</strong> – Name of the robot model.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The digital input list, or std::nullopt if the robot has no
+<cite>{robot_model}/get_digital_input</cite> zenoh queryable (e.g. not
+connected / not running).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.get_rpc">
+<span class="sig-name descname"><span class="pre">get_rpc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">RpcManager</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.get_rpc" title="Link to this definition">#</a></dt>
+<dd><p>Returns the RpcManager registered for <code class="docutils literal notranslate"><span class="pre">module_name,</span></code> creating it on
+first use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>module_name</strong> – PFM task id used as the RpcManager cache key.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The RpcManager instance for <code class="docutils literal notranslate"><span class="pre">module_name,</span></code> owned by
+<a href="#id1"><span class="problematic" id="id2">rpc_managers_</span></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.interface">
+<span class="sig-name descname"><span class="pre">interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.interface" title="Link to this definition">#</a></dt>
+<dd><p>Dispatches a protocol interface call (Modbus/MC/XGT/socket) via the
+native RpcManager cached for this step’s task id (<a href="#id3"><span class="problematic" id="id4">rpc_managers_</span></a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>option</strong> (<em>str</em>) – “MODBUS_CLIENT”, “MC_PROTOCOL”, “XGT_PROTOCOL”, or
+“SOCKET_INTERFACE”.</p></li>
+<li><p><strong>data</strong> (<em>rb_schemas.fbs_types.muscat.InterfaceModbusClientPayloadTD</em><em> | </em><em>rb_schemas.fbs_types.muscat.InterfaceMcProtocolPayloadTD</em><em> | </em><em>rb_schemas.fbs_types.muscat.InterfaceXgtProtocolPayloadTD</em><em> | </em><em>rb_schemas.fbs_types.muscat.InterfaceSocketPayloadTD</em>) – Protocol payload generated from manipulate.fbs. Must contain
+a non-empty “server_ip” and a “type” of “READ”/”WRITE” (plus
+“CONNECT” for SOCKET_INTERFACE).</p></li>
+<li><p><strong>flow_manager_args</strong> (<em>rb_schemas.sdk.FlowManagerArgs</em><em> | </em><em>None</em>) – Optional PyFM step context. Required for this
+call to do anything — if omitted, returns
+immediately without dispatching to any
+protocol. When provided, it’s forwarded to the
+underlying execute_* call and the step is
+marked done after dispatch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">option</span></code> or <code class="docutils literal notranslate"><span class="pre">data[&quot;type&quot;]</span></code> is
+    unsupported for the given <code class="docutils literal notranslate"><span class="pre">option.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.log">
+<span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.log" title="Link to this definition">#</a></dt>
+<dd><p>Emits a program log entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> – Log message content.</p></li>
+<li><p><strong>robot_model</strong> – Name of the robot model this log entry is associated
+with.</p></li>
+<li><p><strong>level</strong> – Log level (“INFO”, “WARNING”, “ERROR”, “USER”, “DEBUG”, or
+“GENERAL”).</p></li>
+<li><p><strong>disable_db</strong> – Unused (kept for parity with the Python original,
+which also never reads this parameter).</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done immediately after the log
+entry is published.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.make_script">
+<span class="sig-name descname"><span class="pre">make_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ADVANCED'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contents</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.make_script" title="Link to this definition">#</a></dt>
+<dd><p>Runs a program script step, in either GENERAL or ADVANCED mode.</p>
+<p>In GENERAL mode, <code class="docutils literal notranslate"><span class="pre">flow_manager_args's</span></code> “general_contents” argument
+is evaluated as a single expression against the step’s context
+(assignments are reflected into state). In ADVANCED mode, <code class="docutils literal notranslate"><span class="pre">contents</span></code>
+is compiled and executed as an arbitrary python script with
+<cite>variables</cite>/<cite>var</cite>, <cite>update_variable</cite>, <cite>update_var</cite>/<cite>update</cite>,
+<cite>get_var</cite>/<cite>get</cite>, <cite>done</cite>, <cite>pause</cite>, <cite>stop</cite>, <cite>resume</cite>, <cite>check_stop</cite>, and
+<cite>rb_log</cite> injected into its globals (the bridge builds that env from
+<code class="docutils literal notranslate"><span class="pre">flow_manager_args;</span></code> compile/exec runs on the PyFM side in
+ctx.run_advanced_script). <cite>rb_log</cite> is this SDK’s own log
+(RBBaseSDK::log), called as <cite>rb_log(content, robot_model, level)</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> – “GENERAL” or “ADVANCED”.</p></li>
+<li><p><strong>contents</strong> – ADVANCED-mode script source. Required when <code class="docutils literal notranslate"><span class="pre">mode</span></code> is
+“ADVANCED”.</p></li>
+<li><p><strong>flow_manager_args</strong> – PyFM step context. Required; the step is marked
+done when the script finishes (or immediately
+raises, in ADVANCED mode, since the step is
+still marked done before the exception
+propagates).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>std::runtime_error</strong> – If GENERAL mode is missing “general_contents”,
+    or ADVANCED mode is missing <code class="docutils literal notranslate"><span class="pre">contents.</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.plugin_execute">
+<span class="sig-name descname"><span class="pre">plugin_execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">plugin_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.plugin_execute" title="Link to this definition">#</a></dt>
+<dd><p>Sends an execute request to a plugin process and waits until it
+reports completion (or stop). Concurrent calls for the same
+<code class="docutils literal notranslate"><span class="pre">plugin_id</span></code> are serialized so their control queryables don’t
+collide.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plugin_id</strong> – Target plugin id; the request is sent to
+“muscat/plugin/{plugin_id}/execute” and control
+messages are exchanged over
+“muscat/plugin/{plugin_id}/control”.</p></li>
+<li><p><strong>user_args</strong> – Execute request JSON object. The Python binding
+collects <cite>**kwargs</cite> into this object.</p></li>
+<li><p><strong>flow_manager_args</strong> – PyFM step context. Required; the step is marked
+done once the plugin reports “done” (directly,
+or by exiting its control loop after “stop”).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is not provided, or
+    if the plugin is not running/responding to the
+    execute request.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.set_variables">
+<span class="sig-name descname"><span class="pre">set_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.set_variables" title="Link to this definition">#</a></dt>
+<dd><p>Initializes local task variables from their configured init values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>variables</strong> – List of variable definition dicts, each carrying an
+“init_value” key, in the same order as the task’s
+declared variables.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. Required for this
+call to do anything — if omitted, returns
+immediately without touching <code class="docutils literal notranslate"><span class="pre">variables.</span></code>
+When provided, each variable is applied via
+<code class="docutils literal notranslate"><span class="pre">flow_manager_args's</span></code> local variable updater
+and the step is marked done afterwards.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.simple_wait">
+<span class="sig-name descname"><span class="pre">simple_wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.simple_wait" title="Link to this definition">#</a></dt>
+<dd><p>Blocks the calling thread for <code class="docutils literal notranslate"><span class="pre">second</span></code> seconds, polling for
+stop/pause requests every 1/50s. Time spent blocked inside a pause is
+excluded from the wait duration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>second</strong> – Seconds to wait. Must be greater than 0 when
+<code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is not provided (a standalone caller
+has no other way to be notified that the wait was
+skipped).</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done once the wait elapses (or
+immediately, if <code class="docutils literal notranslate"><span class="pre">second</span></code> &lt;= 0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">second</span></code> &lt;= 0 and <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code>
+    is not provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.user_input">
+<span class="sig-name descname"><span class="pre">user_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_selection</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_form</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'STRING'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.user_input" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.user_select">
+<span class="sig-name descname"><span class="pre">user_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ask_ment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disconn_timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.user_select" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBProgramSDK.wait">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK" title="rb_sdk.rb_sdk_cpp.RBProgramSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBProgramSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'TIME'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GENERAL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">digital_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="rb_sdk.base_sdk.html#rb_sdk.base_sdk.base_schema.DigitalInputConditionSchema" title="rb_sdk.base_sdk.base_schema.DigitalInputConditionSchema"><span class="pre">rb_sdk.base_sdk.base_schema.DigitalInputConditionSchema</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_out</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.wait" title="Link to this definition">#</a></dt>
+<dd><p>Blocks until the requested wait condition is satisfied (or times out),
+polling for stop requests every 10ms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>robot_model</strong> – Name of the robot model (used for DIGITAL_INPUT
+polling).</p></li>
+<li><p><strong>wait_type</strong> – “TIME” (delegates to simple_wait()), “HOLDING” (wait
+while the condition holds), or “EXIT” (wait until the
+condition becomes true / the digital input matches).</p></li>
+<li><p><strong>mode</strong> – “GENERAL” (evaluate <code class="docutils literal notranslate"><span class="pre">flow_manager_args's</span></code> “condition”
+expression) or “DIGITAL_INPUT” (poll get_digital_input()
+against <code class="docutils literal notranslate"><span class="pre">digital_input's</span></code> expected signal pattern).</p></li>
+<li><p><strong>second</strong> – Wait duration in seconds, used only when <code class="docutils literal notranslate"><span class="pre">wait_type</span></code> is
+“TIME”.</p></li>
+<li><p><strong>digital_input</strong> – Digital input condition dict (“signal” list and
+optional “logical_operator”, “AND” by default).
+Required when <code class="docutils literal notranslate"><span class="pre">mode</span></code> is “DIGITAL_INPUT”.</p></li>
+<li><p><strong>time_out</strong> – Optional timeout in seconds; the wait loop breaks once
+elapsed time reaches this value, regardless of whether
+the condition was satisfied.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. Required for this
+call to do anything — if omitted, returns
+immediately without waiting (despite the
+default of py::none(), calling this standalone
+is a no-op). The step is marked done once the
+wait loop exits.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcManager">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">RpcManager</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">RpcResult</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.bits">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">bits</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.bits" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.data_bit">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data_bit</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_bit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.data_bit_fins">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data_bit_fins</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_bit_fins" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.data_word">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data_word</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.data_word_fins">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data_word_fins</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word_fins" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.data_word_xgt">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">data_word_xgt</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word_xgt" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.error">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.error" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.payload">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">payload</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.payload" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.regs">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">regs</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.regs" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RpcResult.success">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">success</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RpcResult.success" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.call_event_tree">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">call_event_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">trees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_step_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_post_run</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.call_event_tree" title="Link to this definition">#</a></dt>
+<dd><p>Execute one event-sub-task tree from a list[rb_flow_manager.step.Step].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trees</strong> (<em>list</em><em>[</em><em>'rb_flow_manager.step.Step'</em><em>]</em>)</p></li>
+<li><p><strong>index</strong> (<em>int</em>)</p></li>
+<li><p><strong>task_id</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>target_step_id</strong> (<em>str</em><em> | </em><em>None</em>)</p></li>
+<li><p><strong>_post_run</strong> (<em>bool</em>)</p></li>
+<li><p><strong>flow_manager_args</strong> (<em>rb_schemas.sdk.FlowManagerArgs</em><em> | </em><em>None</em>)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_mc_read">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_mc_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_read</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_variable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_mc_read" title="Link to this definition">#</a></dt>
+<dd><p>Reads MC (Mitsubishi) protocol device values.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects the command: 1 reads bit devices (read_bit),
+2 reads word devices (read_word). <code class="docutils literal notranslate"><span class="pre">address_type</span></code> and <code class="docutils literal notranslate"><span class="pre">protocol</span></code>
+resolve the target McDeviceType and McFrameType respectively. The
+result is always taken from <code class="docutils literal notranslate"><span class="pre">RpcResult::data_word</span></code> — unlike the
+Python original’s <cite>data_word or data_bit</cite> fallback, a bit read does
+not fall back to <code class="docutils literal notranslate"><span class="pre">data_bit</span></code> (matches the current C++ behavior).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – MC server IP address.</p></li>
+<li><p><strong>server_port</strong> – MC server port.</p></li>
+<li><p><strong>register_addr</strong> – Starting device address to read from.</p></li>
+<li><p><strong>address_type</strong> – Device type: “1”/”D”, “2”/”M”, “3”/”X”, or “4”/”Y”.</p></li>
+<li><p><strong>protocol</strong> – MC frame type: “1”/”MC_1E” or “2”/”MC_3E”.</p></li>
+<li><p><strong>function_code</strong> – 1 (read_bit) or 2 (read_word).</p></li>
+<li><p><strong>number_of_read</strong> – Number of devices to read.</p></li>
+<li><p><strong>return_variable_name</strong> – PyFM variable name that will receive the
+read values (<code class="docutils literal notranslate"><span class="pre">RpcResult::data_word).</span></code></p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed read — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<code class="docutils literal notranslate"><span class="pre">return_variable_name</span></code> is written into its
+context and <cite>flow_manager_args.done()</cite> is
+called on completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code>
+is “STOP” and the read failed, which raises
+instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call (success flag plus the read values
+in <code class="docutils literal notranslate"><span class="pre">data_word).</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 1 or 2, or
+    <code class="docutils literal notranslate"><span class="pre">address_type/&#64;p</span></code> protocol cannot be
+    resolved; and, under “STOP”, if the read
+    fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_mc_write">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_mc_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_mc_write" title="Link to this definition">#</a></dt>
+<dd><p>Writes MC (Mitsubishi) protocol device values.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects the command: 3 writes bit devices
+(write_bit, <code class="docutils literal notranslate"><span class="pre">payload_field</span></code> values restricted to 0/1), 4 writes word
+devices (write_word, <code class="docutils literal notranslate"><span class="pre">payload_field</span></code> values restricted to [-32768,
+32767]). <code class="docutils literal notranslate"><span class="pre">address_type</span></code> also determines which native buffer the
+payload is sent through: “1”/”D” (word device) uses write_word,
+“2”/”3”/”4” or “M”/”X”/”Y” (bit devices) use write_bit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – MC server IP address.</p></li>
+<li><p><strong>server_port</strong> – MC server port.</p></li>
+<li><p><strong>register_addr</strong> – Starting device address to write to.</p></li>
+<li><p><strong>address_type</strong> – Device type: “1”/”D”, “2”/”M”, “3”/”X”, or “4”/”Y”.</p></li>
+<li><p><strong>protocol</strong> – MC frame type: “1”/”MC_1E” or “2”/”MC_3E”.</p></li>
+<li><p><strong>function_code</strong> – 3 (write_bit) or 4 (write_word).</p></li>
+<li><p><strong>payload_field</strong> – List of values to write (1-40 entries), range
+depends on <code class="docutils literal notranslate"><span class="pre">function_code</span></code> as described above.</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed write — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<cite>flow_manager_args.done()</cite> is called on
+completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “STOP”
+and the write failed, which raises instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 3 or 4,
+    <code class="docutils literal notranslate"><span class="pre">address_type/&#64;p</span></code> protocol cannot be
+    resolved, or <code class="docutils literal notranslate"><span class="pre">payload_field</span></code> is missing/out
+    of range; and, under “STOP”, if the write
+    fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_modbus_read">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_modbus_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_read</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_variable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_modbus_read" title="Link to this definition">#</a></dt>
+<dd><p>Reads Modbus holding or input registers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects the register type: 3 reads holding registers
+(READ_HOLDING), 4 reads input registers (READ_INPUT).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – Modbus server IP address.</p></li>
+<li><p><strong>server_port</strong> – Modbus server port.</p></li>
+<li><p><strong>function_code</strong> – 3 (READ_HOLDING) or 4 (READ_INPUT).</p></li>
+<li><p><strong>register_addr</strong> – Starting register address to read from.</p></li>
+<li><p><strong>number_of_read</strong> – Number of registers to read.</p></li>
+<li><p><strong>return_variable_name</strong> – PyFM variable name that will receive the
+read registers (<code class="docutils literal notranslate"><span class="pre">RpcResult::regs).</span></code></p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed read — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>timeout_sec</strong> – Read timeout in seconds. Defaults to 1.0.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<code class="docutils literal notranslate"><span class="pre">return_variable_name</span></code> is written into its
+context and <cite>flow_manager_args.done()</cite> is
+called on completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code>
+is “STOP” and the read failed, which raises
+instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call (success flag plus the read
+registers in <code class="docutils literal notranslate"><span class="pre">regs).</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 3 or 4; and, under
+    “STOP”, if the read fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_modbus_write">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_modbus_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_modbus_write" title="Link to this definition">#</a></dt>
+<dd><p>Writes Modbus holding registers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects the write mode: 6 writes a single register
+(WRITE_SINGLE_REG), 16 writes multiple registers (WRITE_MULTI_REGS).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – Modbus server IP address.</p></li>
+<li><p><strong>server_port</strong> – Modbus server port.</p></li>
+<li><p><strong>function_code</strong> – 6 (WRITE_SINGLE_REG) or 16 (WRITE_MULTI_REGS).</p></li>
+<li><p><strong>register_addr</strong> – Starting register address to write to.</p></li>
+<li><p><strong>payload_field</strong> – List of register values to write (1-40 entries,
+each in [0, 65535]).</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed write — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>timeout_sec</strong> – Write timeout in seconds. Defaults to 1.0.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<cite>flow_manager_args.done()</cite> is called on
+completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “STOP”
+and the write failed, which raises instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 6 or 16, or
+    <code class="docutils literal notranslate"><span class="pre">payload_field</span></code> is missing/out of range;
+    and, under “STOP”, if the write fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_socket_connect">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_socket_connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_socket_connect" title="Link to this definition">#</a></dt>
+<dd><p>Opens a socket connection and registers the session under
+<code class="docutils literal notranslate"><span class="pre">module_name.</span></code></p>
+<p>Only creates the session (<code class="docutils literal notranslate"><span class="pre">connect_sock());</span></code> it does not wait for a
+response, so unlike the other execute_* calls in this file the GIL is
+not released while the call runs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – Socket server IP address.</p></li>
+<li><p><strong>server_port</strong> – Socket server port.</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed connect — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<cite>flow_manager_args.done()</cite> is called on
+completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “STOP”
+and the connect failed, which raises instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the connection was established; false otherwise.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – Under “STOP”, if the connect fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_socket_read">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_socket_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_variable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_sec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_socket_read" title="Link to this definition">#</a></dt>
+<dd><p>Receives data over a socket connection.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects how the received payload is decoded before
+being stored: 1 keeps it as the raw byte list, 2 decodes it as a UTF-8
+string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – Socket server IP address.</p></li>
+<li><p><strong>server_port</strong> – Socket server port.</p></li>
+<li><p><strong>function_code</strong> – 1 (raw bytes) or 2 (UTF-8 string).</p></li>
+<li><p><strong>return_variable_name</strong> – PyFM variable name that will receive the
+decoded payload.</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed receive — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>timeout_sec</strong> – Receive timeout in seconds. Defaults to 1.0.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<code class="docutils literal notranslate"><span class="pre">return_variable_name</span></code> is written into its
+context and <cite>flow_manager_args.done()</cite> is
+called on completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code>
+is “STOP” and the receive failed, which raises
+instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call (success flag plus the raw payload
+in <code class="docutils literal notranslate"><span class="pre">payload).</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 1 or 2, or the
+    payload cannot be decoded as UTF-8; and, under
+    “STOP”, if the receive fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_socket_write">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_socket_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_socket_write" title="Link to this definition">#</a></dt>
+<dd><p>Sends data over a socket connection.</p>
+<p><code class="docutils literal notranslate"><span class="pre">function_code</span></code> selects how <code class="docutils literal notranslate"><span class="pre">payload</span></code> is encoded before sending: 3
+(BYTES) splits <code class="docutils literal notranslate"><span class="pre">payload</span></code> on the delimiter read from
+<cite>flow_manager_args.args[“data”][“split”]</cite> and parses each token as an
+integer byte value; 4 (ASCII) encodes <code class="docutils literal notranslate"><span class="pre">payload</span></code> directly as ASCII
+bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – Socket server IP address.</p></li>
+<li><p><strong>server_port</strong> – Socket server port.</p></li>
+<li><p><strong>function_code</strong> – 3 (BYTES, delimiter-split) or 4 (ASCII).</p></li>
+<li><p><strong>payload</strong> – String payload to send; interpretation depends on
+<code class="docutils literal notranslate"><span class="pre">function_code</span></code> as described above.</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed send — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context, required when
+<code class="docutils literal notranslate"><span class="pre">function_code</span></code> is 3 to look up the split
+delimiter. <cite>flow_manager_args.done()</cite> is called
+on completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is
+“STOP” and the send failed, which raises
+instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 3 or 4, the BYTES
+    split delimiter is missing, or <code class="docutils literal notranslate"><span class="pre">payload</span></code>
+    cannot be parsed/encoded; and, under “STOP”,
+    if the send fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_xgt_read">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_xgt_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpu_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_read</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_variable_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_xgt_read" title="Link to this definition">#</a></dt>
+<dd><p>Reads XGT (LS Electric) protocol device values.</p>
+<p>Only <code class="docutils literal notranslate"><span class="pre">function_code</span></code> 1 (read_byte) is currently supported.
+<code class="docutils literal notranslate"><span class="pre">cpu_type</span></code> and <code class="docutils literal notranslate"><span class="pre">device_type</span></code> resolve the target XgtCPUinfo and
+XgtDeviceType respectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – XGT server IP address.</p></li>
+<li><p><strong>server_port</strong> – XGT server port.</p></li>
+<li><p><strong>register_addr</strong> – Starting device address to read from.</p></li>
+<li><p><strong>cpu_type</strong> – CPU type: “XGK”, “XGI”, “XBC”, “XEC”, or “NONE”.</p></li>
+<li><p><strong>device_type</strong> – Device type; only “DB” is currently supported.</p></li>
+<li><p><strong>function_code</strong> – Must be 1 (read_byte).</p></li>
+<li><p><strong>number_of_read</strong> – Number of devices to read.</p></li>
+<li><p><strong>return_variable_name</strong> – PyFM variable name that will receive the
+read values (<code class="docutils literal notranslate"><span class="pre">RpcResult::data_word_xgt).</span></code></p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed read — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<code class="docutils literal notranslate"><span class="pre">return_variable_name</span></code> is written into its
+context and <cite>flow_manager_args.done()</cite> is
+called on completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code>
+is “STOP” and the read failed, which raises
+instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call (success flag plus the read values
+in <code class="docutils literal notranslate"><span class="pre">data_word_xgt).</span></code></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 1, or
+    <code class="docutils literal notranslate"><span class="pre">cpu_type/&#64;p</span></code> device_type cannot be
+    resolved; and, under “STOP”, if the read
+    fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.execute_xgt_write">
+<span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">execute_xgt_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcManager" title="rb_sdk.rb_sdk_cpp.RpcManager"><span class="pre">rb_sdk.rb_sdk_cpp.RpcManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_ip</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server_port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">register_addr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cpu_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolve_option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'SKIP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alarm_fn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RpcResult" title="rb_sdk.rb_sdk_cpp.RpcResult"><span class="pre">rb_sdk.rb_sdk_cpp.RpcResult</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.execute_xgt_write" title="Link to this definition">#</a></dt>
+<dd><p>Writes XGT (LS Electric) protocol device values.</p>
+<p>Only <code class="docutils literal notranslate"><span class="pre">function_code</span></code> 3 (write_byte) is currently supported.
+<code class="docutils literal notranslate"><span class="pre">cpu_type</span></code> and <code class="docutils literal notranslate"><span class="pre">device_type</span></code> resolve the target XgtCPUinfo and
+XgtDeviceType respectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rpc</strong> – RpcManager handle for the target connection, obtained via
+RBProgramSDK::get_rpc(module_name).</p></li>
+<li><p><strong>module_name</strong> – PyFM task id identifying the calling step/task.</p></li>
+<li><p><strong>server_ip</strong> – XGT server IP address.</p></li>
+<li><p><strong>server_port</strong> – XGT server port.</p></li>
+<li><p><strong>register_addr</strong> – Starting device address to write to.</p></li>
+<li><p><strong>cpu_type</strong> – CPU type: “XGK”, “XGI”, “XBC”, “XEC”, or “NONE”.</p></li>
+<li><p><strong>device_type</strong> – Device type; only “DB” is currently supported.</p></li>
+<li><p><strong>function_code</strong> – Must be 3 (write_byte).</p></li>
+<li><p><strong>payload_field</strong> – List of values to write (1-40 entries, each in
+[-32768, 32767]).</p></li>
+<li><p><strong>resolve_option</strong> – How to handle a failed write — “SKIP” continues
+without effect, “STOP” raises immediately, “ASK”
+fires <code class="docutils literal notranslate"><span class="pre">alarm_fn</span></code> and pauses the PyFM context
+(requires <code class="docutils literal notranslate"><span class="pre">flow_manager_args).</span></code> Defaults to
+“SKIP”.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context.
+<cite>flow_manager_args.done()</cite> is called on
+completion (unless <code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “STOP”
+and the write failed, which raises instead).</p></li>
+<li><p><strong>alarm_fn</strong> – Optional (title, content) callback used only when
+<code class="docutils literal notranslate"><span class="pre">resolve_option</span></code> is “ASK”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>RpcResult from the native call.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">function_code</span></code> is not 3, <code class="docutils literal notranslate"><span class="pre">cpu_type/&#64;p</span></code>
+    device_type cannot be resolved, or
+    <code class="docutils literal notranslate"><span class="pre">payload_field</span></code> is missing/out of range;
+    and, under “STOP”, if the write fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rb_sdk.rb_sdk_cpp.manipulate.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Manipulate</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rb_sdk.rb_sdk_cpp.plugin_program_context.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plugin Program Context</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.alarm()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.alarm_or_halt"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.alarm_or_halt()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.all_pause"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.all_pause()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.all_stop"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.all_stop()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.before_close"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.before_close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.call_event_tree"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.call_event_tree()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.change_program"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.change_program()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.debug_variables"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.debug_variables()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.get_digital_input"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.get_digital_input()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.get_rpc"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.get_rpc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.interface"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.interface()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.log"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.log()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.make_script"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.make_script()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.plugin_execute"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.plugin_execute()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.set_variables"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.set_variables()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.simple_wait"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.simple_wait()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.user_input"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.user_input()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.user_select"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.user_select()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBProgramSDK.wait"><code class="docutils literal notranslate"><span class="pre">RBProgramSDK.wait()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcManager"><code class="docutils literal notranslate"><span class="pre">RpcManager</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult"><code class="docutils literal notranslate"><span class="pre">RpcResult</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.bits"><code class="docutils literal notranslate"><span class="pre">RpcResult.bits</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_bit"><code class="docutils literal notranslate"><span class="pre">RpcResult.data_bit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_bit_fins"><code class="docutils literal notranslate"><span class="pre">RpcResult.data_bit_fins</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word"><code class="docutils literal notranslate"><span class="pre">RpcResult.data_word</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word_fins"><code class="docutils literal notranslate"><span class="pre">RpcResult.data_word_fins</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.data_word_xgt"><code class="docutils literal notranslate"><span class="pre">RpcResult.data_word_xgt</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.error"><code class="docutils literal notranslate"><span class="pre">RpcResult.error</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.payload"><code class="docutils literal notranslate"><span class="pre">RpcResult.payload</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.regs"><code class="docutils literal notranslate"><span class="pre">RpcResult.regs</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RpcResult.success"><code class="docutils literal notranslate"><span class="pre">RpcResult.success</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.call_event_tree"><code class="docutils literal notranslate"><span class="pre">call_event_tree()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_mc_read"><code class="docutils literal notranslate"><span class="pre">execute_mc_read()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_mc_write"><code class="docutils literal notranslate"><span class="pre">execute_mc_write()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_modbus_read"><code class="docutils literal notranslate"><span class="pre">execute_modbus_read()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_modbus_write"><code class="docutils literal notranslate"><span class="pre">execute_modbus_write()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_socket_connect"><code class="docutils literal notranslate"><span class="pre">execute_socket_connect()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_socket_read"><code class="docutils literal notranslate"><span class="pre">execute_socket_read()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_socket_write"><code class="docutils literal notranslate"><span class="pre">execute_socket_write()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_xgt_read"><code class="docutils literal notranslate"><span class="pre">execute_xgt_read()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.execute_xgt_write"><code class="docutils literal notranslate"><span class="pre">execute_xgt_write()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/rb_sdk.rb_sdk_cpp.program.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

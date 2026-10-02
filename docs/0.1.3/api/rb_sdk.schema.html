@@ -1,0 +1,1110 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ko" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>rb_sdk.schema package &#8212; rb-sdk 0.1.3 문서</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../_static/documentation_options.js?v=e1502d85"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/translations.js?v=afa94a99"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/rb_sdk.schema';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.3';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="FlatBuffers 반환 타입" href="return_types.html" />
+    <link rel="prev" title="rb_sdk.rby1_sdk package" href="rb_sdk.rby1_sdk.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ko"/>
+  <meta name="docsearch:version" content="0.1.3" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.3 문서</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rb_sdk.html">rb_sdk package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="rb_sdk.amr_sdk.html">rb_sdk.amr_sdk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="rb_sdk.amr_sdk.schema.html">rb_sdk.amr_sdk.schema package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.base_sdk.html">rb_sdk.base_sdk package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rby1_sdk.html">rb_sdk.rby1_sdk package</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">rb_sdk.schema package</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">rb_sdk</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="rb_sdk.html" class="nav-link">rb_sdk package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_sdk.schema package</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rb-sdk-schema-package">
+<h1>rb_sdk.schema package<a class="headerlink" href="#rb-sdk-schema-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-rb_sdk.schema.amr_schema">
+<span id="rb-sdk-schema-amr-schema-module"></span><h2>rb_sdk.schema.amr_schema module<a class="headerlink" href="#module-rb_sdk.schema.amr_schema" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-rb_sdk.schema.rby1_schema">
+<span id="rb-sdk-schema-rby1-schema-module"></span><h2>rb_sdk.schema.rby1_schema module<a class="headerlink" href="#module-rb_sdk.schema.rby1_schema" title="Link to this heading">#</a></h2>
+<p>RB-Y1 SDK 스키마 (TypedDict).</p>
+<p>공식 <code class="docutils literal notranslate"><span class="pre">rby1_sdk</span></code> 의 pybind 구조체(RobotState_* 등)를 순수 dict 로 변환할 때의
+스키마. SDK 레이어는 런타임 오버헤드 0 인 <strong>TypedDict</strong> 만 노출한다.
+Pydantic 모델이 필요하면 services 레이어에서 이 TypedDict 로 파생한다.</p>
+<dl class="simple">
+<dt>변환 엔진은 <code class="docutils literal notranslate"><span class="pre">rb_sdk.rby1_sdk.base.RBRby1BaseSDK.struct_to_dict</span></code> 참조.</dt><dd><ul class="simple">
+<li><p>관절 벡터는 numpy ndarray → list[float], enum → str(name), datetime 유지</p></li>
+<li><p>A/M/UB가 동일 필드를 공유. DOF = robot.model().robot_dof (A=24, M=23, UB=18)</p></li>
+<li><p>total=False: pybind 객체에서 일부 필드 추출 실패해도 부분 직렬화 허용</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.BatteryStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">BatteryStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#BatteryStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.BatteryStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.BatteryStateTD.current">
+<span class="sig-name descname"><span class="pre">current</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.current" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.BatteryStateTD.level_percent">
+<span class="sig-name descname"><span class="pre">level_percent</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.level_percent" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.BatteryStateTD.voltage">
+<span class="sig-name descname"><span class="pre">voltage</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.voltage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">ControlManagerStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#ControlManagerStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD.control_state">
+<span class="sig-name descname"><span class="pre">control_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.control_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD.enabled_joint_idx">
+<span class="sig-name descname"><span class="pre">enabled_joint_idx</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.enabled_joint_idx" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD.time_scale">
+<span class="sig-name descname"><span class="pre">time_scale</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.time_scale" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ControlManagerStateTD.unlimited_mode_enabled">
+<span class="sig-name descname"><span class="pre">unlimited_mode_enabled</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.unlimited_mode_enabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.EMOStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">EMOStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#EMOStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.EMOStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.EMOStateTD.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.EMOStateTD.state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.FTSensorDataTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">FTSensorDataTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#FTSensorDataTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.FTSensorDataTD.force">
+<span class="sig-name descname"><span class="pre">force</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.force" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.FTSensorDataTD.time_since_last_update">
+<span class="sig-name descname"><span class="pre">time_since_last_update</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.time_since_last_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.FTSensorDataTD.torque">
+<span class="sig-name descname"><span class="pre">torque</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.torque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">JointStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#JointStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.current">
+<span class="sig-name descname"><span class="pre">current</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.current" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.fet_state">
+<span class="sig-name descname"><span class="pre">fet_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.fet_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.init_state">
+<span class="sig-name descname"><span class="pre">init_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.init_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.is_ready">
+<span class="sig-name descname"><span class="pre">is_ready</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.is_ready" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.motor_state">
+<span class="sig-name descname"><span class="pre">motor_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.motor_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.motor_type">
+<span class="sig-name descname"><span class="pre">motor_type</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.motor_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.position">
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.power_on">
+<span class="sig-name descname"><span class="pre">power_on</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.power_on" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.run_state">
+<span class="sig-name descname"><span class="pre">run_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.run_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.target_feedback_gain">
+<span class="sig-name descname"><span class="pre">target_feedback_gain</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_feedback_gain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.target_feedforward_torque">
+<span class="sig-name descname"><span class="pre">target_feedforward_torque</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_feedforward_torque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.target_position">
+<span class="sig-name descname"><span class="pre">target_position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.target_velocity">
+<span class="sig-name descname"><span class="pre">target_velocity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_velocity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.temperature">
+<span class="sig-name descname"><span class="pre">temperature</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.temperature" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.time_since_last_update">
+<span class="sig-name descname"><span class="pre">time_since_last_update</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.time_since_last_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.torque">
+<span class="sig-name descname"><span class="pre">torque</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.torque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.JointStateTD.velocity">
+<span class="sig-name descname"><span class="pre">velocity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.JointStateTD.velocity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.PowerStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">PowerStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#PowerStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.PowerStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.PowerStateTD.state">
+<span class="sig-name descname"><span class="pre">state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.PowerStateTD.state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.PowerStateTD.voltage">
+<span class="sig-name descname"><span class="pre">voltage</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.PowerStateTD.voltage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">RobotStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#RobotStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<p>RB-Y1 RobotState (한 시점 전체 스냅샷).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.battery_state">
+<span class="sig-name descname"><span class="pre">battery_state</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.BatteryStateTD" title="rb_sdk.schema.rby1_schema.BatteryStateTD"><span class="pre">BatteryStateTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.battery_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.center_of_mass">
+<span class="sig-name descname"><span class="pre">center_of_mass</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.center_of_mass" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.collisions">
+<span class="sig-name descname"><span class="pre">collisions</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.collisions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.current">
+<span class="sig-name descname"><span class="pre">current</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.current" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.emo_states">
+<span class="sig-name descname"><span class="pre">emo_states</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.EMOStateTD" title="rb_sdk.schema.rby1_schema.EMOStateTD"><span class="pre">EMOStateTD</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.emo_states" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_left">
+<span class="sig-name descname"><span class="pre">ft_sensor_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD" title="rb_sdk.schema.rby1_schema.FTSensorDataTD"><span class="pre">FTSensorDataTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_left" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_right">
+<span class="sig-name descname"><span class="pre">ft_sensor_right</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD" title="rb_sdk.schema.rby1_schema.FTSensorDataTD"><span class="pre">FTSensorDataTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_right" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.gravity">
+<span class="sig-name descname"><span class="pre">gravity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.gravity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.is_ready">
+<span class="sig-name descname"><span class="pre">is_ready</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.is_ready" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.joint_states">
+<span class="sig-name descname"><span class="pre">joint_states</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.JointStateTD" title="rb_sdk.schema.rby1_schema.JointStateTD"><span class="pre">JointStateTD</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.joint_states" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.odometry">
+<span class="sig-name descname"><span class="pre">odometry</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.odometry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.position">
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.power_states">
+<span class="sig-name descname"><span class="pre">power_states</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.PowerStateTD" title="rb_sdk.schema.rby1_schema.PowerStateTD"><span class="pre">PowerStateTD</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.power_states" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.system_stat">
+<span class="sig-name descname"><span class="pre">system_stat</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.SystemStatTD" title="rb_sdk.schema.rby1_schema.SystemStatTD"><span class="pre">SystemStatTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.system_stat" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.target_feedback_gain">
+<span class="sig-name descname"><span class="pre">target_feedback_gain</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_feedback_gain" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.target_feedforward_torque">
+<span class="sig-name descname"><span class="pre">target_feedforward_torque</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_feedforward_torque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.target_position">
+<span class="sig-name descname"><span class="pre">target_position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_position" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.target_velocity">
+<span class="sig-name descname"><span class="pre">target_velocity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_velocity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.temperature">
+<span class="sig-name descname"><span class="pre">temperature</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.temperature" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.timestamp" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_left">
+<span class="sig-name descname"><span class="pre">tool_flange_left</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD" title="rb_sdk.schema.rby1_schema.ToolFlangeStateTD"><span class="pre">ToolFlangeStateTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_left" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_right">
+<span class="sig-name descname"><span class="pre">tool_flange_right</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD" title="rb_sdk.schema.rby1_schema.ToolFlangeStateTD"><span class="pre">ToolFlangeStateTD</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_right" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.torque">
+<span class="sig-name descname"><span class="pre">torque</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.torque" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.RobotStateTD.velocity">
+<span class="sig-name descname"><span class="pre">velocity</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.RobotStateTD.velocity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.SystemStatTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">SystemStatTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#SystemStatTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.SystemStatTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.SystemStatTD.cpu_usage">
+<span class="sig-name descname"><span class="pre">cpu_usage</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.SystemStatTD.cpu_usage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.SystemStatTD.memory_usage">
+<span class="sig-name descname"><span class="pre">memory_usage</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.SystemStatTD.memory_usage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.SystemStatTD.program_uptime">
+<span class="sig-name descname"><span class="pre">program_uptime</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.SystemStatTD.program_uptime" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.SystemStatTD.uptime">
+<span class="sig-name descname"><span class="pre">uptime</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.SystemStatTD.uptime" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.schema.rby1_schema.</span></span><span class="sig-name descname"><span class="pre">ToolFlangeStateTD</span></span><a class="reference internal" href="../_modules/rb_sdk/schema/rby1_schema.html#ToolFlangeStateTD"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD" title="Link to this definition">#</a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.acceleration">
+<span class="sig-name descname"><span class="pre">acceleration</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.acceleration" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_A">
+<span class="sig-name descname"><span class="pre">digital_input_A</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_A" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_B">
+<span class="sig-name descname"><span class="pre">digital_input_B</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_B" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_A">
+<span class="sig-name descname"><span class="pre">digital_output_A</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_A" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_B">
+<span class="sig-name descname"><span class="pre">digital_output_B</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_B" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.gyro">
+<span class="sig-name descname"><span class="pre">gyro</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="return_types.html#rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list" title="rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT.list"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.gyro" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.output_voltage">
+<span class="sig-name descname"><span class="pre">output_voltage</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.output_voltage" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.switch_A">
+<span class="sig-name descname"><span class="pre">switch_A</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.switch_A" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="rb_sdk.schema.rby1_schema.ToolFlangeStateTD.time_since_last_update">
+<span class="sig-name descname"><span class="pre">time_since_last_update</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.time_since_last_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-rb_sdk.schema">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-rb_sdk.schema" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rb_sdk.rby1_sdk.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">이전</p>
+        <p class="prev-next-title">rb_sdk.rby1_sdk package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="return_types.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">다음</p>
+        <p class="prev-next-title">FlatBuffers 반환 타입</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rb_sdk.schema.amr_schema">rb_sdk.schema.amr_schema module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rb_sdk.schema.rby1_schema">rb_sdk.schema.rby1_schema module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.BatteryStateTD"><code class="docutils literal notranslate"><span class="pre">BatteryStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.current"><code class="docutils literal notranslate"><span class="pre">BatteryStateTD.current</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.level_percent"><code class="docutils literal notranslate"><span class="pre">BatteryStateTD.level_percent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.BatteryStateTD.voltage"><code class="docutils literal notranslate"><span class="pre">BatteryStateTD.voltage</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.control_state"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD.control_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.enabled_joint_idx"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD.enabled_joint_idx</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.state"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD.state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.time_scale"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD.time_scale</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ControlManagerStateTD.unlimited_mode_enabled"><code class="docutils literal notranslate"><span class="pre">ControlManagerStateTD.unlimited_mode_enabled</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.EMOStateTD"><code class="docutils literal notranslate"><span class="pre">EMOStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.EMOStateTD.state"><code class="docutils literal notranslate"><span class="pre">EMOStateTD.state</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD"><code class="docutils literal notranslate"><span class="pre">FTSensorDataTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.force"><code class="docutils literal notranslate"><span class="pre">FTSensorDataTD.force</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.time_since_last_update"><code class="docutils literal notranslate"><span class="pre">FTSensorDataTD.time_since_last_update</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.FTSensorDataTD.torque"><code class="docutils literal notranslate"><span class="pre">FTSensorDataTD.torque</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD"><code class="docutils literal notranslate"><span class="pre">JointStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.current"><code class="docutils literal notranslate"><span class="pre">JointStateTD.current</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.fet_state"><code class="docutils literal notranslate"><span class="pre">JointStateTD.fet_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.init_state"><code class="docutils literal notranslate"><span class="pre">JointStateTD.init_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.is_ready"><code class="docutils literal notranslate"><span class="pre">JointStateTD.is_ready</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.motor_state"><code class="docutils literal notranslate"><span class="pre">JointStateTD.motor_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.motor_type"><code class="docutils literal notranslate"><span class="pre">JointStateTD.motor_type</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.position"><code class="docutils literal notranslate"><span class="pre">JointStateTD.position</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.power_on"><code class="docutils literal notranslate"><span class="pre">JointStateTD.power_on</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.run_state"><code class="docutils literal notranslate"><span class="pre">JointStateTD.run_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_feedback_gain"><code class="docutils literal notranslate"><span class="pre">JointStateTD.target_feedback_gain</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_feedforward_torque"><code class="docutils literal notranslate"><span class="pre">JointStateTD.target_feedforward_torque</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_position"><code class="docutils literal notranslate"><span class="pre">JointStateTD.target_position</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.target_velocity"><code class="docutils literal notranslate"><span class="pre">JointStateTD.target_velocity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.temperature"><code class="docutils literal notranslate"><span class="pre">JointStateTD.temperature</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.time_since_last_update"><code class="docutils literal notranslate"><span class="pre">JointStateTD.time_since_last_update</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.torque"><code class="docutils literal notranslate"><span class="pre">JointStateTD.torque</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.JointStateTD.velocity"><code class="docutils literal notranslate"><span class="pre">JointStateTD.velocity</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.PowerStateTD"><code class="docutils literal notranslate"><span class="pre">PowerStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.PowerStateTD.state"><code class="docutils literal notranslate"><span class="pre">PowerStateTD.state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.PowerStateTD.voltage"><code class="docutils literal notranslate"><span class="pre">PowerStateTD.voltage</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD"><code class="docutils literal notranslate"><span class="pre">RobotStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.battery_state"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.battery_state</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.center_of_mass"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.center_of_mass</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.collisions"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.collisions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.current"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.current</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.emo_states"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.emo_states</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_left"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.ft_sensor_left</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.ft_sensor_right"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.ft_sensor_right</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.gravity"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.gravity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.is_ready"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.is_ready</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.joint_states"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.joint_states</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.odometry"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.odometry</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.position"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.position</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.power_states"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.power_states</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.system_stat"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.system_stat</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_feedback_gain"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.target_feedback_gain</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_feedforward_torque"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.target_feedforward_torque</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_position"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.target_position</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.target_velocity"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.target_velocity</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.temperature"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.temperature</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.timestamp"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.timestamp</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_left"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.tool_flange_left</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.tool_flange_right"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.tool_flange_right</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.torque"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.torque</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.RobotStateTD.velocity"><code class="docutils literal notranslate"><span class="pre">RobotStateTD.velocity</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.SystemStatTD"><code class="docutils literal notranslate"><span class="pre">SystemStatTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.SystemStatTD.cpu_usage"><code class="docutils literal notranslate"><span class="pre">SystemStatTD.cpu_usage</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.SystemStatTD.memory_usage"><code class="docutils literal notranslate"><span class="pre">SystemStatTD.memory_usage</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.SystemStatTD.program_uptime"><code class="docutils literal notranslate"><span class="pre">SystemStatTD.program_uptime</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.SystemStatTD.uptime"><code class="docutils literal notranslate"><span class="pre">SystemStatTD.uptime</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.acceleration"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.acceleration</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_A"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.digital_input_A</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_input_B"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.digital_input_B</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_A"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.digital_output_A</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.digital_output_B"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.digital_output_B</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.gyro"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.gyro</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.output_voltage"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.output_voltage</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.switch_A"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.switch_A</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.schema.rby1_schema.ToolFlangeStateTD.time_since_last_update"><code class="docutils literal notranslate"><span class="pre">ToolFlangeStateTD.time_since_last_update</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-rb_sdk.schema">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/rb_sdk.schema.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> 소스 보기
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0 버전으로 생성되었습니다.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

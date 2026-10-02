@@ -1,0 +1,27 @@
+Exceptions
+==========
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PluginRouteError
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.ZenohNoReply
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.ZenohQueryException
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.ZenohReplyError
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.ZenohTransportError
+   :members:
+   :show-inheritance:
+   :undoc-members:

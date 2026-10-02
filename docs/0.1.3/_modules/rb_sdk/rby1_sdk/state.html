@@ -1,0 +1,791 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ko" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rb_sdk.rby1_sdk.state &#8212; rb-sdk 0.1.3 문서</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../_static/documentation_options.js?v=e1502d85"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/translations.js?v=afa94a99"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rb_sdk/rby1_sdk/state';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.3';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ko"/>
+  <meta name="docsearch:version" content="0.1.3" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.3 문서</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">모듈 코드</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_sdk.rby1_sdk.state</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>rb_sdk.rby1_sdk.state의 소스 코드</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;RB-Y1 State SDK.</span>
+
+<span class="sd">모든 호출 메서드는 ``async def`` — 공식 ``rby1_sdk``가 sync gRPC stub이라</span>
+<span class="sd">``asyncio.to_thread`` 로 worker thread에 위임한다. 자세한 이유는 ``README.md`` 참조.</span>
+
+<span class="sd">스키마 정책:</span>
+<span class="sd">    SDK 레이어는 **TypedDict** (런타임 오버헤드 0, 고주파 스트림에 적합)만 노출한다.</span>
+<span class="sd">    Pydantic 모델이 필요하면 services 레이어에서 이 TypedDict로 파생한다</span>
+<span class="sd">    (예: ``pydantic.create_model`` / ``TypeAdapter``). SDK는 Pydantic에 의존하지 않는다.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections.abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_schemas.sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">FlowManagerArgs</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..schema.rby1_schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">ControlManagerStateTD</span><span class="p">,</span> <span class="n">RobotStateTD</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">RBRby1BaseSDK</span>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK">[문서]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">RBRby1StateSDK</span><span class="p">(</span><span class="n">RBRby1BaseSDK</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rainbow Robotics RB-Y1 State SDK&quot;&quot;&quot;</span>
+
+    <span class="c1"># ------------------------------------------------------------------</span>
+    <span class="c1"># 변환 — 공통 엔진은 ``RBRby1BaseSDK.struct_to_dict`` (base.py).</span>
+    <span class="c1">#   여기선 RobotState 전용 TypedDict 를 그 엔진에 물려주는 얇은 래퍼만 둔다.</span>
+    <span class="c1">#   staticmethod 라 __init_subclass__ 의 safe-handler 래핑에서 제외된다.</span>
+    <span class="c1"># ------------------------------------------------------------------</span>
+<div class="viewcode-block" id="RBRby1StateSDK.robot_state_to_dict">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.robot_state_to_dict">[문서]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">robot_state_to_dict</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RobotStateTD</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;공식 ``rby1_sdk`` ``RobotState_*`` 구조체 → ``RobotStateTD`` (순수 dict).</span>
+
+<span class="sd">        이미 dict 면 그대로 반환 (테스트/호환성).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">s</span>  <span class="c1"># type: ignore[return-value]</span>
+        <span class="k">return</span> <span class="n">RBRby1BaseSDK</span><span class="o">.</span><span class="n">struct_to_dict</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">RobotStateTD</span><span class="p">)</span>  <span class="c1"># type: ignore[return-value]</span></div>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK.control_manager_state_to_dict">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.control_manager_state_to_dict">[문서]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">control_manager_state_to_dict</span><span class="p">(</span><span class="n">o</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ControlManagerStateTD</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;``ControlManagerState`` → ``ControlManagerStateTD`` (start_state_stream 2번째 인자용).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">RBRby1BaseSDK</span><span class="o">.</span><span class="n">struct_to_dict</span><span class="p">(</span><span class="n">o</span><span class="p">,</span> <span class="n">ControlManagerStateTD</span><span class="p">)</span>  <span class="c1"># type: ignore[return-value]</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_get_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RobotStateTD</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;worker thread에서 실행될 sync 호출 (``get_state`` 호환 메서드 fallback 포함).&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;get_state&quot;</span><span class="p">,</span> <span class="s2">&quot;GetState&quot;</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">):</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot_state_to_dict</span><span class="p">(</span><span class="n">fn</span><span class="p">())</span>
+
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1 get_state not found on </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RBRby1StateSDK.get_state">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.get_state">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_state</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RobotStateTD</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 상태 조회] — 전체 RobotState 스냅샷 (TypedDict).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_get_state</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK.get_robot_info">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.get_robot_info">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_robot_info</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 robot info 조회] — ``robot.get_robot_info()``.&quot;&quot;&quot;</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_client</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">whoami</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_get_control_manager_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ControlManagerStateTD</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;worker thread 전용 — ``robot.get_control_manager_state()`` 원샷 조회.&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_manager_state_to_dict</span><span class="p">(</span><span class="n">robot</span><span class="o">.</span><span class="n">get_control_manager_state</span><span class="p">())</span>
+
+<div class="viewcode-block" id="RBRby1StateSDK.get_control_manager_state">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.get_control_manager_state">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_control_manager_state</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ControlManagerStateTD</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 컨트롤 매니저 상태 원샷 조회] ``time_scale``, ``enabled_joint_idx``,</span>
+<span class="sd">        ``unlimited_mode_enabled`` 등. 스트리밍 구독(``start_state_stream``) 없이</span>
+<span class="sd">        현재 값을 한 번만 확인하고 싶을 때 씀 (``start_state_stream``의 2번째 콜백</span>
+<span class="sd">        인자로도 계속 받을 수 있음).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_get_control_manager_state</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_get_joint_limits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;worker thread 전용 — dynamics 모델에서 관절별 리밋 조회.&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">dyn</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_dynamics</span><span class="p">()</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_joint_names</span><span class="p">())</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">dyn</span><span class="o">.</span><span class="n">make_state</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_link_names</span><span class="p">(),</span> <span class="n">names</span><span class="p">)</span>
+
+        <span class="n">q_lo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_q_lower</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">q_hi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_q_upper</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">v_lo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_qdot_lower</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">v_hi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_qdot_upper</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">a_lo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_qddot_lower</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">a_hi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_qddot_upper</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">tq</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_torque</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">name</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;position&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">q_lo</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">q_hi</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>       <span class="c1"># [lower, upper] rad</span>
+                <span class="s2">&quot;velocity&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">v_lo</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">v_hi</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>       <span class="c1"># rad/s</span>
+                <span class="s2">&quot;acceleration&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">a_lo</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">a_hi</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>   <span class="c1"># rad/s^2</span>
+                <span class="s2">&quot;torque&quot;</span><span class="p">:</span> <span class="n">tq</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>                      <span class="c1"># Nm</span>
+            <span class="p">}</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+        <span class="p">}</span>
+
+<div class="viewcode-block" id="RBRby1StateSDK.get_joint_limits">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.get_joint_limits">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_joint_limits</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 관절 리밋 조회] 관절명 → {position/velocity/acceleration [lower,upper], torque}.</span>
+
+<span class="sd">        move_joint_position 전에 target 이 position 리밋 안에 드는지 검증하는 용도.</span>
+<span class="sd">        (rby1 은 리밋 초과 시 에러 없이 해당 관절을 현재 위치에 hold 하므로, 사전 검증 필요.)</span>
+<span class="sd">        wheel_* 은 연속회전이라 리밋이 ±float max 로 사실상 무한대.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_get_joint_limits</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_start_state_stream</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">on_state</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">rate</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;worker thread에서 실행될 sync 호출 (``start_state_update`` 호환 fallback 포함).&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;start_state_update&quot;</span><span class="p">,</span> <span class="s2">&quot;StartStateUpdate&quot;</span><span class="p">):</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+                <span class="n">fn</span><span class="p">(</span><span class="n">on_state</span><span class="p">,</span> <span class="n">rate</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1 start_state_update not found on </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_stop_state_stream</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;worker thread에서 실행될 sync 호출 (``stop_state_update`` 호환 fallback 포함).&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;stop_state_update&quot;</span><span class="p">,</span> <span class="s2">&quot;StopStateUpdate&quot;</span><span class="p">):</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+                <span class="n">fn</span><span class="p">()</span>
+                <span class="k">return</span>
+
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1 stop_state_update not found on </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="RBRby1StateSDK.start_state_stream">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.start_state_stream">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">start_state_stream</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">on_state</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">rate</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 상태 고주파 구독 시작]</span>
+
+<span class="sd">        공식 ``rby1_sdk``의 ``robot.start_state_update(cb, rate)`` 래퍼.</span>
+<span class="sd">        ``on_state``는 ``rate`` Hz로 호출되며 인자는 1개(``robot_state``) 또는</span>
+<span class="sd">        2개(``robot_state, control_manager_state``)를 받을 수 있다.</span>
+
+<span class="sd">        콜백에 넘어오는 인자는 **raw pybind 객체**다. dict로 변환하려면 콜백 안에서</span>
+<span class="sd">        ``RBRby1StateSDK.robot_state_to_dict(...)`` /</span>
+<span class="sd">        ``RBRby1StateSDK.control_manager_state_to_dict(...)`` 를 호출할 것.</span>
+
+<span class="sd">        주의: ``on_state`` 콜백은 gRPC 핸들러 **전용 스레드**에서 호출된다 —</span>
+<span class="sd">        블로킹/무거운 작업 금지. asyncio 루프로 값을 넘기려면</span>
+<span class="sd">        ``loop.call_soon_threadsafe`` 등으로 직접 브릿지할 것.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_sync_start_state_stream</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">on_state</span><span class="p">,</span> <span class="n">rate</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK.stop_state_stream">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.stop_state_stream">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">stop_state_stream</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 상태 고주파 구독 중지] — ``robot.stop_state_update()`` 래퍼.&quot;&quot;&quot;</span>
+        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_stop_state_stream</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK.is_emergency_stopped">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.is_emergency_stopped">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">is_emergency_stopped</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 비상정지(EMO) 상태 조회] EMO 버튼 중 하나라도 Pressed 면 True.</span>
+
+<span class="sd">        ``get_state()``의 ``emo_states``(버튼별 ``Pressed``/``Released``)를 그대로</span>
+<span class="sd">        씀. 물리 EMO 버튼이 없는 환경(예: 시뮬레이터)에서는 리스트가 비어 있어</span>
+<span class="sd">        항상 False.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_state</span><span class="p">(</span><span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="n">emo_states</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;emo_states&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="p">[]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;state&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Pressed&quot;</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">emo_states</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1StateSDK.is_connected">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.state.RBRby1StateSDK.is_connected">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">is_connected</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 연결 상태 조회]</span>
+
+<span class="sd">        ``client.connected``는 C++ 호출일 수 있어 일관성을 위해 to_thread로 위임.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_client</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">connected</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">client</span><span class="o">.</span><span class="n">connected</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">connected</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0 버전으로 생성되었습니다.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
