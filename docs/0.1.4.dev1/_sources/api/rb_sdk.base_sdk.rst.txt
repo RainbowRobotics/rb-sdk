@@ -1,0 +1,21 @@
+rb\_sdk.base\_sdk package
+=========================
+
+Submodules
+----------
+
+rb\_sdk.base\_sdk.base\_schema module
+-------------------------------------
+
+.. automodule:: rb_sdk.base_sdk.base_schema
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: rb_sdk.base_sdk
+   :members:
+   :show-inheritance:
+   :undoc-members:

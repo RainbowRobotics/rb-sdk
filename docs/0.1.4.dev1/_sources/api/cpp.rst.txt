@@ -1,0 +1,256 @@
+C++ API
+=======
+
+``librb_sdk`` 공개 헤더 (``backend/packages/rb_sdk/src/rb_sdk/cpp``). 이 파일은 ``conf.py`` 빌드 시 자동으로 생성됩니다.
+
+amr/amr_accessory.hpp
+---------------------
+
+.. doxygenfile:: amr_accessory.hpp
+   :project: rb_sdk
+
+amr/amr_capability.hpp
+----------------------
+
+.. doxygenfile:: amr_capability.hpp
+   :project: rb_sdk
+
+amr/amr_control.hpp
+-------------------
+
+.. doxygenfile:: amr_control.hpp
+   :project: rb_sdk
+
+amr/amr_file.hpp
+----------------
+
+.. doxygenfile:: amr_file.hpp
+   :project: rb_sdk
+
+amr/amr_localization.hpp
+------------------------
+
+.. doxygenfile:: amr_localization.hpp
+   :project: rb_sdk
+
+amr/amr_map.hpp
+---------------
+
+.. doxygenfile:: amr_map.hpp
+   :project: rb_sdk
+
+amr/amr_move.hpp
+----------------
+
+.. doxygenfile:: amr_move.hpp
+   :project: rb_sdk
+
+amr/amr_program.hpp
+-------------------
+
+.. doxygenfile:: amr_program.hpp
+   :project: rb_sdk
+
+amr/amr_sensor.hpp
+------------------
+
+.. doxygenfile:: amr_sensor.hpp
+   :project: rb_sdk
+
+amr/amr_setting.hpp
+-------------------
+
+.. doxygenfile:: amr_setting.hpp
+   :project: rb_sdk
+
+amr/amr_status.hpp
+------------------
+
+.. doxygenfile:: amr_status.hpp
+   :project: rb_sdk
+
+amr/rb_amr_sdk.hpp
+------------------
+
+.. doxygenfile:: rb_amr_sdk.hpp
+   :project: rb_sdk
+
+base.hpp
+--------
+
+.. doxygenfile:: base.hpp
+   :project: rb_sdk
+
+common/value_validation.hpp
+---------------------------
+
+.. doxygenfile:: value_validation.hpp
+   :project: rb_sdk
+
+flow_manager_args.hpp
+---------------------
+
+.. doxygenfile:: flow_manager_args.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_config.hpp
+--------------------------------
+
+.. doxygenfile:: manipulate_config.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_flange.hpp
+--------------------------------
+
+.. doxygenfile:: manipulate_flange.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_get_data.hpp
+----------------------------------
+
+.. doxygenfile:: manipulate_get_data.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_io.hpp
+----------------------------
+
+.. doxygenfile:: manipulate_io.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_maintenance.hpp
+-------------------------------------
+
+.. doxygenfile:: manipulate_maintenance.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_move.hpp
+------------------------------
+
+.. doxygenfile:: manipulate_move.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_point.hpp
+-------------------------------
+
+.. doxygenfile:: manipulate_point.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_program.hpp
+---------------------------------
+
+.. doxygenfile:: manipulate_program.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_safety.hpp
+--------------------------------
+
+.. doxygenfile:: manipulate_safety.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_service.hpp
+---------------------------------
+
+.. doxygenfile:: manipulate_service.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_state.hpp
+-------------------------------
+
+.. doxygenfile:: manipulate_state.hpp
+   :project: rb_sdk
+
+manipulate/manipulate_vision.hpp
+--------------------------------
+
+.. doxygenfile:: manipulate_vision.hpp
+   :project: rb_sdk
+
+manipulate/rb_manipulate_sdk.hpp
+--------------------------------
+
+.. doxygenfile:: rb_manipulate_sdk.hpp
+   :project: rb_sdk
+
+plugin/rb_plugin.hpp
+--------------------
+
+.. doxygenfile:: rb_plugin.hpp
+   :project: rb_sdk
+
+plugin/sio_message_json.hpp
+---------------------------
+
+.. doxygenfile:: sio_message_json.hpp
+   :project: rb_sdk
+
+program/plugin_program_context.hpp
+----------------------------------
+
+.. doxygenfile:: plugin_program_context.hpp
+   :project: rb_sdk
+
+program/program_interface.hpp
+-----------------------------
+
+.. doxygenfile:: program_interface.hpp
+   :project: rb_sdk
+
+program/rb_program_sdk.hpp
+--------------------------
+
+.. doxygenfile:: rb_program_sdk.hpp
+   :project: rb_sdk
+
+rb_sdk_api.hpp
+--------------
+
+.. doxygenfile:: rb_sdk_api.hpp
+   :project: rb_sdk
+
+rby1/rb_rby1_sdk.hpp
+--------------------
+
+.. doxygenfile:: rb_rby1_sdk.hpp
+   :project: rb_sdk
+
+rby1/rby1_runtime.hpp
+---------------------
+
+.. doxygenfile:: rby1_runtime.hpp
+   :project: rb_sdk
+
+schema/interface_payload_types.hpp
+----------------------------------
+
+.. doxygenfile:: interface_payload_types.hpp
+   :project: rb_sdk
+
+schema/move_speed_args.hpp
+--------------------------
+
+.. doxygenfile:: move_speed_args.hpp
+   :project: rb_sdk
+
+schema/move_target_values_arg.hpp
+---------------------------------
+
+.. doxygenfile:: move_target_values_arg.hpp
+   :project: rb_sdk
+
+schema/program_setting_args.hpp
+-------------------------------
+
+.. doxygenfile:: program_setting_args.hpp
+   :project: rb_sdk
+
+schema/vibration_motion_arg.hpp
+-------------------------------
+
+.. doxygenfile:: vibration_motion_arg.hpp
+   :project: rb_sdk
+
+utils/manipulate.hpp
+--------------------
+
+.. doxygenfile:: manipulate.hpp
+   :project: rb_sdk

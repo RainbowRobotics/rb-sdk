@@ -1,0 +1,1073 @@
+FlatBuffers Types
+=================
+
+Argument and return types used by the SDK, generated from the FlatBuffers schemas.
+
+SDK argument / return types
+---------------------------
+
+Plain ``dict`` at runtime; these ``TypedDict`` definitions list the accepted keys.
+
+.. autoclass:: rb_schemas.fbs_types.ipc.MoveInput_SpeedTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.MoveInput_TargetTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.MoveInput_TypeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Move_PropertyUnionTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Move_Property_EntryTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_AIN_fTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_AOUT_fTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_DIN_bTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_DIN_uTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_DOUT_bTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.N_DOUT_uTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Analog_OutputTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Digital_OutputTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Weaving_MagnitudeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Weaving_SpeedTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Welding_CurrentTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Welding_FeedRateTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Prop_Welding_VoltageTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_ExtAout_GeneralTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_ExtDout_BitcombinationTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_ExtDout_GeneralTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_ExtDout_PulseTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_ExtDout_ToggleTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Flange_Digital_OutTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_MotionSpeedBarTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_AsciiFunctionCallTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_DinFunctionMaskTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_DoutFunctionMaskTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_ExternalAxisSyncTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Fixed_Speed_ModeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Free_DriveTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_JacobSpeedModeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_JointRef_FilterTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Joint_ImpedanceTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Master_ModeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_MoveBreakTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Out_Collision_ParaTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_ProgramFlowManageTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_SelfCollBlindTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_SelfVibrationModeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Self_Collision_ParaTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_ShiftTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_Shift_LandMarkTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_TcpSpeedBoundTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_TimeConstraintTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_User_FrameTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_User_Frame_3PointsTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_User_Frame_6DofTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_User_Frame_TCPTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_Set_WristSingular_ModeTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_SideAout_GeneralTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_SideDout_BitcombinationTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_SideDout_GeneralTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_SideDout_PulseTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Request_SideDout_ToggleTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ResponseCANConnectTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ResponseCANDisconnectTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ResponseCANTransmitTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigCommunicationTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigControlBoxTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigEXTFTTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigExtAxisTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigFlangeOptionTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigGlobPinListTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigGripperAttachTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigNetworkTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigRobotArmTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigSafetyTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigSoftPLCTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigToolListTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallConfigWeldTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_CallWhoamITD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_FunctionsTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_Get_Absolute_ValueTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_Get_Relative_ValueTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_Get_ValueTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_Move_WaitTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Response_Replay_Motion_ListTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ST_Box_ParaTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ST_Config_AreaTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ST_Config_UserFrameTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.ST_Tool_ParaTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.State_CoreTD
+
+.. autoclass:: rb_schemas.fbs_types.ipc.Vec3fTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.InterfaceMechMindPayloadTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.InterfacePhotoneoPayloadTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.InterfacePickitPayloadTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.PhotoneoJointTargetTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.Request_Wrapper_VibrationMotionTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.TrajectoryNameInputTD
+
+.. autoclass:: rb_schemas.fbs_types.muscat.TrajectoryWaypointTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.CameraInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.FileInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.IMUInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.InfoCategoryTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.InfoGroupTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.LidarDataTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.LidarInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.LinkTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.LocalizationPoseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.MapInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.MetadataTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.MovePoseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.MoveStatusTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.MultilingualStructTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.NodePoseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.NodeSizeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.NodeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ObsBoxTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.PathTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.Point2DTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.PointPoseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.RTSPInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityCameraTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityDockTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityImuTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityLidar2DTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityLidar3DTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetyBumperTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetyInterlockTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetyIoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetyObstacleTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetyOperationStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilitySafetySpeedControlTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCapabilityTabosTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseChargeTriggerTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCompressFilesTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseCurrentVersionTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseDecompressFileTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseDeleteFileTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseDockStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseDockTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseEnqueueActionTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetDriveParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetFileChunkTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetFileMetaTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetInfoCategoryTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetMapCloudStreamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetMapCloudTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetMapTopologyTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetObsBoxTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetPduParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetRobotTypeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSafetyFieldTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSafetyFlagTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSafetyIoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSensorInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSensorModeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSettingCategoryTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSettingParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSettingPresetListTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseGetSettingPresetTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLiftPowerTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationAutoInitTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationInitTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationRandomInitTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationSemiAutoInitTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationStartTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseLocalizationStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMapCurrentTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMapDeleteTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMapListTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMapLoadTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMappingCloudReloadTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMappingSaveTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMappingStartTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMappingStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMarkerScanStartTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMarkerScanStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveCircularTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveGoalTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMovePauseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveResumeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveRotateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveStopTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveTargetTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveXLinearTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMoveYLinearTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMultiPathTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseMultiVobsTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseRTSPSubscribeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseRegisterMarkerTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetAvoidTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetCrossingTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetJogTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetLedTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetMapCloudTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetMapTopologyTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetMotorTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetObsBoxTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetPduParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetPrecisionNodeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetRobotTypeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSafetyFieldTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSafetyFlagTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSafetyIoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSafetyLidarTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSensorInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSensorModeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSettingParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetSettingPresetTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseSetStreamFrequencyTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseTopoLoadTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResponseUndockTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResultControlDockTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResultLocalizationTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ResultMoveTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.SafetyFlagTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.SensorInfoTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.SettingParamTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusChargeStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusImuTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusLocStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusMapStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusMotorTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusMoveStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusMultiStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusNodeTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusPoseTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusPowerTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusRobotSafetyIoStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusRobotStateTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusSettingTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.StatusVelTD
+
+.. autoclass:: rb_schemas.fbs_types.slamnav.ZoneTD
+
+FlatBuffers response objects
+----------------------------
+
+ResponseCANConnectT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.IPC.ResponseCANConnect.ResponseCANConnectT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCANDisconnectT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.IPC.ResponseCANDisconnect.ResponseCANDisconnectT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCANTransmitT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.IPC.ResponseCANTransmit.ResponseCANTransmitT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityCameraT
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityCamera.ResponseCapabilityCameraT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityDockT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityDock.ResponseCapabilityDockT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityImuT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityImu.ResponseCapabilityImuT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityLidar2DT
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityLidar2D.ResponseCapabilityLidar2DT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityLidar3DT
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityLidar3D.ResponseCapabilityLidar3DT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilitySafetyBumperT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilitySafetyBumper.ResponseCapabilitySafetyBumperT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilitySafetyIoT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilitySafetyIo.ResponseCapabilitySafetyIoT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCapabilityTabosT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCapabilityTabos.ResponseCapabilityTabosT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseChargeTriggerT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseChargeTrigger.ResponseChargeTriggerT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCompressFilesT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCompressFiles.ResponseCompressFilesT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseCurrentVersionT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseCurrentVersion.ResponseCurrentVersionT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseDecompressFileT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseDecompressFile.ResponseDecompressFileT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseDeleteFileT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseDeleteFile.ResponseDeleteFileT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseDockStopT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseDockStop.ResponseDockStopT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseDockT
+~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseDock.ResponseDockT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseEnqueueActionT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseEnqueueAction.ResponseEnqueueActionT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetDriveParamT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetDriveParam.ResponseGetDriveParamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetFileChunkT
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetFileChunk.ResponseGetFileChunkT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetFileMetaT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetFileMeta.ResponseGetFileMetaT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetInfoCategoryT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetInfoCategory.ResponseGetInfoCategoryT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetMapCloudStreamT
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetMapCloudStream.ResponseGetMapCloudStreamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetMapCloudT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetMapCloud.ResponseGetMapCloudT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetMapTopologyT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetMapTopology.ResponseGetMapTopologyT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetObsBoxT
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetObsBox.ResponseGetObsBoxT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetPduParamT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetPduParam.ResponseGetPduParamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetRobotTypeT
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetRobotType.ResponseGetRobotTypeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSafetyFieldT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSafetyField.ResponseGetSafetyFieldT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSafetyFlagT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSafetyFlag.ResponseGetSafetyFlagT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSafetyIoT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSafetyIo.ResponseGetSafetyIoT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSensorInfoT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSensorInfo.ResponseGetSensorInfoT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSensorModeT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSensorMode.ResponseGetSensorModeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSettingCategoryT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSettingCategory.ResponseGetSettingCategoryT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSettingParamT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSettingParam.ResponseGetSettingParamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSettingPresetListT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSettingPresetList.ResponseGetSettingPresetListT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseGetSettingPresetT
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseGetSettingPreset.ResponseGetSettingPresetT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLiftPowerT
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLiftPower.ResponseLiftPowerT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLocalizationAutoInitT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLocalizationAutoInit.ResponseLocalizationAutoInitT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLocalizationInitT
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLocalizationInit.ResponseLocalizationInitT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLocalizationRandomInitT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLocalizationRandomInit.ResponseLocalizationRandomInitT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLocalizationStartT
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLocalizationStart.ResponseLocalizationStartT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseLocalizationStopT
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseLocalizationStop.ResponseLocalizationStopT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMapCurrentT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMapCurrent.ResponseMapCurrentT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMapDeleteT
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMapDelete.ResponseMapDeleteT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMapListT
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMapList.ResponseMapListT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMapLoadT
+~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMapLoad.ResponseMapLoadT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMappingCloudReloadT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMappingCloudReload.ResponseMappingCloudReloadT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMappingSaveT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMappingSave.ResponseMappingSaveT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMappingStartT
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMappingStart.ResponseMappingStartT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMappingStopT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMappingStop.ResponseMappingStopT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMarkerScanStartT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMarkerScanStart.ResponseMarkerScanStartT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMarkerScanStopT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMarkerScanStop.ResponseMarkerScanStopT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveCircularT
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveCircular.ResponseMoveCircularT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveGoalT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveGoal.ResponseMoveGoalT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMovePauseT
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMovePause.ResponseMovePauseT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveResumeT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveResume.ResponseMoveResumeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveRotateT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveRotate.ResponseMoveRotateT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveStopT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveStop.ResponseMoveStopT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveTargetT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveTarget.ResponseMoveTargetT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveXLinearT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveXLinear.ResponseMoveXLinearT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMoveYLinearT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMoveYLinear.ResponseMoveYLinearT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseMultiPathT
+~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseMultiPath.ResponseMultiPathT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseRTSPSubscribeT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseRTSPSubscribe.ResponseRTSPSubscribeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseRegisterMarkerT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseRegisterMarker.ResponseRegisterMarkerT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetAvoidT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetAvoid.ResponseSetAvoidT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetCrossingT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetCrossing.ResponseSetCrossingT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetJogT
+~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetJog.ResponseSetJogT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetLedT
+~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetLed.ResponseSetLedT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetMapCloudT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetMapCloud.ResponseSetMapCloudT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetMapTopologyT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetMapTopology.ResponseSetMapTopologyT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetMotorT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetMotor.ResponseSetMotorT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetPduParamT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetPduParam.ResponseSetPduParamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetPrecisionNodeT
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetPrecisionNode.ResponseSetPrecisionNodeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetRobotTypeT
+~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetRobotType.ResponseSetRobotTypeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSafetyFieldT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSafetyField.ResponseSetSafetyFieldT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSafetyFlagT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSafetyFlag.ResponseSetSafetyFlagT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSafetyIoT
+~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSafetyIo.ResponseSetSafetyIoT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSafetyLidarT
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSafetyLidar.ResponseSetSafetyLidarT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSensorInfoT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSensorInfo.ResponseSetSensorInfoT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSensorModeT
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSensorMode.ResponseSetSensorModeT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetSettingParamT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetSettingParam.ResponseSetSettingParamT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseSetStreamFrequencyT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseSetStreamFrequency.ResponseSetStreamFrequencyT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseTopoLoadT
+~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseTopoLoad.ResponseTopoLoadT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+ResponseUndockT
+~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.SLAMNAV.ResponseUndock.ResponseUndockT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack
+
+Response_FunctionsT
+~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: rb_flat_buffers.IPC.Response_Functions.Response_FunctionsT
+   :members:
+   :exclude-members: InitFromBuf, InitFromObj, InitFromPackedBuf, Pack

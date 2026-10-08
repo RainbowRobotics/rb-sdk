@@ -1,0 +1,1326 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ko" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rb_sdk.rby1_sdk.control &#8212; rb-sdk 0.1.3 문서</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../_static/documentation_options.js?v=e1502d85"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/translations.js?v=afa94a99"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rb_sdk/rby1_sdk/control';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.3';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ko"/>
+  <meta name="docsearch:version" content="0.1.3" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.3 문서</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">모듈 코드</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_sdk.rby1_sdk.control</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>rb_sdk.rby1_sdk.control의 소스 코드</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;RB-Y1 Control SDK.</span>
+
+<span class="sd">모든 호출 메서드는 ``async def`` — 공식 ``rby1_sdk``가 sync gRPC stub이라</span>
+<span class="sd">``asyncio.to_thread`` 로 worker thread에 위임한다. 자세한 이유는 ``README.md`` 참조.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">contextlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Literal</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_schemas.sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">FlowManagerArgs</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">RBRby1BaseSDK</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_log_message</span>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK">[문서]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">RBRby1ControlSDK</span><span class="p">(</span><span class="n">RBRby1BaseSDK</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rainbow Robotics RB-Y1 Control SDK&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_call_existing</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">*</span><span class="n">method_names</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;``robot``에서 후보 method 중 첫 매칭 실행 — ``asyncio.to_thread`` 안에서만 호출할 것.&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">method_names</span><span class="p">:</span>
+            <span class="n">fn</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;rby1 methods not found on </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">method_names</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="RBRby1ControlSDK.invoke">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.invoke">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">invoke</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">args</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">(),</span>
+        <span class="n">kwargs</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 원본 제어 메서드 호출]&quot;&quot;&quot;</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_client</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">call</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">kwargs</span> <span class="ow">or</span> <span class="p">{}))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.control_power">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.control_power">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">control_power</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">status</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">],</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 전원 활성화] ``dev_name``은 regex (기본 ``&quot;.*&quot;`` = 전체 디바이스).&quot;&quot;&quot;</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;on&quot;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+                <span class="n">robot_model</span><span class="p">,</span>
+                <span class="s2">&quot;power_on&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;PowerOn&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;enable_power&quot;</span><span class="p">,</span>
+                <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;off&quot;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+                <span class="n">robot_model</span><span class="p">,</span>
+                <span class="s2">&quot;power_off&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;PowerOff&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;disable_power&quot;</span><span class="p">,</span>
+                <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.power_on">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.power_on">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">power_on</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 전원 활성화] 다른 SDK의 verb-first 호출 스타일에 맞춘 alias.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_power</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.power_off">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.power_off">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">power_off</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 전원 비활성화] 다른 SDK의 verb-first 호출 스타일에 맞춘 alias.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_power</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;off&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.control_servo">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.control_servo">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">control_servo</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">status</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;on&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">],</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 서보 활성화] ``dev_name``은 regex (기본 ``&quot;.*&quot;`` = 전체 디바이스).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;on&quot;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+                <span class="n">robot_model</span><span class="p">,</span>
+                <span class="s2">&quot;servo_on&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ServoOn&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;enable_servo&quot;</span><span class="p">,</span>
+                <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;off&quot;</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+                <span class="n">robot_model</span><span class="p">,</span>
+                <span class="s2">&quot;servo_off&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ServoOff&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;disable_servo&quot;</span><span class="p">,</span>
+                <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.servo_on">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.servo_on">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">servo_on</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 서보 활성화] 다른 SDK의 verb-first 호출 스타일에 맞춘 alias.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_servo</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.servo_off">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.servo_off">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">servo_off</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 서보 비활성화] 다른 SDK의 verb-first 호출 스타일에 맞춘 alias.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">control_servo</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;off&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.break_engage">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.break_engage">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">break_engage</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 브레이크 체결] ``dev_name``은 regex (기본 ``&quot;.*&quot;`` = 전체 디바이스).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="s2">&quot;break_engage&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;BreakEngage&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;engage_break&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.brake_engage">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.brake_engage">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">brake_engage</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 브레이크 체결] typo 호환을 유지하면서 올바른 spelling도 제공.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">break_engage</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.break_release">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.break_release">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">break_release</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 브레이크 해제] ``dev_name``은 regex (기본 ``&quot;.*&quot;`` = 전체 디바이스).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="s2">&quot;break_release&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;BreakRelease&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;release_break&quot;</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.brake_release">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.brake_release">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">brake_release</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">dev_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;.*&quot;</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 브레이크 해제] typo 호환을 유지하면서 올바른 spelling도 제공.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">break_release</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">dev_name</span><span class="o">=</span><span class="n">dev_name</span><span class="p">,</span>
+            <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.home">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.home">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">home</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 홈 포지션 이동]&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="s2">&quot;home&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;go_home&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;move_to_home&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;``StopCommandBuilder``로 정지 — 공식 SDK엔 stop()/Stop() 없음(확인됨), 이 경로가 유일.&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">rby1_sdk</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rby</span>
+
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">RobotCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_command</span><span class="p">(</span>
+            <span class="n">rby</span><span class="o">.</span><span class="n">WholeBodyCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_command</span><span class="p">(</span><span class="n">rby</span><span class="o">.</span><span class="n">StopCommandBuilder</span><span class="p">())</span>
+        <span class="p">)</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">send_command</span><span class="p">(</span><span class="n">builder</span><span class="o">=</span><span class="n">command</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">priority</span><span class="p">)</span>
+        <span class="n">feedback</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">finish_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_finish_code</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">feedback</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="n">handler</span><span class="o">.</span><span class="n">is_done</span><span class="p">(),</span> <span class="s2">&quot;finish_code&quot;</span><span class="p">:</span> <span class="n">finish_code</span><span class="p">}</span>
+
+<div class="viewcode-block" id="RBRby1ControlSDK.stop">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.stop">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">stop</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 모션 정지] 진행 중인 명령보다 확실히 우선하려면 ``priority``를 높게 줄 것.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_stop</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">priority</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_emergency_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;모션 정지(best-effort) 후 무조건 전원 차단 — stop 실패해도 차단은 계속 시도(최후 안전장치).&quot;&quot;&quot;</span>
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_sync_stop</span><span class="p">(</span><span class="n">robot_model</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">powered_off</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">power_off</span><span class="p">(</span><span class="n">dev_name</span><span class="o">=</span><span class="s2">&quot;.*&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;stopped&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">(</span><span class="n">powered_off</span><span class="p">)}</span>
+
+<div class="viewcode-block" id="RBRby1ControlSDK.emergency_stop">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.emergency_stop">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">emergency_stop</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 비상 정지] 정지 시도 후 전원 차단(물리 EMO와 별개, SW 트리거). 재개하려면 power_on+servo_on+enable 다시 필요.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_sync_emergency_stop</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.enable_control_manager">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.enable_control_manager">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">enable_control_manager</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">unlimited_mode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 컨트롤 매니저 활성화] 모션 명령(send_command) 전에 필요.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="s2">&quot;enable_control_manager&quot;</span><span class="p">,</span>
+            <span class="n">unlimited_mode_enabled</span><span class="o">=</span><span class="n">unlimited_mode</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.disable_control_manager">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.disable_control_manager">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">disable_control_manager</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 컨트롤 매니저 비활성화]&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="s2">&quot;disable_control_manager&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.reset_fault_control_manager">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.reset_fault_control_manager">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">reset_fault_control_manager</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 컨트롤 매니저 fault 리셋] 전원 인가 후 MajorFault 상태면 enable 전에 호출.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="s2">&quot;reset_fault_control_manager&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.set_time_scale">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.set_time_scale">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">set_time_scale</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">time_scale</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 전체 모션 속도 배율 설정] 0.0~1.0. 진행 중 명령에도 실시간 적용(확인됨), minimum_time과는 별개로 곱해져 적용.&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="s2">&quot;set_time_scale&quot;</span><span class="p">,</span> <span class="n">time_scale</span><span class="o">=</span><span class="n">time_scale</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_find_out_of_range_targets</span><span class="p">(</span><span class="n">robot</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">margin_deg</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;리밋 벗어난 관절을 자기 리밋 안쪽(margin)으로 되돌릴 목표각을 계산 — enable 거부 시 자동복구용.</span>
+
+<span class="sd">        ``get_dynamics().get_joint_names()``(해시맵 순서)와 ``joint_infos``(DOF 순서)가</span>
+<span class="sd">        서로 달라 인덱스로 안 엮고 이름으로만 연결한다. 바퀴(연속회전)는 대상에서 제외.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+        <span class="n">dyn</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_dynamics</span><span class="p">()</span>
+        <span class="n">dyn_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_joint_names</span><span class="p">())</span>
+        <span class="n">st</span> <span class="o">=</span> <span class="n">dyn</span><span class="o">.</span><span class="n">make_state</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_link_names</span><span class="p">(),</span> <span class="n">dyn_names</span><span class="p">)</span>
+        <span class="n">q_lo</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_q_lower</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">q_hi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dyn</span><span class="o">.</span><span class="n">get_limit_q_upper</span><span class="p">(</span><span class="n">st</span><span class="p">))</span>
+        <span class="n">limits_by_name</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">dyn_names</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">q_lo</span><span class="p">,</span> <span class="n">q_hi</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+        <span class="n">info</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_robot_info</span><span class="p">()</span>
+        <span class="n">info_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">ji</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">ji</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">joint_infos</span><span class="p">]</span>
+        <span class="n">position_by_name</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">info_names</span><span class="p">,</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span><span class="o">.</span><span class="n">position</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+        <span class="n">margin</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">margin_deg</span><span class="p">)</span>
+        <span class="n">targets</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">lo</span><span class="p">,</span> <span class="n">hi</span><span class="p">)</span> <span class="ow">in</span> <span class="n">limits_by_name</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">lo</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mf">1.0e6</span> <span class="ow">or</span> <span class="n">hi</span> <span class="o">&gt;=</span> <span class="mf">1.0e6</span><span class="p">:</span>
+                <span class="k">continue</span>  <span class="c1"># 바퀴 등 연속회전 관절 -- 대상 아님</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">position_by_name</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">pos</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">lo</span> <span class="o">&lt;</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">hi</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">safe_margin</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">margin</span><span class="p">,</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">lo</span> <span class="o">+</span> <span class="n">safe_margin</span> <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">lo</span> <span class="k">else</span> <span class="n">hi</span> <span class="o">-</span> <span class="n">safe_margin</span>
+            <span class="n">targets</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">targets</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_ensure_control_manager_ready</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Enabled면 통과, Fault/Idle이면 자동 reset+enable — move 호출자가 매번 손으로 안 해도 되게.</span>
+
+<span class="sd">        enable_control_manager 는 실패해도 예외 없이 조용히 Idle 로 남는다(예: 관절이</span>
+<span class="sd">        리밋 밖이면 거부) — 그대로 move 하면 애매한 에러로 나오므로 여기서 실제</span>
+<span class="sd">        Enabled 여부를 확인한다. 실패했는데 리밋 벗어난 관절이 있으면 unlimited_mode로</span>
+<span class="sd">        강제 enable → 그 관절만 복귀 → 정상 enable 재시도(실측된 반복 케이스), 없으면 에러.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_control_manager_state</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">reset_fault_control_manager</span><span class="p">()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">enable_control_manager</span><span class="p">(</span><span class="n">unlimited_mode_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_control_manager_state</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">:</span>
+            <span class="k">return</span>
+
+        <span class="n">targets</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_out_of_range_targets</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">targets</span><span class="p">:</span>
+            <span class="n">state_after</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_control_manager_state</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">name</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;rby1_control_manager_enable_failed: robot_model=</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2"> state=</span><span class="si">{</span><span class="n">state_after</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">robot</span><span class="o">.</span><span class="n">reset_fault_control_manager</span><span class="p">()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">enable_control_manager</span><span class="p">(</span><span class="n">unlimited_mode_enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_sync_move_joints</span><span class="p">(</span><span class="n">robot_model</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">relative</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">robot</span><span class="o">.</span><span class="n">reset_fault_control_manager</span><span class="p">()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">disable_control_manager</span><span class="p">()</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">enable_control_manager</span><span class="p">(</span><span class="n">unlimited_mode_enabled</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">state_after</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_control_manager_state</span><span class="p">()</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">name</span>
+        <span class="k">if</span> <span class="n">state_after</span> <span class="o">!=</span> <span class="s2">&quot;Enabled&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;rby1_control_manager_enable_failed_after_recovery: robot_model=</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2"> &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;state=</span><span class="si">{</span><span class="n">state_after</span><span class="si">}</span><span class="s2"> recovered_joints=</span><span class="si">{</span><span class="nb">sorted</span><span class="p">(</span><span class="n">targets</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_finish_code</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">feedback</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;finish_code 확인 — is_done()/status 는 Canceled/Preempted 에도 Finished 로 뜨므로 그것만으론 성공 여부를 알 수 없다.</span>
+
+<span class="sd">        FinishCode enum 엔 &quot;요청 검증 거부&quot;에 대응하는 값이 없어 그 경우 기본값</span>
+<span class="sd">        Unknown 으로 온다(확인됨) — 예외 대신 그대로 반환하고, 실패 시 알림을 보낸다.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="n">feedback</span><span class="o">.</span><span class="n">finish_code</span>
+        <span class="k">if</span> <span class="n">code</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="s2">&quot;Ok&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_publish_move_error</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">code</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">code</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_publish_move_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">finish_code_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;실패한 move/stop 명령을 ``muscat/{robot_model}/message`` 로 알린다.&quot;&quot;&quot;</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.muscat.Muscat_Message</span><span class="w"> </span><span class="kn">import</span> <span class="n">Muscat_MessageT</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.muscat.Muscat_Message_Type</span><span class="w"> </span><span class="kn">import</span> <span class="n">Muscat_Message_Type</span>
+
+        <span class="n">detail</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+            <span class="n">logs</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_last_log</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">logs</span><span class="p">:</span>
+                <span class="n">detail</span> <span class="o">=</span> <span class="n">extract_log_message</span><span class="p">(</span><span class="n">logs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+
+        <span class="n">msg</span> <span class="o">=</span> <span class="n">Muscat_MessageT</span><span class="p">()</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">Muscat_Message_Type</span><span class="o">.</span><span class="n">ERROR</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">isToast</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">strCode</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;RBY1 Move Error: </span><span class="si">{</span><span class="n">finish_code_name</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">subStr</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">detail</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">if</span> <span class="n">detail</span> <span class="k">else</span> <span class="n">finish_code_name</span>
+
+        <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;muscat/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/message&quot;</span><span class="p">,</span> <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">msg</span><span class="p">,</span> <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">512</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_move_joint_position</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">position</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">minimum_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">velocity_limit</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">acceleration_limit</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;body(torso+양팔) 전체 위치 명령 조립+전송. position 길이는 body DOF 와 일치해야 함(예: model A = 20).&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">rby1_sdk</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rby</span>
+
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_control_manager_ready</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+
+        <span class="n">jp</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">JointPositionCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">jp</span> <span class="o">=</span> <span class="n">jp</span><span class="o">.</span><span class="n">set_minimum_time</span><span class="p">(</span><span class="n">minimum_time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">velocity_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">jp</span> <span class="o">=</span> <span class="n">jp</span><span class="o">.</span><span class="n">set_velocity_limit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">velocity_limit</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">acceleration_limit</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">jp</span> <span class="o">=</span> <span class="n">jp</span><span class="o">.</span><span class="n">set_acceleration_limit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">acceleration_limit</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">RobotCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_command</span><span class="p">(</span>
+            <span class="n">rby</span><span class="o">.</span><span class="n">ComponentBasedCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_body_command</span><span class="p">(</span>
+                <span class="n">rby</span><span class="o">.</span><span class="n">BodyCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_command</span><span class="p">(</span><span class="n">jp</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="c1"># 디스패치는 다른 메서드와 동일하게 _call_existing 으로 (get_robot + 미연결 체크 재사용)</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="p">,</span> <span class="s2">&quot;send_command&quot;</span><span class="p">,</span> <span class="n">builder</span><span class="o">=</span><span class="n">command</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">priority</span>
+        <span class="p">)</span>
+        <span class="n">feedback</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># 모션 완료까지 blocking (이미 worker thread 라 루프 안 막음)</span>
+        <span class="n">finish_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_finish_code</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">feedback</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="n">handler</span><span class="o">.</span><span class="n">is_done</span><span class="p">(),</span> <span class="s2">&quot;finish_code&quot;</span><span class="p">:</span> <span class="n">finish_code</span><span class="p">}</span>
+
+<div class="viewcode-block" id="RBRby1ControlSDK.move_joint_position">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.move_joint_position">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">move_joint_position</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">position</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">minimum_time</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span>
+        <span class="n">velocity_limit</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">acceleration_limit</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 전체 관절 위치 이동] body 목표 각도[rad]로 이동 후 완료 대기. position 길이는 body DOF 와 동일(model A = 20).&quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_sync_move_joint_position</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">position</span><span class="p">,</span>
+            <span class="n">minimum_time</span><span class="p">,</span>
+            <span class="n">velocity_limit</span><span class="p">,</span>
+            <span class="n">acceleration_limit</span><span class="p">,</span>
+            <span class="n">priority</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_group_by_component</span><span class="p">(</span>
+        <span class="n">names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">torso_joint_idx</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">right_arm_joint_idx</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">left_arm_joint_idx</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">head_joint_idx</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">values_deg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;관절명 -&gt; 컴포넌트(torso/right_arm/left_arm/head) 매핑. 바퀴는 대상 밖이라 안 들어오면 unsupported로 걸러짐.&quot;&quot;&quot;</span>
+        <span class="n">component_of</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">torso_joint_idx</span><span class="p">:</span>
+            <span class="n">component_of</span><span class="p">[</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;torso&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">right_arm_joint_idx</span><span class="p">:</span>
+            <span class="n">component_of</span><span class="p">[</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;right_arm&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">left_arm_joint_idx</span><span class="p">:</span>
+            <span class="n">component_of</span><span class="p">[</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;left_arm&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">head_joint_idx</span><span class="p">:</span>
+            <span class="n">component_of</span><span class="p">[</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;head&quot;</span>
+
+        <span class="n">unsupported</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">values_deg</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">component_of</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">unsupported</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;unsupported joint name(s) (only torso/right_arm/left_arm/head): </span><span class="si">{</span><span class="n">unsupported</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">grouped</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;torso&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;right_arm&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;left_arm&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;head&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value_deg</span> <span class="ow">in</span> <span class="n">values_deg</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">grouped</span><span class="p">[</span><span class="n">component_of</span><span class="p">[</span><span class="n">name</span><span class="p">]][</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_deg</span>
+        <span class="k">return</span> <span class="n">grouped</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_compute_subset_target</span><span class="p">(</span>
+        <span class="n">names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">position</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">touched</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">relative</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;지정한 관절만 대상인 target(torso 전용) — 나머지 torso 관절은 명령에서 아예 빠짐.&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+        <span class="n">joint_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">touched</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">joint_names</span><span class="p">:</span>
+            <span class="n">angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">touched</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+            <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="n">names</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span> <span class="o">+</span> <span class="n">angle</span> <span class="k">if</span> <span class="n">relative</span> <span class="k">else</span> <span class="n">angle</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">joint_names</span><span class="p">,</span> <span class="n">values</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_compute_full_vector</span><span class="p">(</span>
+        <span class="n">names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">component_joint_idx</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="n">position</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
+        <span class="n">touched</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">relative</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;팔/head 전용 — 컴포넌트 전체 고정 길이 벡터만 받으므로 지정 안 한 관절은 현재값으로 채움(hold).&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+        <span class="n">vec</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">component_joint_idx</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">touched</span><span class="p">:</span>
+                <span class="n">angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">touched</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+                <span class="n">vec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">angle</span> <span class="k">if</span> <span class="n">relative</span> <span class="k">else</span> <span class="n">angle</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">vec</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">vec</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_sync_move_joints</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">values_deg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="n">minimum_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">relative</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;지정한 여러 관절을 한 번에 이동(절대/상대). 안 건드린 컴포넌트는 커맨드에서 아예 뺀다 —</span>
+<span class="sd">        body 20-DOF 벡터 하나로 뭉치면 안 건드린 컴포넌트까지 겹침 판정돼 다른 동시</span>
+<span class="sd">        명령과 불필요하게 취소/interrupt 될 수 있어서다. torso 는 이름 지정 subset</span>
+<span class="sd">        타겟팅, 팔/head 는 컴포넌트 전체 벡터 중 안 지정한 관절만 현재값 유지(hold).&quot;&quot;&quot;</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+        <span class="kn">import</span><span class="w"> </span><span class="nn">rby1_sdk</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rby</span>
+
+        <span class="n">robot</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_robot</span><span class="p">(</span><span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">robot</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rby1_not_connected: </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_control_manager_ready</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+
+        <span class="n">info</span> <span class="o">=</span> <span class="n">robot</span><span class="o">.</span><span class="n">get_robot_info</span><span class="p">()</span>
+        <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">ji</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">ji</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">joint_infos</span><span class="p">]</span>
+        <span class="n">grouped</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_group_by_component</span><span class="p">(</span>
+            <span class="n">names</span><span class="p">,</span>
+            <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">torso_joint_idx</span><span class="p">),</span>
+            <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">right_arm_joint_idx</span><span class="p">),</span>
+            <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">left_arm_joint_idx</span><span class="p">),</span>
+            <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">head_joint_idx</span><span class="p">),</span>
+            <span class="n">values_deg</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">any</span><span class="p">(</span><span class="n">grouped</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;no joints specified&quot;</span><span class="p">)</span>
+
+        <span class="n">position</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">robot</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span><span class="o">.</span><span class="n">position</span><span class="p">)</span>
+
+        <span class="n">body_component</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">grouped</span><span class="p">[</span><span class="s2">&quot;torso&quot;</span><span class="p">]:</span>
+            <span class="n">joint_names</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_subset_target</span><span class="p">(</span>
+                <span class="n">names</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">grouped</span><span class="p">[</span><span class="s2">&quot;torso&quot;</span><span class="p">],</span> <span class="n">relative</span><span class="o">=</span><span class="n">relative</span>
+            <span class="p">)</span>
+            <span class="n">torso_group</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">rby</span><span class="o">.</span><span class="n">JointGroupPositionCommandBuilder</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">set_joint_names</span><span class="p">(</span><span class="n">joint_names</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+                <span class="o">.</span><span class="n">set_minimum_time</span><span class="p">(</span><span class="n">minimum_time</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">body_component</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">BodyComponentBasedCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_torso_command</span><span class="p">(</span><span class="n">torso_group</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">side</span><span class="p">,</span> <span class="n">idx_attr</span><span class="p">,</span> <span class="n">setter</span> <span class="ow">in</span> <span class="p">(</span>
+            <span class="p">(</span><span class="s2">&quot;right_arm&quot;</span><span class="p">,</span> <span class="s2">&quot;right_arm_joint_idx&quot;</span><span class="p">,</span> <span class="s2">&quot;set_right_arm_command&quot;</span><span class="p">),</span>
+            <span class="p">(</span><span class="s2">&quot;left_arm&quot;</span><span class="p">,</span> <span class="s2">&quot;left_arm_joint_idx&quot;</span><span class="p">,</span> <span class="s2">&quot;set_left_arm_command&quot;</span><span class="p">),</span>
+        <span class="p">):</span>
+            <span class="k">if</span> <span class="n">grouped</span><span class="p">[</span><span class="n">side</span><span class="p">]:</span>
+                <span class="n">vec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_full_vector</span><span class="p">(</span>
+                    <span class="n">names</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">info</span><span class="p">,</span> <span class="n">idx_attr</span><span class="p">)),</span> <span class="n">position</span><span class="p">,</span> <span class="n">grouped</span><span class="p">[</span><span class="n">side</span><span class="p">],</span> <span class="n">relative</span><span class="o">=</span><span class="n">relative</span>
+                <span class="p">)</span>
+                <span class="n">arm_jp</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">rby</span><span class="o">.</span><span class="n">JointPositionCommandBuilder</span><span class="p">()</span>
+                    <span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+                    <span class="o">.</span><span class="n">set_minimum_time</span><span class="p">(</span><span class="n">minimum_time</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="n">body_component</span> <span class="o">=</span> <span class="n">body_component</span> <span class="ow">or</span> <span class="n">rby</span><span class="o">.</span><span class="n">BodyComponentBasedCommandBuilder</span><span class="p">()</span>
+                <span class="n">body_component</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">body_component</span><span class="p">,</span> <span class="n">setter</span><span class="p">)(</span><span class="n">arm_jp</span><span class="p">)</span>
+
+        <span class="n">comp</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">ComponentBasedCommandBuilder</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">body_component</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">comp</span> <span class="o">=</span> <span class="n">comp</span><span class="o">.</span><span class="n">set_body_command</span><span class="p">(</span><span class="n">body_component</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">grouped</span><span class="p">[</span><span class="s2">&quot;head&quot;</span><span class="p">]:</span>
+            <span class="n">vec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_full_vector</span><span class="p">(</span>
+                <span class="n">names</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">head_joint_idx</span><span class="p">),</span> <span class="n">position</span><span class="p">,</span> <span class="n">grouped</span><span class="p">[</span><span class="s2">&quot;head&quot;</span><span class="p">],</span> <span class="n">relative</span><span class="o">=</span><span class="n">relative</span>
+            <span class="p">)</span>
+            <span class="n">head_jp</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">rby</span><span class="o">.</span><span class="n">JointPositionCommandBuilder</span><span class="p">()</span>
+                <span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">))</span>
+                <span class="o">.</span><span class="n">set_minimum_time</span><span class="p">(</span><span class="n">minimum_time</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">comp</span> <span class="o">=</span> <span class="n">comp</span><span class="o">.</span><span class="n">set_head_command</span><span class="p">(</span><span class="n">head_jp</span><span class="p">)</span>
+
+        <span class="n">command</span> <span class="o">=</span> <span class="n">rby</span><span class="o">.</span><span class="n">RobotCommandBuilder</span><span class="p">()</span><span class="o">.</span><span class="n">set_command</span><span class="p">(</span><span class="n">comp</span><span class="p">)</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_existing</span><span class="p">(</span>
+            <span class="n">robot_model</span><span class="p">,</span> <span class="s2">&quot;send_command&quot;</span><span class="p">,</span> <span class="n">builder</span><span class="o">=</span><span class="n">command</span><span class="p">,</span> <span class="n">priority</span><span class="o">=</span><span class="n">priority</span>
+        <span class="p">)</span>
+        <span class="n">feedback</span> <span class="o">=</span> <span class="n">handler</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="n">finish_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_finish_code</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">feedback</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="n">handler</span><span class="o">.</span><span class="n">is_done</span><span class="p">(),</span> <span class="s2">&quot;finish_code&quot;</span><span class="p">:</span> <span class="n">finish_code</span><span class="p">}</span>
+
+<div class="viewcode-block" id="RBRby1ControlSDK.move_joints_relative">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.move_joints_relative">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">move_joints_relative</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">deltas_deg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="n">minimum_time</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 여러 관절 동시 상대 이동] 현재 각도 기준 ``{관절명: ±각도(deg)}``만큼 이동.</span>
+
+<span class="sd">        예: ``deltas_deg={&quot;torso_0&quot;: 5.0, &quot;right_arm_3&quot;: -10.0}``. 컴포넌트 스코핑</span>
+<span class="sd">        규칙은 ``_sync_move_joints`` 참고.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_sync_move_joints</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">deltas_deg</span><span class="p">,</span> <span class="n">minimum_time</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">relative</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="RBRby1ControlSDK.move_joints_absolute">
+<a class="viewcode-back" href="../../../api/rb_sdk.rby1_sdk.html#rb_sdk.rby1_sdk.control.RBRby1ControlSDK.move_joints_absolute">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">move_joints_absolute</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">targets_deg</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span>
+        <span class="n">minimum_time</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span>
+        <span class="n">priority</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;[RB-Y1 여러 관절 동시 절대 이동] ``{관절명: 목표각도(deg)}``로 이동.</span>
+
+<span class="sd">        예: ``targets_deg={&quot;torso_0&quot;: 30.0, &quot;right_arm_3&quot;: -20.0}``. 컴포넌트 스코핑</span>
+<span class="sd">        규칙은 ``_sync_move_joints`` 참고. body 전체 20-DOF 벡터를 직접 다루려면</span>
+<span class="sd">        ``move_joint_position`` 을 쓸 것.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">to_thread</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_sync_move_joints</span><span class="p">,</span>
+            <span class="n">robot_model</span><span class="p">,</span>
+            <span class="n">targets_deg</span><span class="p">,</span>
+            <span class="n">minimum_time</span><span class="p">,</span>
+            <span class="n">priority</span><span class="p">,</span>
+            <span class="n">relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_finish_flow</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0 버전으로 생성되었습니다.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
