@@ -1,0 +1,11 @@
+Rainbow Robotics SDK
+====================
+
+Version ``0.1.7``. API reference for the Python package ``rainbow-rb-sdk`` (PyPI) and the C++ library ``librb_sdk`` (apt).
+
+.. toctree::
+   :maxdepth: 2
+
+   Python SDK <api/modules>
+   C++ SDK <api/cpp>
+   api/return_types

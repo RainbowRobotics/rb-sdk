@@ -1,0 +1,1106 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rb_schemas.fbs_types.muscat &#8212; rb-sdk 0.1.7 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../_static/documentation_options.js?v=ca7ad2ea"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rb_schemas/fbs_types/muscat';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.7';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.7" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.7 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_schemas.fbs_types.muscat</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for rb_schemas.fbs_types.muscat</h1><div class="highlight"><pre>
+<span></span><span class="c1"># AUTO-GENERATED by scripts/backend/generate_fbs_casters.py — DO NOT EDIT.</span>
+<span class="c1"># .fbs 스키마 바꾼 뒤: make backend.flatc</span>
+<span class="c1">#</span>
+<span class="c1"># muscat flatc 타입 당 TypedDict 하나. rb_fbs_casters.hpp 의 pybind11</span>
+<span class="c1"># caster 와 키가 1:1 이다. C++ 바인딩이 인자/반환 타입을 이 이름으로 부르므로</span>
+<span class="c1"># rb_sdk_cpp.pyi 가 맨 dict 대신 여기 타입으로 풀린다. 런타임 값은 그냥 dict.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">typing</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Core_SW_InfoTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">sw_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">alias</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">be_service</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">connected</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Get_System_StatesTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">core_sw_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Core_SW_InfoTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">WriteRegisterValuesTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfaceMcProtocolPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">register_addr</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">protocol</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">address_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">payload</span><span class="p">:</span> <span class="n">WriteRegisterValuesTD</span>
+    <span class="n">number_of_read</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="InterfaceMechMindPayloadTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.InterfaceMechMindPayloadTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfaceMechMindPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">project_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">recipe_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">expected_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">position</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfaceModbusClientPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">register_addr</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">payload</span><span class="p">:</span> <span class="n">WriteRegisterValuesTD</span>
+    <span class="n">number_of_read</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="PhotoneoJointTargetTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.PhotoneoJointTargetTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PhotoneoJointTargetTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">input_method</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">tar_frame</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">tar_unit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">ref_point</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+    <span class="n">tar_values</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="TrajectoryWaypointTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.TrajectoryWaypointTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TrajectoryWaypointTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="TrajectoryNameInputTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.TrajectoryNameInputTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">TrajectoryNameInputTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">waypoints</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">TrajectoryWaypointTD</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="InterfacePhotoneoPayloadTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.InterfacePhotoneoPayloadTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfacePhotoneoPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">vision_system_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">start_joint</span><span class="p">:</span> <span class="n">PhotoneoJointTargetTD</span>
+    <span class="n">end_joint</span><span class="p">:</span> <span class="n">PhotoneoJointTargetTD</span>
+    <span class="n">point_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">trajectory_start_to_approach</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">trajectory_approach_to_grasp</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">trajectory_grasp_to_deapproach</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">trajectory_deapproach_to_end</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">solution_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">current_solution_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">trajectory_name</span><span class="p">:</span> <span class="n">TrajectoryNameInputTD</span>
+    <span class="n">pnt_type</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">pnt_para</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="InterfacePickitPayloadTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.InterfacePickitPayloadTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfacePickitPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">pickit_mode</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">calib_method</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">calib_camera_mount</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">pick_point_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">remaining_count_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">model_id_or_type_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">retry_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">gripper_pose_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">reference_pick_point_id_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">setup_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">product_id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">cylinder_length</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">cylinder_diameter</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfaceSocketPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">payload</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">write_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">split</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfaceXgtProtocolPayloadTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_ip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">function_code</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">return_variable_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">resolve_option</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">timeout_sec</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">register_addr</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">cpu_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">device_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">payload</span><span class="p">:</span> <span class="n">WriteRegisterValuesTD</span>
+    <span class="n">number_of_read</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MainTaskBeginTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">position</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">is_enable</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">speed_ratio</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">variables</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Multilingual_StructTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">ko</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">en</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">ja</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">zh</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">vi</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">th</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">es</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Muscat_LogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">level</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">contents</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Muscat_MessageTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">is_toast</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">code</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">str_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_str</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Notify_ButtonTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">Multilingual_StructTD</span>
+    <span class="n">action</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Notify_MessageTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">title</span><span class="p">:</span> <span class="n">Multilingual_StructTD</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">Multilingual_StructTD</span>
+    <span class="n">level</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">buttons</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Notify_ButtonTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Notify_Message_ListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_alias</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">messages</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Notify_MessageTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">repeat_cnt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">last_loaded_at</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PyFM_Executor_StateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">is_ui_execution</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">step_mode</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">total_repeat</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">current_repeat</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">is_main_task</span><span class="p">:</span> <span class="nb">bool</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PyFM_Executor_State_EntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">PyFM_Executor_StateTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PyFM_By_Robot_Model_EntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">PyFM_Executor_State_EntryTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PyFM_Variable_ValueTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">value_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PyFM_Variable_EntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">PyFM_Variable_ValueTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RB_Program_DialogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RB_Program_LogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RB_Program_Task_CheckpointTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sync_task_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">node_path</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RB_Program_Task_StatusTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sync_task_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">node_path</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">offset</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Reponse_Program_At_Start_Or_EndTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetMainTaskTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetProgramListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">order</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">last_load_order</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">search_name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetStepListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">VariableTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="n">Multilingual_StructTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestProgramExecutionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">VariableTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Change_ProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Exec_Control_ProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Get_Digital_InputTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Get_Variable_ListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Program_At_EndTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Program_At_StartTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Program_ExecutionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Read_Notify_MessageTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">action</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">extra_payload</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Update_Sub_Task_StateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">sub_task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_task_type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">int</span>
+
+<div class="viewcode-block" id="Request_Wrapper_VibrationMotionTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.muscat.Request_Wrapper_VibrationMotionTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Request_Wrapper_VibrationMotionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">onoff</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">frame</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">x_mag</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">y_mag</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">z_mag</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">x_freq</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">y_freq</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">z_freq</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">x_phase</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">y_phase</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">z_phase</span><span class="p">:</span> <span class="nb">float</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TaskTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">raw_task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">parent_task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">order</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">script_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">script_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">begin</span><span class="p">:</span> <span class="n">MainTaskBeginTD</span>
+    <span class="n">extension</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetMainTaskTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">tasks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">TaskTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetProgramListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">programs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ProgramTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">StepTreeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">children</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepTreeTD</span><span class="p">]</span>
+    <span class="n">parent_step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">group_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sync_step_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">target_step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">variable_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">args_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_args_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">func</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_func</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">func_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_func_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">done_script</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_task_script_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_task_type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">not_ast_eval</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">order</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">highlight</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disabled</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">memo</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">allow_children</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">allow_parents</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">not_allow_children</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">fix_children</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">require_children</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">require_parent</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disable_delete</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disable_copy</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">group_last_item</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">group_first_item</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">is_strict</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">ignore_pause</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">StepEntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepTreeTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">StepTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">parent_step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">group_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sync_step_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">target_step_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">variable_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">args_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_args_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">func</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_func</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">func_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">post_func_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">done_script</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_task_script_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sub_task_type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">not_ast_eval</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">order</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">highlight</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disabled</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">memo</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">allow_children</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">allow_parents</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">not_allow_children</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">fix_children</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">require_children</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">require_parent</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disable_delete</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">disable_copy</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">group_last_item</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">group_first_item</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">is_strict</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">ignore_pause</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SubStepTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">steps</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SubStepEntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">SubStepTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program</span><span class="p">:</span> <span class="n">ProgramTD</span>
+    <span class="n">main_tasks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">TaskTD</span><span class="p">]</span>
+    <span class="n">sub_tasks</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">TaskTD</span><span class="p">]</span>
+    <span class="n">main_steps</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepEntryTD</span><span class="p">]</span>
+    <span class="n">sub_steps</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">SubStepEntryTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetStepListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">steps</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepTD</span><span class="p">]</span>
+    <span class="n">step_tree</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">StepTreeTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseProgramExecutionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">VariableTD</span><span class="p">]</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Change_ProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Exec_Control_ProgramTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Get_Digital_InputTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">digital_input</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Get_Executor_StateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">by_robot_model</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">PyFM_By_Robot_Model_EntryTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Get_Variable_ListTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">VariableTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Program_ExecutionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_Read_Notify_MessageTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Response_ResultTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Robot_StateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">InterfacePayloadUnionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">InterfaceModbusClientPayloadTD</span> <span class="o">|</span> <span class="n">InterfaceMcProtocolPayloadTD</span> <span class="o">|</span> <span class="n">InterfaceXgtProtocolPayloadTD</span> <span class="o">|</span> <span class="n">InterfaceSocketPayloadTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">VisionInterfacePayloadUnionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">InterfaceMechMindPayloadTD</span> <span class="o">|</span> <span class="n">InterfacePhotoneoPayloadTD</span> <span class="o">|</span> <span class="n">InterfacePickitPayloadTD</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Core_SW_InfoTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Get_System_StatesTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;WriteRegisterValuesTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfaceMcProtocolPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfaceMechMindPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfaceModbusClientPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PhotoneoJointTargetTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TrajectoryWaypointTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TrajectoryNameInputTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfacePhotoneoPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfacePickitPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfaceSocketPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfaceXgtProtocolPayloadTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MainTaskBeginTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Multilingual_StructTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Muscat_LogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Muscat_MessageTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Notify_ButtonTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Notify_MessageTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Notify_Message_ListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PyFM_Executor_StateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PyFM_Executor_State_EntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PyFM_By_Robot_Model_EntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PyFM_Variable_ValueTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PyFM_Variable_EntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RB_Program_DialogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RB_Program_LogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RB_Program_Task_CheckpointTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RB_Program_Task_StatusTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Reponse_Program_At_Start_Or_EndTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetMainTaskTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetProgramListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetStepListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VariableTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestProgramExecutionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Change_ProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Exec_Control_ProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Get_Digital_InputTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Get_Variable_ListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Program_At_EndTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Program_At_StartTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Program_ExecutionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Read_Notify_MessageTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Update_Sub_Task_StateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Request_Wrapper_VibrationMotionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TaskTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetMainTaskTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetProgramListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;StepTreeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;StepEntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;StepTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SubStepTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SubStepEntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetStepListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseProgramExecutionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Change_ProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Exec_Control_ProgramTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Get_Digital_InputTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Get_Executor_StateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Get_Variable_ListTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Program_ExecutionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_Read_Notify_MessageTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Response_ResultTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Robot_StateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;InterfacePayloadUnionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VisionInterfacePayloadUnionTD&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

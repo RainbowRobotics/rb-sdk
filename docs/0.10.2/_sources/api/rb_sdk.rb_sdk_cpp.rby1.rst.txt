@@ -1,0 +1,56 @@
+Rby1
+====
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1CommandHandle
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1CommandHandleSync
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1CommandStream
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1CommandStreamSync
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1SDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1SerialStream
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1SerialStreamSync
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBRby1SyncSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBY1ConnectionError
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBY1Error
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. automodule:: rb_sdk.rb_sdk_cpp.rby1
+   :members:
+   :undoc-members:

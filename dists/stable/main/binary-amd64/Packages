@@ -1,0 +1,180 @@
+Package: rainbow-rb-sdk
+Version: 0.1.5
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 34575
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Filename: pool/stable/rainbow-rb-sdk_0.1.5_amd64.deb
+Size: 14423308
+MD5sum: 3ffe1d3d8770b93bde4b81cdacf08daf
+SHA1: 1f3a8fc50332013225d0b9968c149968b1cb5037
+SHA256: e1f9c01cb796d64a4b075072d5362225003a6430d7e7bedcfaad760c09b14f4d
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (zenoh-c, libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. Install the matching rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.1.6
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 34575
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Filename: pool/stable/rainbow-rb-sdk_0.1.6_amd64.deb
+Size: 14423312
+MD5sum: 945e3b9098fe2ef85f6f6e8a344b39f6
+SHA1: abbefb6e12fab74857749d6c40cee7a26d222615
+SHA256: 4c29baca245ed6ceff02112f16f3894db734a5b529dab23f5c050188c4ad0df9
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (zenoh-c, libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. Install the matching rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.1.7
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 34579
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Filename: pool/stable/rainbow-rb-sdk_0.1.7_amd64.deb
+Size: 14431046
+MD5sum: 95fb975f1924594f0a13db1a7c9e7d0e
+SHA1: 0865455ad2af849b6bcb98ec94f7467585e4bbb6
+SHA256: 53cb250b08a58c11da3bf7c02b74c56f03c26f56cd2a0c86576c637867a1a517
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (zenoh-c, libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. Install the matching rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.10.1
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 34599
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Filename: pool/stable/rainbow-rb-sdk_0.10.1_amd64.deb
+Size: 14437438
+MD5sum: 2660018e0fa46a9aa9a3259486c850d7
+SHA1: 555d7fd5de368fa87f9a1fa5e485beb8335f5de3
+SHA256: f79cf79de4df9884ee4dd24dc03582cea98f3cdd768d7f99283f6609c16af5b7
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (zenoh-c, libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. Install the matching rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.10.2
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 34599
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Filename: pool/stable/rainbow-rb-sdk_0.10.2_amd64.deb
+Size: 14437438
+MD5sum: da0b98a91131f05faa5f3d10d8d5eeec
+SHA1: 0adddc90f5662c45224880164b9678c3f2354de6
+SHA256: dbae52f5f07cc5376c24f76a477d1b83e70a5e15cde07ac53f2a41d3640becd9
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (zenoh-c, libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. Install the matching rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.1.5
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 6261
+Depends: rainbow-rb-sdk (= 0.1.5), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.1.5_amd64.deb
+Size: 947732
+MD5sum: dcb5ced2f951e9f190e01066041e7381
+SHA1: 62f49f1a30f322665b2542837482b6afad972e05
+SHA256: f6ee36b0deff6077580da201013157290a4673e112945cbe4bc02a9b10fc9c2d
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.1.6
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 6261
+Depends: rainbow-rb-sdk (= 0.1.6), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.1.6_amd64.deb
+Size: 947806
+MD5sum: 97429645b0a1412c45acd82090bfe080
+SHA1: fc3fb2d1ef5508a10fa692c38932c12c4ff24571
+SHA256: b28fdec11529a59a865e23bf1d7a227b792e756450d0b0b744e416360a5d2910
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.1.7
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 6320
+Depends: rainbow-rb-sdk (= 0.1.7), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.1.7_amd64.deb
+Size: 954726
+MD5sum: 704f9d2287961cd3df7b59e810f8a237
+SHA1: 228fbb679ce727b13a7bc202b79b878596f4c4fd
+SHA256: 30757f44582e0eb03555e21cebecb74be60657c01f3f23c85a2da73406cb7cc8
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.10.1
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 6335
+Depends: rainbow-rb-sdk (= 0.10.1), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.10.1_amd64.deb
+Size: 956032
+MD5sum: ef29554cee17786a9f6c7de9b5a86e9f
+SHA1: 866a3da1be1a2744bb75059738d5ae4b421738a3
+SHA256: bd9d6265a3cf1f278bb7f75e7a544b156f033a93ccb6643ca8375291216d54f0
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.10.2
+Architecture: amd64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 6335
+Depends: rainbow-rb-sdk (= 0.10.2), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.10.2_amd64.deb
+Size: 956016
+MD5sum: 1985b7e762a531ee20aab8082750b574
+SHA1: 89b554fa4869d63fa7c2a7bc40d6d6c6038d7f39
+SHA256: 74836e1599e32477bd944d744af9bf61b19db613117fa110aadcdbef23f4e4db
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+

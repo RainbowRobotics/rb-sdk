@@ -1,0 +1,17 @@
+Plugin Call
+===========
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PluginRouter
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBPluginCall
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBPluginGatewayError
+   :members:
+   :show-inheritance:
+   :undoc-members:
