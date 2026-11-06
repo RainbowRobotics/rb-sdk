@@ -1,0 +1,21 @@
+rb\_sdk.schema package
+======================
+
+Submodules
+----------
+
+rb\_sdk.schema.amr\_schema module
+---------------------------------
+
+.. automodule:: rb_sdk.schema.amr_schema
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: rb_sdk.schema
+   :members:
+   :show-inheritance:
+   :undoc-members:

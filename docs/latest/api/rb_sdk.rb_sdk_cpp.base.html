@@ -1,0 +1,1406 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Base &#8212; rb-sdk 0.11.4 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../_static/documentation_options.js?v=0fc275bd"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/rb_sdk.rb_sdk_cpp.base';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.11.4';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Manipulate" href="rb_sdk.rb_sdk_cpp.manipulate.html" />
+    <link rel="prev" title="rb_sdk package" href="rb_sdk.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.11.4" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.11.4 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="rb_sdk.html">rb_sdk package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.manipulate.html">Manipulate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.program.html">Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.plugin_program_context.html">Plugin Program Context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.amr.html">Amr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.plugin_call.html">Plugin Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.rby1.html">Rby1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.rb_sdk_cpp.exceptions.html">Exceptions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="rb_sdk.amr_sdk.html">rb_sdk.amr_sdk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="rb_sdk.amr_sdk.schema.html">rb_sdk.amr_sdk.schema package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.base_sdk.html">rb_sdk.base_sdk package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rb_sdk.schema.html">rb_sdk.schema package</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">rb_sdk</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="rb_sdk.html" class="nav-link">rb_sdk package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Base</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="base">
+<h1>Base<a class="headerlink" href="#base" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">ConnectOptions</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Options for connecting this SDK process as a remote zenoh peer.</p>
+<p>Passed to RBBaseSDK::connect() when the SDK runs on a different
+machine than the robot (for example a developer PC or an external
+vision PC). The SDK opens a zenoh listen port, registers its IP and
+port with the robot’s common service over HTTP, and keeps that
+registration alive with periodic heartbeats so that the robot’s
+services connect back to it and the process joins the robot’s zenoh
+mesh.</p>
+<p>Only token and host are required; every other field has a usable
+default.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.heartbeat">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">heartbeat</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.heartbeat" title="Link to this definition">#</a></dt>
+<dd><p>Heartbeat interval in seconds. When omitted, ttl / 2 is used, with a
+lower bound of 1 second. Must be shorter than ttl or the registration
+expires between heartbeats.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.host">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">host</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.host" title="Link to this definition">#</a></dt>
+<dd><p>IPv4 address or hostname of the robot that runs the common service.
+The service is reached at <a class="reference external" href="http:/">http:/</a>/&lt;host&gt;:8000. If this resolves to the
+local machine (“127.0.0.1”, “localhost”, “::1”, or an address of this
+host), connect() does nothing because the process is already in the
+local mesh.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_interval">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">mesh_probe_interval</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_interval" title="Link to this definition">#</a></dt>
+<dd><p>0.5.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Delay in seconds between two consecutive echo probes. Default</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_timeout">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">mesh_probe_timeout</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_timeout" title="Link to this definition">#</a></dt>
+<dd><p>Time in seconds to wait for each individual echo probe reply. Default:
+1.0.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_timeout">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">mesh_timeout</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_timeout" title="Link to this definition">#</a></dt>
+<dd><p>Maximum time in seconds connect() waits for the zenoh echo check to
+prove that the robot can reach this process. When omitted, 5 seconds
+is used. If the check does not pass in time, the peer is unregistered
+and connect() returns no peer id.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.token">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">token</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.token" title="Link to this definition">#</a></dt>
+<dd><p>Bearer &lt;token&gt;” on every peer
+registration, heartbeat, and unregistration request to the common
+service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Bearer token sent as “Authorization</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.ttl">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ttl</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.ttl" title="Link to this definition">#</a></dt>
+<dd><p>Peer registration time-to-live in seconds. The common service drops
+the peer if no heartbeat arrives within this time. Default: 30.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.ConnectOptions.zenoh_port">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">zenoh_port</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.zenoh_port" title="Link to this definition">#</a></dt>
+<dd><p>Local TCP port on which this process listens for zenoh connections
+from the robot. When omitted, a free port is picked by the OS. Set it
+when a firewall only allows a known port.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.QueuedSample">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">QueuedSample</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.QueuedSample" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.QueuedSample.attachment">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">attachment</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.QueuedSample.attachment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.QueuedSample.key">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.QueuedSample.key" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.QueuedSample.payload">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">payload</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.QueuedSample.payload" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">RBBaseSDK</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<p>Common SDK base for zenoh transport, lifecycle, logging, and shared
+helpers.</p>
+<p>Every domain SDK (RBManipulateSDK, RBAmrSDK, RBProgramSDK, RBRby1SDK,
+…) derives from this class. It provides:</p>
+<ul class="simple">
+<li><p>One zenoh session per process. All SDK instances in the same process
+share a single rb_zenoh::ZenohClient. The session is opened lazily
+by the first constructor and is closed only when the last SDK
+instance is closed (reference counted per process id).</p></li>
+<li><p>Raw and FlatBuffer-typed request/reply (query, query_one,
+query_all), publish/subscribe (publish, zenoh_subscribe,
+receive_one), and serving requests (zenoh_queryable).</p></li>
+<li><p>Automatic recovery: query-style calls that fail with a transport
+error or no reply reconnect the shared session and retry exactly
+once.</p></li>
+<li><p>Remote peer mode (connect/disconnect): lets a process running off-
+robot join the robot’s zenoh mesh through the common service.</p></li>
+<li><p>Cross-domain helpers: program logs (log), PyFM step result checks
+(manipulate_return_value, validate_single_return_value), CAN bus
+access through the host_pcan service (connect_can, disconnect_can,
+transmit_can), and vendor vision client registries.</p></li>
+</ul>
+<dl class="simple">
+<dt>Threading: blocking network calls release the Python GIL when it is</dt><dd><p>held,</p>
+</dd>
+</dl>
+<p>so other Python threads and zenoh callbacks keep running while a call
+waits for a reply. Calls are safe to make from multiple threads.</p>
+<p>Fork safety: the zenoh runtime does not survive fork(). An instance
+that was created in a parent process is ignored by close() in a forked
+child; the child must create its own SDK instances.</p>
+<p>Python binding: the Python class keeps one instance per (process id,
+class), so constructing the same SDK class twice in one process
+returns the same object. connect() and disconnect() return awaitables
+in Python, and zenoh_subscribe()/zenoh_queryable() are used as
+decorators.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.close" title="Link to this definition">#</a></dt>
+<dd><p>Releases this instance’s resources and closes the shared session when
+it is the last SDK.</p>
+<p>In order: runs before_close(), decrements the per-process SDK
+reference count, then either calls disconnect() when a remote peer is
+registered (which always closes the shared session), or undeclares
+only this instance’s subscribers and queryables and closes the shared
+session if no other SDK instance is left.</p>
+<p>Idempotent: later calls do nothing. Does nothing in a forked child for
+an instance created by the parent process. Called automatically by the
+destructor.</p>
+<p>Python: also removes this object from the per-process instance cache, so the
+next construction of the same class creates a new object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.close_all_for_pid">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">close_all_for_pid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.close_all_for_pid" title="Link to this definition">#</a></dt>
+<dd><p>Closes every live SDK instance in the current process.</p>
+<p>Calls close() on every RBBaseSDK (including derived SDKs and sub-SDKs
+held as members of an aggregate SDK) that was constructed in this
+process and is not closed yet. The reference count therefore reaches
+zero and the shared zenoh session is closed. Use it at shutdown when
+relying on destructor or garbage-collection order is not acceptable.
+Errors from individual close() calls are logged and skipped.</p>
+<p>In Python this also clears the per-process instance cache, so the next
+construction creates a fresh object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of instances that were closed. 0 when called from a forked
+child.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.connect" title="Link to this definition">#</a></dt>
+<dd><p>Registers this process as a remote zenoh peer through the common
+service.</p>
+<p>Use this when the SDK runs on a machine other than the robot. The
+steps
+are:</p>
+<ol class="arabic simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">options.host</span></code> resolves to this machine, return std::nullopt
+immediately: the process is already part of the local mesh.</p></li>
+<li><p>If a peer is already registered in this process, return its id.</p></li>
+<li><p>Pick the listen port (options.zenoh_port or a free port), add
+“tcp/0.0.0.0:&lt;port&gt;” to ZENOH_PEER_LISTEN_ENDPOINTS, and reopen the
+shared zenoh session so it listens on that port.</p></li>
+<li><p>POST this machine’s IP (the local address used to reach the host),
+port, and ttl to <a class="reference external" href="http:/">http:/</a>/&lt;host&gt;:8000/zenoh/peer.</p></li>
+<li><p>Start a background keepalive thread that sends a heartbeat every
+options.heartbeat seconds (ttl / 2 by default) and re-registers the
+peer if the common service forgets it (for example after a
+restart).</p></li>
+<li><p>Publish echo probes on “muscat/zenoh/echo_req” until a matching
+reply arrives on “muscat/zenoh/echo_res” or options.mesh_timeout
+expires.</p></li>
+</ol>
+<p>If the first registration request fails (for example the robot is
+still booting), the error is logged, the keepalive thread keeps
+retrying with exponential backoff (2 s up to 30 s), and std::nullopt
+is returned. If registration succeeds but the echo check times out,
+the peer is unregistered and std::nullopt is returned.</p>
+<p>In Python this method returns an awaitable that runs the blocking work
+in a worker thread: use “await sdk.connect(options)”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>options</strong> – Remote peer registration and heartbeat options.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Registered peer id, or std::nullopt when registration is skipped,
+still pending in the background, or the mesh echo check fails.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>std::runtime_error</strong> – If local IP/port detection or zenoh
+    reconnection fails, or if unregistering the
+    peer after a failed echo check fails.</p>
+</dd>
+</dl>
+<p>Python: returns an awaitable that runs the blocking work in a worker thread
+(asyncio.to_thread). Use <code class="docutils literal notranslate"><span class="pre">peer_id</span> <span class="pre">=</span> <span class="pre">await</span> <span class="pre">sdk.connect(options)</span></code>; the
+awaited value is the peer id string or None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.connect_can">
+<span class="sig-name descname"><span class="pre">connect_can</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataBitrate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receiveOwnMessages</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'pcan'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="return_types.html#rb_schemas.fbs_types.ipc.ResponseCANConnectTD" title="rb_schemas.fbs_types.ipc.ResponseCANConnectTD"><span class="pre">rb_schemas.fbs_types.ipc.ResponseCANConnectTD</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.connect_can" title="Link to this definition">#</a></dt>
+<dd><p>Opens a CAN channel through the host_pcan service.</p>
+<p>Sends a request on “muscat/can/connect” (1 s timeout) to the host
+service, which opens the bus on the robot PC. Each channel is opened
+once and stays open until disconnect_can() is called; frames are then
+sent with transmit_can().</p>
+<p>In Python the keyword arguments use the FlatBuffer field names:
+channel, bitrate, fd, dataBitrate, receiveOwnMessages, interface,
+flow_manager_args (all keyword-only).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – CAN channel name as understood by the interface backend,
+for example “PCAN_USBBUS1”.</p></li>
+<li><p><strong>bitrate</strong> – Nominal (arbitration phase) bitrate in bit/s, for example
+500000.</p></li>
+<li><p><strong>fd</strong> – Whether to open the channel in CAN-FD mode.</p></li>
+<li><p><strong>data_bitrate</strong> – CAN-FD data phase bitrate in bit/s. Used only when
+<code class="docutils literal notranslate"><span class="pre">fd</span></code> is true; 0 leaves it to the backend default.</p></li>
+<li><p><strong>receive_own_messages</strong> – Whether transmitted frames should be looped
+back to this channel’s receivers.</p></li>
+<li><p><strong>iface</strong> – CAN interface backend, defaults to “pcan” (PEAK-System
+adapters).</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done on success and an
+unsuccessful response raises.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>IPC::ResponseCANConnectT returned by the host service. Check
+success and message when <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is not given,
+because a failure is then returned instead of raised.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>std::runtime_error</strong> – If no response is received, or if
+    <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is provided and the
+    response reports failure (the exception
+    message is the service’s message).</p></li>
+<li><p><strong>rb_zenoh::ZenohNoReply</strong> – , rb_zenoh::ZenohTransportError If the
+    host service cannot be reached.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect">
+<span class="sig-name descname"><span class="pre">disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect" title="Link to this definition">#</a></dt>
+<dd><p>Unregisters this process from the remote peer mesh and closes its
+shared zenoh session.</p>
+<p>Reverses connect(): stops and joins the keepalive thread, sends DELETE
+/zenoh/peer/&lt;peer_id&gt; to the common service (a failure is logged, not
+thrown), undeclares this instance’s subscribers and queryables, and
+closes the shared zenoh session unconditionally. Other SDK instances
+in the process lose their session too; their next query-style call
+reopens it, but their subscribers and queryables are not restored.</p>
+<p>In Python this method returns an awaitable: use “await
+sdk.disconnect()”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true when a peer registration or keepalive thread was active and
+has been torn down; false when there was nothing to disconnect.</p>
+</dd>
+</dl>
+<p>Python: returns an awaitable (asyncio.to_thread). Use
+<code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">sdk.disconnect()</span></code>; the awaited value is the bool result.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect_can">
+<span class="sig-name descname"><span class="pre">disconnect_can</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="return_types.html#rb_schemas.fbs_types.ipc.ResponseCANDisconnectTD" title="rb_schemas.fbs_types.ipc.ResponseCANDisconnectTD"><span class="pre">rb_schemas.fbs_types.ipc.ResponseCANDisconnectTD</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect_can" title="Link to this definition">#</a></dt>
+<dd><p>Closes a CAN channel through the host_pcan service.</p>
+<p>Sends a request on “muscat/can/disconnect” (1 s timeout). Same success
+and error handling as connect_can().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – CAN channel name previously passed to connect_can().</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done on success and an
+unsuccessful response raises.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>IPC::ResponseCANDisconnectT returned by the host service.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>std::runtime_error</strong> – If no response is received, or if
+    <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is provided and the
+    response reports failure.</p></li>
+<li><p><strong>rb_zenoh::ZenohNoReply</strong> – , rb_zenoh::ZenohTransportError If the
+    host service cannot be reached.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.instance">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.instance" title="Link to this definition">#</a></dt>
+<dd><p>Returns a process-local singleton base SDK instance.</p>
+<p>The instance is created on first use and lives until process exit. Use
+it when only the shared transport and helpers are needed and no domain
+SDK is involved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Reference to the singleton. Do not delete it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.log">
+<span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">robot_model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.log" title="Link to this definition">#</a></dt>
+<dd><p>Emits a program log entry on the shared muscat log topic.</p>
+<p>Publishes a muscat::RB_Program_LogT on “muscat/program/log”, where the
+common service’s program feature picks it up as a program log. The
+call is fire-and-forget (see publish()); it does not wait for the log
+to be stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>content</strong> – Log message content.</p></li>
+<li><p><strong>robot_model</strong> – Name of the robot model associated with the log.</p></li>
+<li><p><strong>level</strong> – Log level: “INFO”, “WARNING”, “ERROR”, “USER”, “DEBUG”, or
+“GENERAL”. Matching is case-sensitive. Any other string
+leaves the log type at its FlatBuffer default.</p></li>
+<li><p><strong>disable_db</strong> – Kept for parity with the Python SDK; currently
+ignored.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done after publishing the log.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.publish">
+<span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_attachment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">congestion_control</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">express</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.publish" title="Link to this definition">#</a></dt>
+<dd><p>Publishes raw bytes to a zenoh topic.</p>
+<p>Non-blocking: the sample is put on the session’s transmit queue and
+sent by a background worker, so this returns before the data is on the
+wire. The queue holds up to 4096 samples; when it is full, the oldest
+pending sample is dropped. While the session is closing, samples are
+silently discarded. There is no delivery confirmation; use query_one()
+when an acknowledgement is needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to publish to. Must not contain
+wildcards.</p></li>
+<li><p><strong>payload</strong> – Raw payload bytes.</p></li>
+<li><p><strong>extra_attachment</strong> – Optional attachment string appended to the
+sender metadata that subscribers receive.</p></li>
+<li><p><strong>congestion_control</strong> – zenoh-c congestion control: 1 = DROP (default,
+drop the sample when the network is congested)
+or 0 = BLOCK (wait until it can be sent). See
+CongestionControl.</p></li>
+<li><p><strong>priority</strong> – zenoh-c priority 1 (REAL_TIME) to 7 (BACKGROUND).
+Default 5 (DATA). See Priority.</p></li>
+<li><p><strong>express</strong> – If true, zenoh sends the sample immediately instead of
+batching it with others. Lowers latency at the cost of
+throughput.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">topic</span></code> is not a valid key expression.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RawReply" title="rb_sdk.rb_sdk_cpp.RawReply"><span class="pre">rb_sdk.rb_sdk_cpp.RawReply</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query" title="Link to this definition">#</a></dt>
+<dd><p>Sends a raw zenoh query and returns every raw reply.</p>
+<p>Blocks until every matching queryable has answered or <code class="docutils literal notranslate"><span class="pre">timeout_ms</span></code>
+elapses, then returns all replies received, including error replies
+(RawReply::is_error is true for those). Unlike query_one(), getting no
+reply is not an error: the result is simply empty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to query. Wildcards fan the query out
+to every matching queryable.</p></li>
+<li><p><strong>payload</strong> – Optional raw payload bytes sent with the query.</p></li>
+<li><p><strong>timeout_ms</strong> – Query timeout in milliseconds.</p></li>
+<li><p><strong>target</strong> – zenoh-c query target: 0 = BEST_MATCHING (default), 1 =
+ALL, 2 = ALL_COMPLETE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Raw replies (key, payload, attachment, encoding, is_error)
+received before timeout. May be empty.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rb_zenoh::ZenohTransportError</strong> – If the session is not open or the
+    query cannot be sent, even after
+    one reconnect and retry.</p></li>
+<li><p><strong>std::runtime_error</strong> – If <code class="docutils literal notranslate"><span class="pre">topic</span></code> is not a valid key expression.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.query_all">
+<span class="sig-name descname"><span class="pre">query_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RawReply" title="rb_sdk.rb_sdk_cpp.RawReply"><span class="pre">rb_sdk.rb_sdk_cpp.RawReply</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query_all" title="Link to this definition">#</a></dt>
+<dd><p>Sends a raw zenoh query and returns every successful raw reply.</p>
+<p>Like query(), but error replies are dropped from the result. Use it to
+collect answers from several responders, for example with a wildcard
+key expression. Getting no reply is not an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to query.</p></li>
+<li><p><strong>payload</strong> – Optional raw payload bytes sent with the query.</p></li>
+<li><p><strong>timeout_ms</strong> – Query timeout in milliseconds.</p></li>
+<li><p><strong>target</strong> – zenoh-c query target: 0 = BEST_MATCHING (default), 1 =
+ALL, 2 = ALL_COMPLETE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Successful raw replies received before timeout. May be empty.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rb_zenoh::ZenohTransportError</strong> – If the session is not open or the
+    query cannot be sent, even after
+    one reconnect and retry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.query_one">
+<span class="sig-name descname"><span class="pre">query_one</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RawReply" title="rb_sdk.rb_sdk_cpp.RawReply"><span class="pre">rb_sdk.rb_sdk_cpp.RawReply</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query_one" title="Link to this definition">#</a></dt>
+<dd><p>Sends a raw zenoh query and returns one raw reply.</p>
+<p>Waits for the query to finish (all replies or <code class="docutils literal notranslate"><span class="pre">timeout_ms),</span></code> then
+returns the first non-error reply. This is the usual call for a
+service RPC that has exactly one responder.</p>
+<p>In Python, ZenohNoReply and ZenohTransportError keep their rb_zenoh
+exception types, which the FastAPI services map to HTTP 504 and 502.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to query.</p></li>
+<li><p><strong>payload</strong> – Optional raw payload bytes sent with the query.</p></li>
+<li><p><strong>timeout_ms</strong> – Query timeout in milliseconds. With the single
+reconnect-and-retry, the worst case is about twice
+this value.</p></li>
+<li><p><strong>target</strong> – zenoh-c query target: 0 = BEST_MATCHING (default), 1 =
+ALL, 2 = ALL_COMPLETE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first successful raw reply (key, payload, attachment,
+encoding, is_error = false).</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rb_zenoh::ZenohTransportError</strong> – If the session is not open or the
+    query cannot be sent, even after
+    one reconnect and retry.</p></li>
+<li><p><strong>rb_zenoh::ZenohNoReply</strong> – If no reply arrives before timeout, even
+    after one reconnect and retry.</p></li>
+<li><p><strong>rb_zenoh::ZenohReplyError</strong> – If only error replies arrive. The
+    message contains the first error
+    payload. Not retried.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.receive_one">
+<span class="sig-name descname"><span class="pre">receive_one</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_ms</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">self_sender_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.QueuedSample" title="rb_sdk.rb_sdk_cpp.QueuedSample"><span class="pre">rb_sdk.rb_sdk_cpp.QueuedSample</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.receive_one" title="Link to this definition">#</a></dt>
+<dd><p>Receives one raw queued sample from <code class="docutils literal notranslate"><span class="pre">topic.</span></code></p>
+<p>Declares a temporary subscriber, waits for the first sample published
+after this call, undeclares the subscriber, and returns the sample.
+Samples published before the call are not seen. Use it to wait for the
+next value of a periodic stream or for a one-off event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to receive from.</p></li>
+<li><p><strong>timeout_ms</strong> – Receive timeout in milliseconds. With the single
+reconnect-and-retry, the worst case is about twice
+this value.</p></li>
+<li><p><strong>self_sender_id</strong> – Sender id to ignore when filtering self-originated
+samples. Empty means no filtering.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Raw queued sample (key, payload, attachment).</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rb_zenoh::ZenohNoReply</strong> – If no sample arrives before timeout, even
+    after one reconnect and retry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_queryable">
+<span class="sig-name descname"><span class="pre">register_zenoh_queryable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_queryable" title="Link to this definition">#</a></dt>
+<dd><p>Registers an externally declared queryable topic for cleanup by
+close().</p>
+<p>Same as register_zenoh_subscriber() for queryables. Registering a
+topic also makes later zenoh_queryable() calls for that topic on this
+instance a no-op, because the topic is treated as already declared.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> – Zenoh key expression of the queryable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_subscriber">
+<span class="sig-name descname"><span class="pre">register_zenoh_subscriber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">topic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_subscriber" title="Link to this definition">#</a></dt>
+<dd><p>Registers an externally declared subscriber topic for cleanup by
+close().</p>
+<p>Use this when a subscriber was declared on the shared zenoh session by
+some path other than zenoh_subscribe() and should still be removed
+when this instance is closed or disconnected. Cleanup is by topic, so
+every subscriber on that topic in the shared session is removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> – Zenoh key expression of the subscriber.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.transmit_can">
+<span class="sig-name descname"><span class="pre">transmit_can</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK" title="rb_sdk.rb_sdk_cpp.RBBaseSDK"><span class="pre">rb_sdk.rb_sdk_cpp.RBBaseSDK</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arbitrationId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dlc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isExtendedId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isRemoteFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isFd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bitrateSwitch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isErrorFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errorStateIndicator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_manager_args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">rb_schemas.sdk.FlowManagerArgs</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="return_types.html#rb_schemas.fbs_types.ipc.ResponseCANTransmitTD" title="rb_schemas.fbs_types.ipc.ResponseCANTransmitTD"><span class="pre">rb_schemas.fbs_types.ipc.ResponseCANTransmitTD</span></a></span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.transmit_can" title="Link to this definition">#</a></dt>
+<dd><p>Transmits one CAN/CAN-FD frame through the host_pcan service.</p>
+<p>Sends a request on “muscat/can/transmit” (1 s timeout) carrying one
+IPC::CANMessageT. The channel must have been opened with
+connect_can(). The call returns once the host service has handed the
+frame to the bus, not when another node acknowledges it. Same success
+and error handling as connect_can().</p>
+<p>In Python the keyword arguments use the FlatBuffer field names:
+channel, arbitrationId, data, dlc, isExtendedId, isRemoteFrame, isFd,
+bitrateSwitch, isErrorFrame, errorStateIndicator, timestamp,
+flow_manager_args (all keyword-only).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – CAN channel name previously passed to connect_can().</p></li>
+<li><p><strong>arbitration_id</strong> – CAN arbitration id: 11-bit (0x000-0x7FF) for a
+standard id, 29-bit for an extended id.</p></li>
+<li><p><strong>data</strong> – Frame payload bytes: up to 8 for classic CAN, up to 64 for
+CAN-FD.</p></li>
+<li><p><strong>dlc</strong> – Data length code. 0 lets the backend derive it from <code class="docutils literal notranslate"><span class="pre">data.</span></code></p></li>
+<li><p><strong>is_extended_id</strong> – Whether <code class="docutils literal notranslate"><span class="pre">arbitration_id</span></code> is an extended (29-bit)
+id.</p></li>
+<li><p><strong>is_remote_frame</strong> – Whether the frame is a remote transmission
+request (no data).</p></li>
+<li><p><strong>is_fd</strong> – Whether the frame is CAN-FD.</p></li>
+<li><p><strong>bitrate_switch</strong> – Whether the CAN-FD data phase uses the faster data
+bitrate.</p></li>
+<li><p><strong>is_error_frame</strong> – Whether the frame is an error frame.</p></li>
+<li><p><strong>error_state_indicator</strong> – CAN-FD error-state indicator flag.</p></li>
+<li><p><strong>timestamp</strong> – Optional frame timestamp in seconds. 0 means unset.</p></li>
+<li><p><strong>flow_manager_args</strong> – Optional PyFM step context. If provided, the
+step is marked done on success and an
+unsuccessful response raises.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>IPC::ResponseCANTransmitT returned by the host service.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>std::runtime_error</strong> – If no response is received, or if
+    <code class="docutils literal notranslate"><span class="pre">flow_manager_args</span></code> is provided and the
+    response reports failure.</p></li>
+<li><p><strong>rb_zenoh::ZenohNoReply</strong> – , rb_zenoh::ZenohTransportError If the
+    host service cannot be reached.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_queryable">
+<span class="sig-name descname"><span class="pre">zenoh_queryable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatbuffer_req_T_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatbuffer_res_buf_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_queryable" title="Link to this definition">#</a></dt>
+<dd><p>Decorator that serves zenoh queries on a topic with the decorated function.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@sdk</span><span class="o">.</span><span class="n">zenoh_queryable</span><span class="p">(</span><span class="s2">&quot;my_plugin/add&quot;</span><span class="p">,</span> <span class="n">flatbuffer_req_T_class</span><span class="o">=</span><span class="n">AddReqT</span><span class="p">,</span>
+                     <span class="n">flatbuffer_res_buf_size</span><span class="o">=</span><span class="mi">256</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_add</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">AddResT</span><span class="p">(</span><span class="n">result</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">req</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The handler runs on an rb_zenoh worker thread for every query. It is
+called with keyword arguments only, and receives only the names it
+declares:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (str): the key expression of the query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code> (str): the selector parameters of the query.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code> / <code class="docutils literal notranslate"><span class="pre">dict_payload</span></code> (dict | None): the query payload
+parsed as UTF-8 JSON; None if absent or not JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw_payload</span></code> (bytes): the raw query payload (b”” if absent).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">req</span></code>: the payload decoded with <code class="docutils literal notranslate"><span class="pre">flatbuffer_req_T_class</span></code> when it
+is given; None otherwise or if decoding fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attachment</span></code> (str): the raw query attachment string.</p></li>
+</ul>
+<p>The return value becomes the reply:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: no reply is sent; the caller sees no answer from this
+queryable.</p></li>
+<li><p>FlatBuffer object (has <code class="docutils literal notranslate"><span class="pre">Pack</span></code>), or a dict whose <code class="docutils literal notranslate"><span class="pre">obj_payload</span></code> is
+one: packed and sent. Requires <code class="docutils literal notranslate"><span class="pre">flatbuffer_res_buf_size</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dict</span></code>: sent as UTF-8 JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bytes</span></code> / <code class="docutils literal notranslate"><span class="pre">bytearray</span></code> / <code class="docutils literal notranslate"><span class="pre">list[int]</span></code>: sent as raw bytes.</p></li>
+<li><p>Anything else raises TypeError.</p></li>
+</ul>
+<p>If the handler raises, the error is printed and no reply is sent. If
+<code class="docutils literal notranslate"><span class="pre">flatbuffer_req_T_class</span></code> is given and the query has no payload, the
+handler is not called and no reply is sent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to serve.</p></li>
+<li><p><strong>flatbuffer_req_T_class</strong> – Optional FlatBuffer object class used to
+decode the request into <code class="docutils literal notranslate"><span class="pre">req</span></code>.</p></li>
+<li><p><strong>flatbuffer_res_buf_size</strong> – Initial FlatBuffer builder size in bytes,
+required when the handler returns a FlatBuffer object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A decorator that registers the handler and returns it unchanged.</p>
+</dd>
+</dl>
+<p>A second declaration of the same topic on the same SDK is ignored with
+a warning. The queryable lives until <code class="docutils literal notranslate"><span class="pre">close()</span></code> or <code class="docutils literal notranslate"><span class="pre">disconnect()</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_subscribe">
+<span class="sig-name descname"><span class="pre">zenoh_subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">topic</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">flatbuffer_obj_t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_subscribe" title="Link to this definition">#</a></dt>
+<dd><p>Decorator that subscribes the decorated function to a zenoh topic.</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@sdk</span><span class="o">.</span><span class="n">zenoh_subscribe</span><span class="p">(</span><span class="s2">&quot;robot/state&quot;</span><span class="p">,</span> <span class="n">flatbuffer_obj_t</span><span class="o">=</span><span class="n">StateT</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">on_state</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">topic</span><span class="p">,</span> <span class="n">obj_payload</span><span class="p">,</span> <span class="n">attachment</span><span class="p">):</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>The callback runs on an rb_zenoh dispatch worker thread (not the
+asyncio loop) for every sample. It is called with keyword arguments
+only, and receives only the names it declares:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (str): the key of the received sample.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span></code> (memoryview): the raw payload bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dict_payload</span></code> (dict | None): the payload parsed as UTF-8 JSON when
+<code class="docutils literal notranslate"><span class="pre">flatbuffer_obj_t</span></code> is not given; None if it is not JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">obj_payload</span></code>: the payload decoded with
+<code class="docutils literal notranslate"><span class="pre">flatbuffer_obj_t.InitFromPackedBuf</span></code> when <code class="docutils literal notranslate"><span class="pre">flatbuffer_obj_t</span></code> is
+given, with bytes fields converted to str; None if decoding fails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attachment</span></code> (dict): <code class="docutils literal notranslate"><span class="pre">{&quot;sender&quot;:</span> <span class="pre">...,</span> <span class="pre">&quot;sender_id&quot;:</span> <span class="pre">...}</span></code> parsed
+from the sample attachment.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – Zenoh key expression to subscribe to. Wildcards are allowed.</p></li>
+<li><p><strong>flatbuffer_obj_t</strong> – Optional FlatBuffer object class (the <code class="docutils literal notranslate"><span class="pre">...T</span></code>
+class) used to decode the payload into <code class="docutils literal notranslate"><span class="pre">obj_payload</span></code>.</p></li>
+<li><p><strong>opts</strong> – Optional <code class="docutils literal notranslate"><span class="pre">rb_zenoh.schema.SubscribeOptions</span></code> or
+<code class="docutils literal notranslate"><span class="pre">rb_zenoh._core.CppSubscribeOptions</span></code> (queue size, overflow
+policy, dispatch mode, rate limit). Defaults keep only the
+newest pending sample when the callback falls behind.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A decorator. The decorator registers the function and returns it
+unchanged, so it can still be called directly.</p>
+</dd>
+</dl>
+<p>The subscription lives until <code class="docutils literal notranslate"><span class="pre">close()</span></code> or <code class="docutils literal notranslate"><span class="pre">disconnect()</span></code> of this
+SDK. Exceptions raised by the callback are not propagated to the
+caller of <code class="docutils literal notranslate"><span class="pre">zenoh_subscribe</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">rb_sdk.rb_sdk_cpp.</span></span><span class="sig-name descname"><span class="pre">RawReply</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply.attachment">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">attachment</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply.attachment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply.encoding">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">encoding</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply.encoding" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply.is_error">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">is_error</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply.is_error" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply.key">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply.key" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="rb_sdk.rb_sdk_cpp.RawReply.payload">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">payload</span></span><a class="headerlink" href="#rb_sdk.rb_sdk_cpp.RawReply.payload" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rb_sdk.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">rb_sdk package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rb_sdk.rb_sdk_cpp.manipulate.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Manipulate</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions"><code class="docutils literal notranslate"><span class="pre">ConnectOptions</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.heartbeat"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.heartbeat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.host"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.host</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_interval"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.mesh_probe_interval</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_probe_timeout"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.mesh_probe_timeout</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.mesh_timeout"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.mesh_timeout</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.token"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.token</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.ttl"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.ttl</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.ConnectOptions.zenoh_port"><code class="docutils literal notranslate"><span class="pre">ConnectOptions.zenoh_port</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.QueuedSample"><code class="docutils literal notranslate"><span class="pre">QueuedSample</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.QueuedSample.attachment"><code class="docutils literal notranslate"><span class="pre">QueuedSample.attachment</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.QueuedSample.key"><code class="docutils literal notranslate"><span class="pre">QueuedSample.key</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.QueuedSample.payload"><code class="docutils literal notranslate"><span class="pre">QueuedSample.payload</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.close"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.close()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.close_all_for_pid"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.close_all_for_pid()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.connect"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.connect()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.connect_can"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.connect_can()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.disconnect()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.disconnect_can"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.disconnect_can()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.instance"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.instance()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.log"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.log()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.publish"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.publish()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.query()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query_all"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.query_all()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.query_one"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.query_one()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.receive_one"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.receive_one()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_queryable"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.register_zenoh_queryable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.register_zenoh_subscriber"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.register_zenoh_subscriber()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.transmit_can"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.transmit_can()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_queryable"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.zenoh_queryable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RBBaseSDK.zenoh_subscribe"><code class="docutils literal notranslate"><span class="pre">RBBaseSDK.zenoh_subscribe()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply"><code class="docutils literal notranslate"><span class="pre">RawReply</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply.attachment"><code class="docutils literal notranslate"><span class="pre">RawReply.attachment</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply.encoding"><code class="docutils literal notranslate"><span class="pre">RawReply.encoding</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply.is_error"><code class="docutils literal notranslate"><span class="pre">RawReply.is_error</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply.key"><code class="docutils literal notranslate"><span class="pre">RawReply.key</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rb_sdk.rb_sdk_cpp.RawReply.payload"><code class="docutils literal notranslate"><span class="pre">RawReply.payload</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/rb_sdk.rb_sdk_cpp.base.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

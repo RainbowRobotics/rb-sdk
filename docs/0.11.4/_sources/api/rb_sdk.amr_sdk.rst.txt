@@ -1,0 +1,109 @@
+rb\_sdk.amr\_sdk package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   rb_sdk.amr_sdk.schema
+
+Submodules
+----------
+
+rb\_sdk.amr\_sdk.amr\_accessory module
+--------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_accessory
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_capability module
+---------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_capability
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_control module
+------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_control
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_file module
+---------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_file
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_localization module
+-----------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_localization
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_map module
+--------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_map
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_move module
+---------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_move
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_program module
+------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_program
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_sensor module
+-----------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_sensor
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_setting module
+------------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_setting
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+rb\_sdk.amr\_sdk.amr\_status module
+-----------------------------------
+
+.. automodule:: rb_sdk.amr_sdk.amr_status
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: rb_sdk.amr_sdk
+   :members:
+   :show-inheritance:
+   :undoc-members:
