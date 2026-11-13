@@ -1,0 +1,12 @@
+Plugin Program Context
+======================
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PluginProgramContext
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PluginStopped
+   :members:
+   :show-inheritance:
+   :undoc-members:

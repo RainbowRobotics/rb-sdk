@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rb_schemas.fbs_types.acs &#8212; rb-sdk 0.11.7 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../_static/documentation_options.js?v=383affd7"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rb_schemas/fbs_types/acs';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.11.7';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.11.7" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.11.7 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    Python SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ SDK
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers Types
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_schemas.fbs_types.acs</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for rb_schemas.fbs_types.acs</h1><div class="highlight"><pre>
+<span></span><span class="c1"># AUTO-GENERATED by scripts/backend/generate_fbs_casters.py — DO NOT EDIT.</span>
+<span class="c1"># .fbs 스키마 바꾼 뒤: make backend.flatc</span>
+<span class="c1">#</span>
+<span class="c1"># ACS flatc 타입 당 TypedDict 하나. rb_fbs_casters.hpp 의 pybind11</span>
+<span class="c1"># caster 와 키가 1:1 이다. C++ 바인딩이 인자/반환 타입을 이 이름으로 부르므로</span>
+<span class="c1"># rb_sdk_cpp.pyi 가 맨 dict 대신 여기 타입으로 풀린다. 런타임 값은 그냥 dict.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">typing</span>
+
+
+<div class="viewcode-block" id="ACSVariableTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.acs.ACSVariableTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ACSVariableTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">AcsLogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">service</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">level</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">timestamp</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">contents</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsMapCatalogEntryTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">map_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">map_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">map_version</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">topology_revision</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsMapCatalogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">workspace_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">catalog_revision</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">maps</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">FrsMapCatalogEntryTD</span><span class="p">]</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">EventFrsMapCatalogTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">event_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">epoch</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">catalog</span><span class="p">:</span> <span class="n">FrsMapCatalogTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsMapOperationTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">stage</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">request_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">deploy_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">command_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">workspace_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">map_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">map_version</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">deploy_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">checksum</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">topology_revision</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">reason_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">reason</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">occurred_at</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsRobotMapStateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">state_revision</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">agent_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">amr_serial</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">load_operation_state</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">load_command_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">workspace_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">loaded_map_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">loaded_map_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">loaded_map_version</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">loaded_topology_revision</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">identity_status</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">identity_reason_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">last_operation</span><span class="p">:</span> <span class="n">FrsMapOperationTD</span>
+    <span class="n">updated_at</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">EventFrsRobotMapTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">event_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">epoch</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">state</span><span class="p">:</span> <span class="n">FrsRobotMapStateTD</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsMapCatalogRevisionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">workspace_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">catalog_revision</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FrsRobotMapRevisionTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">amr_serial</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">state_revision</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MuscatStatusTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">manual_mode</span><span class="p">:</span> <span class="nb">bool</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ParamTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">PoseTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">node_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+    <span class="n">rz</span><span class="p">:</span> <span class="nb">float</span> <span class="o">|</span> <span class="kc">None</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestCheckAMRAvailabilityTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestExecutionControlTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestExecutionRunTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">repeat_count</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ParamTD</span><span class="p">]</span>
+    <span class="n">task_tree_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">debug_mode</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">step_mode</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">breakpoint_step_ids</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">start_step_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestExecutionStateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetAMRManualModeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestGetOptimalRobotTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">pose</span><span class="p">:</span> <span class="n">PoseTD</span>
+    <span class="n">options</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestMuscatProgramRunTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ParamTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestSendACSTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">command</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">variables</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ACSVariableTD</span><span class="p">]</span>
+    <span class="n">processId</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestSetAMRManualModeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="nb">bool</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestSetScenarioTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">scenario_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robot_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ParamTD</span><span class="p">]</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">RequestTaskCommandGetTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">intake_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseCheckAMRAvailabilityTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">availability</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseExecutionControlTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseExecutionRunTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">started</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseExecutionStateTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">state_json</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseFrsGetMapCatalogsTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">error_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">error_message</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">epoch</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">catalogs</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">FrsMapCatalogTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseFrsGetMapRevisionsTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">error_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">error_message</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">epoch</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">robots</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">FrsRobotMapRevisionTD</span><span class="p">]</span>
+    <span class="n">workspaces</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">FrsMapCatalogRevisionTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseFrsGetRobotMapStatesTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">result</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">error_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">error_message</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">server_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">epoch</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">states</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">FrsRobotMapStateTD</span><span class="p">]</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetAMRManualModeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseGetOptimalRobotTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">robot_id</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseMuscatProgramRunTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">program_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">params</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ParamTD</span><span class="p">]</span>
+
+<div class="viewcode-block" id="ResponseSendACSTD">
+<a class="viewcode-back" href="../../../api/return_types.html#rb_schemas.fbs_types.acs.ResponseSendACSTD">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseSendACSTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">variables</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ACSVariableTD</span><span class="p">]</span></div>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseSetAMRManualModeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">mode</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseSetScenarioTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">success</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">TaskCommandIntakeTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">intake_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">external_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">scenario_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">task_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">process_id</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ResponseTaskCommandGetTD</span><span class="p">(</span><span class="n">typing</span><span class="o">.</span><span class="n">TypedDict</span><span class="p">,</span> <span class="n">total</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">found</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">intake</span><span class="p">:</span> <span class="n">TaskCommandIntakeTD</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;ACSVariableTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;AcsLogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsMapCatalogEntryTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsMapCatalogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EventFrsMapCatalogTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsMapOperationTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsRobotMapStateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EventFrsRobotMapTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsMapCatalogRevisionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;FrsRobotMapRevisionTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MuscatStatusTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ParamTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PoseTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestCheckAMRAvailabilityTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestExecutionControlTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestExecutionRunTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestExecutionStateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetAMRManualModeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestGetOptimalRobotTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestMuscatProgramRunTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestSendACSTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestSetAMRManualModeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestSetScenarioTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RequestTaskCommandGetTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseCheckAMRAvailabilityTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseExecutionControlTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseExecutionRunTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseExecutionStateTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseFrsGetMapCatalogsTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseFrsGetMapRevisionsTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseFrsGetRobotMapStatesTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetAMRManualModeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseGetOptimalRobotTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseMuscatProgramRunTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseSendACSTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseSetAMRManualModeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseSetScenarioTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TaskCommandIntakeTD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ResponseTaskCommandGetTD&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

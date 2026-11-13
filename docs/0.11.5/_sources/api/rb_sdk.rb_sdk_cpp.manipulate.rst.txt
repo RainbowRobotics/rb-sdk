@@ -1,0 +1,157 @@
+Manipulate
+==========
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.MechMindClient
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.MechMindPose
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.MechMindVisionResponse
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoAckResponse
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoClient
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoGripperCommand
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoObjectPoseResponse
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoPose
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoQuaternionPose
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoSolutionResponse
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoTrajectoryResponse
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoTrajectorySegment
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PhotoneoWaypoint
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PickitClient
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PickitObjectDetection
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PickitPickPointData
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.PickitPose
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.Posture
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateConfigSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateFlangeSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateGetDataSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateIOSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateMaintenanceSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateMoveSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulatePointSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateProgramSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateSafetySDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateServiceSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateStateSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBManipulateVisionSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:

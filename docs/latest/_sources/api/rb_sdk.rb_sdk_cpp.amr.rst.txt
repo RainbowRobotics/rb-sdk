@@ -1,0 +1,62 @@
+Amr
+===
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrAccessorySDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrCapabilitySDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrControlSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrFileSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrLocalizationSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrMapSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrMoveSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrProgramSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrSensorSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrSettingSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBAmrStatusSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:

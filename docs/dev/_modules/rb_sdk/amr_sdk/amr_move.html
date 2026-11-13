@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+
+
+<html lang="ko" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rb_sdk.amr_sdk.amr_move &#8212; rb-sdk 0.1.4.dev1 문서</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
+
+    <script src="../../../_static/documentation_options.js?v=f5e5954a"></script>
+    <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../../_static/translations.js?v=afa94a99"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/rb_sdk/amr_sdk/amr_move';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.21.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://rainbowrobotics.github.io/rb-sdk/docs/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1.4.dev1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            true;
+        </script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="index" title="색인" href="../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="ko"/>
+  <meta name="docsearch:version" content="0.1.4.dev1" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">rb-sdk 0.1.4.dev1 문서</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="검색" aria-label="검색" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">검색</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/modules.html">
+    rb_sdk
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/return_types.html">
+    FlatBuffers 반환 타입
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../api/cpp.html">
+    C++ API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/RainbowRobotics/rb-sdk" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/rainbow-rb-sdk/" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">모듈 코드</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">rb_sdk.amr_sdk.amr_move</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>rb_sdk.amr_sdk.amr_move의 소스 코드</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uuid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">suppress</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ActionEntry</span><span class="w"> </span><span class="kn">import</span> <span class="n">ActionEntryT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.MoveJog</span><span class="w"> </span><span class="kn">import</span> <span class="n">MoveJogT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.MovePose</span><span class="w"> </span><span class="kn">import</span> <span class="n">MovePoseT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.MoveStatus</span><span class="w"> </span><span class="kn">import</span> <span class="n">MoveStatusT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestEnqueueAction</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestEnqueueActionT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveCircular</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveCircularT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveGoal</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveGoalT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMovePause</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMovePauseT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveResume</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveResumeT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveRotate</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveRotateT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveStop</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveStopT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveTarget</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveTargetT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveXLinear</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveXLinearT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMoveYLinear</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMoveYLinearT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMultiPath</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMultiPathT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.RequestMultiVobs</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestMultiVobsT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseEnqueueAction</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseEnqueueActionT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveCircular</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveCircularT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveGoal</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveGoalT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMovePause</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMovePauseT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveResume</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveResumeT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveRotate</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveRotateT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveStop</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveStopT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveTarget</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveTargetT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveXLinear</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveXLinearT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMoveYLinear</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMoveYLinearT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMultiPath</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMultiPathT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResponseMultiVobs</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResponseMultiVobsT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_flat_buffers.SLAMNAV.ResultMove</span><span class="w"> </span><span class="kn">import</span> <span class="n">ResultMoveT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_schemas.sdk</span><span class="w"> </span><span class="kn">import</span> <span class="n">FlowManagerArgs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_utils.parser</span><span class="w"> </span><span class="kn">import</span> <span class="n">t_to_dict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rb_zenoh.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">OverflowPolicy</span><span class="p">,</span> <span class="n">SubscribeOptions</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">..base</span><span class="w"> </span><span class="kn">import</span> <span class="n">RBBaseSDK</span>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK">[문서]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">RBAmrMoveSDK</span><span class="p">(</span><span class="n">RBBaseSDK</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Rainbow Robotics AMR Move SDK&quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">_move_flow_manager_solver</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [Move 관련 함수에서 사용되는 flow manager 처리 함수]</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            robot_model: 로봇 모델명</span>
+<span class="sd">            req_id: 요청 아이디</span>
+<span class="sd">            flow_manager_args: RB PFM을 쓸때 전달된 Flow Manager 인자 (done 콜백 등)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">done_event</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zenoh_subs_done_event</span><span class="p">()</span>
+        <span class="n">state</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;finished&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;last_seen&quot;</span><span class="p">:</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">(),</span>
+        <span class="p">}</span>
+
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">all_stop</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;모든 프로세스 정지&quot;&quot;&quot;</span>
+            <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span><span class="s2">&quot;muscat/stop&quot;</span><span class="p">,</span> <span class="n">payload</span><span class="o">=</span><span class="p">{},</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">_on_move_status</span><span class="p">(</span><span class="o">*</span><span class="p">,</span> <span class="n">obj_payload</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">unsubscribe</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">_</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span> <span class="ow">or</span> <span class="n">obj_payload</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">state</span><span class="p">[</span><span class="s2">&quot;last_seen&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span>
+                <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">ctx</span><span class="o">.</span><span class="n">check_stop</span><span class="p">()</span>
+
+                <span class="n">obj</span> <span class="o">=</span> <span class="n">t_to_dict</span><span class="p">(</span><span class="n">obj_payload</span><span class="p">)</span>
+                <span class="c1"># print(f&quot;FLOW MANAGER MOVESTATUS &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; {obj.get(&#39;moveState&#39;).get(&#39;moveId&#39;)} {req_id} {obj.get(&#39;moveState&#39;).get(&#39;moveResult&#39;)} &quot;, flush=True)</span>
+
+                <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveState&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveId&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">req_id</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Move ID Mismatch&quot;</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveState&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveResult&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;success&quot;</span><span class="p">:</span>
+                    <span class="c1"># print(&quot;FLOW MANAGER SOLVER DONE&quot;, flush=True)</span>
+                    <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+                    <span class="n">state</span><span class="p">[</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">if</span> <span class="n">unsubscribe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="n">unsubscribe</span><span class="p">()</span>
+                    <span class="n">done_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+                <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveState&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveResult&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;fail&quot;</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Move Fail&quot;</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="n">obj</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveState&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;moveResult&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;cancel&quot;</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Move Cancel&quot;</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">state</span><span class="p">[</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="n">state</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">unsubscribe</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">unsubscribe</span><span class="p">()</span>
+                <span class="n">done_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+        <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">_watchdog</span><span class="p">():</span>
+            <span class="n">timeout_sec</span> <span class="o">=</span> <span class="mf">2.0</span>
+            <span class="n">interval_sec</span> <span class="o">=</span> <span class="mf">0.5</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;finished&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">monotonic</span><span class="p">()</span> <span class="o">-</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;last_seen&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">interval_sec</span> <span class="o">&gt;</span> <span class="n">timeout_sec</span><span class="p">:</span>
+                    <span class="n">state</span><span class="p">[</span><span class="s2">&quot;finished&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">state</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Move Fail (Timeout)&quot;</span>
+                    <span class="n">done_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+                    <span class="k">return</span>
+
+                <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">interval_sec</span><span class="p">)</span>
+
+        <span class="k">async</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_zenoh_sub_with_close</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/moveStatus&quot;</span><span class="p">,</span>
+            <span class="n">_on_move_status</span><span class="p">,</span>
+            <span class="n">flatbuffer_obj_t</span><span class="o">=</span><span class="n">MoveStatusT</span><span class="p">,</span>
+            <span class="n">options</span><span class="o">=</span><span class="n">SubscribeOptions</span><span class="p">(</span>
+                <span class="n">dispatch</span><span class="o">=</span><span class="s2">&quot;queue&quot;</span><span class="p">,</span>
+                <span class="n">overflow</span><span class="o">=</span><span class="n">OverflowPolicy</span><span class="o">.</span><span class="n">LATEST_ONLY</span><span class="p">,</span>
+                <span class="n">parse_dict_payload</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">):</span>
+            <span class="n">watchdog_task</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">_watchdog</span><span class="p">())</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">await</span> <span class="n">done_event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">])</span>
+            <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">:</span>
+                <span class="k">pass</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">all_stop</span><span class="p">(</span><span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">)</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="n">watchdog_task</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">await</span> <span class="n">watchdog_task</span>
+                <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">CancelledError</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WATCHDOG CANCELLED&quot;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_goal">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_goal">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_goal</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">goal_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">goal_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">preset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveGoalT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [목표 위치로 이동]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - goal_id: 목표 노드 ID</span>
+<span class="sd">        - goal_name: 목표 노드 이름</span>
+<span class="sd">        - method: 이동 방법 ( &quot;pp&quot;, &quot;hpp&quot; )</span>
+<span class="sd">        - preset: 프리셋 번호 (현재는 0으로 고정)</span>
+<span class="sd">        - ResponseMoveGoalT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="c1"># 1) Request_Move_GoalT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveGoalT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">goalId</span> <span class="o">=</span> <span class="n">goal_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">goalName</span> <span class="o">=</span> <span class="n">goal_name</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Goal Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">goal_id</span><span class="p">,</span> <span class="n">goal_name</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">preset</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/goal&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveGoalT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Target failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Goal Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># variable_name = flow_manager_args.args.get(&quot;variable_name&quot;, None)</span>
+            <span class="c1"># print(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt; variable Name : &quot;,variable_name,flush=True)</span>
+            <span class="c1"># print(result[&quot;dict_payload&quot;].get(&quot;result&quot;))</span>
+            <span class="c1"># flow_manager_args.ctx.update_local_variables({&quot;AMR_TE33ST&quot;: result[&quot;dict_payload&quot;].get(&quot;result&quot;)})</span>
+            <span class="c1"># flow_manager_args.done()</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_target">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_target">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_target</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">z</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">rz</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">preset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveTargetT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [특정 위치로 이동]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - x: X축 위치 [m]</span>
+<span class="sd">        - y: Y축 위치 [m]</span>
+<span class="sd">        - z: Z축 위치 [m]</span>
+<span class="sd">        - rz: Z축 각도 [deg]</span>
+<span class="sd">        - method: 이동 방법 ( &quot;pp&quot;, &quot;hpp&quot; )</span>
+<span class="sd">        - preset: 프리셋 번호 (현재는 0으로 고정)</span>
+<span class="sd">        - ResponseMoveTargetT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="n">goal_pose</span> <span class="o">=</span> <span class="n">MovePoseT</span><span class="p">()</span>
+        <span class="n">goal_pose</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">goal_pose</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="n">goal_pose</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="n">goal_pose</span><span class="o">.</span><span class="n">rz</span> <span class="o">=</span> <span class="n">rz</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Target Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">rz</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">preset</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) Request_Move_GoalT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveTargetT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">goalPose</span> <span class="o">=</span> <span class="n">goal_pose</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/target&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveTargetT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 6) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Jog failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Target Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_jog">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_jog">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_jog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vx</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">vy</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">wz</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [Move Jog 전송]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - vx: X축 선속도 [m/s]</span>
+<span class="sd">        - vy: Y축 선속도 [m/s]</span>
+<span class="sd">        - wz: Z축 각속도 [deg/s]</span>
+<span class="sd">        - 반환 없음</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># 1) MoveJogT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">MoveJogT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vx</span> <span class="o">=</span> <span class="n">vx</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vy</span> <span class="o">=</span> <span class="n">vy</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">wz</span> <span class="o">=</span> <span class="n">wz</span>
+
+        <span class="c1"># print(f&quot;send_move_jog : {robot_model} {req.vx}, {req.vy}, {req.wz}&quot;)</span>
+        <span class="c1"># 2) 요청 전송(jog는 반환 필요없으니 publish 사용)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/jog&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_stop">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_stop">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveStopT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [이동 중지]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveStopT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Stop Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveStopT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveStopT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/stop&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveStopT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Stop failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Stop Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_pause">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_pause">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMovePauseT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [이동 일시정지]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMovePauseT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Pause Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMovePauseT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMovePauseT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/pause&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMovePauseT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Pause failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Pause Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_resume">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_resume">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_resume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveResumeT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [이동 재개]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveResumeT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Resume Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveResumeT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveResumeT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/resume&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveResumeT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Resume failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Resume Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="n">flow_manager_args</span><span class="o">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_x_linear">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_x_linear">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_x_linear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveXLinearT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [X축 선 이동]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - target: 이동 거리 [m]</span>
+<span class="sd">        - speed: 이동 속도 [m/s]</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveXLinearT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move X Linear Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveXLinearT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveXLinearT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/xLinear&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveXLinearT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Linear failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move X Linear Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_y_linear">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_y_linear">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_y_linear</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveYLinearT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [Y축 선 이동 - 미사용]</span>
+<span class="sd">        - target: 이동 거리 [m]</span>
+<span class="sd">        - speed: 이동 속도 [m/s]</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveYLinearT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Y Linear Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveYLinearT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveYLinearT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/yLinear&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveYLinearT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Linear failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Y Linear Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_circular">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_circular">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_circular</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveCircularT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [원형 이동 - 미사용]</span>
+<span class="sd">        - target: 회전 각도 [deg]</span>
+<span class="sd">        - speed: 회전 속도 [deg/s]</span>
+<span class="sd">        - direction: 회전 방향 ( &quot;right&quot;, &quot;left&quot; )</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveCircularT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Circular Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveCircularT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveCircularT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">direction</span> <span class="o">=</span> <span class="n">direction</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/circular&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveCircularT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Circular failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Circular Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_move_rotate">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_move_rotate">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_move_rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">target</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">speed</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMoveRotateT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [회전 이동]</span>
+<span class="sd">        - target: 회전 각도 [deg]</span>
+<span class="sd">        - speed: 회전 속도 [deg/s]</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMoveRotateT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Rotate Request : &quot;</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">,</span> <span class="n">req_id</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">speed</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># 1) RequestMoveRotateT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMoveRotateT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/rotate&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMoveRotateT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Move Rotate failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[AmrMoveSDK] Move Rotate Response : &quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">),</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.get_move_result">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.get_move_result">[문서]</a>
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get_move_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResultMoveT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [이동 결과 조회]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - ResponseMoveResultT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">receive_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/move/result&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_obj_t</span><span class="o">=</span><span class="n">ResultMoveT</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_multi_path">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_multi_path">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_multi_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">preset</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMultiPathT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [멀티 경로 설정]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - path: 경로 데이터 (NodeID list)</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMultiPathT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="c1"># 1) RequestMultiPathT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMultiPathT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">preset</span> <span class="o">=</span> <span class="n">preset</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/multi/path&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMultiPathT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Multi Path failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_multi_vobs">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_multi_vobs">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_multi_vobs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">vobs_robots</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">vobs_robots_column</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">vobs_robots_row</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">vobs_closures</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">is_vobs_c</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">flow_manager_args</span><span class="p">:</span> <span class="n">FlowManagerArgs</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseMultiPathT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [멀티 경로 설정]</span>
+<span class="sd">        - robot_model: 로봇 모델명</span>
+<span class="sd">        - req_id: 요청 아이디 (None인 경우 자동 생성)</span>
+<span class="sd">        - vobs_robots: 가상 장애물 로봇 목록 (NodeID list)</span>
+<span class="sd">        - vobs_closures: 가상 장애물 클로저 목록 (NodeID list)</span>
+<span class="sd">        - is_vobs_c: 클로저 변경 여부 ( &quot;true&quot;, &quot;false&quot; )</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMultiPathT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">req_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">req_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="c1"># 1) RequestMultiPathT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestMultiVobsT</span><span class="p">()</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">req_id</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vobsRobots</span> <span class="o">=</span> <span class="n">vobs_robots</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vobsRobotsColumn</span> <span class="o">=</span> <span class="n">vobs_robots_column</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vobsRobotsRow</span> <span class="o">=</span> <span class="n">vobs_robots_row</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">vobsClosures</span> <span class="o">=</span> <span class="n">vobs_closures</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">isVobsC</span> <span class="o">=</span> <span class="n">is_vobs_c</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/multi/vobs&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseMultiVobsT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Multi Path failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">flow_manager_args</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;reject&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;message&quot;</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_run_coro_blocking</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_move_flow_manager_solver</span><span class="p">(</span>
+                    <span class="n">robot_model</span><span class="o">=</span><span class="n">robot_model</span><span class="p">,</span>
+                    <span class="n">req_id</span><span class="o">=</span><span class="n">req_id</span><span class="p">,</span>
+                    <span class="n">flow_manager_args</span><span class="o">=</span><span class="n">flow_manager_args</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+
+
+    <span class="c1"># def send_multi_arrival(self,robot_model: str, )</span>
+
+<div class="viewcode-block" id="RBAmrMoveSDK.send_multi_enqueue">
+<a class="viewcode-back" href="../../../api/rb_sdk.amr_sdk.html#rb_sdk.amr_sdk.amr_move.RBAmrMoveSDK.send_multi_enqueue">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">send_multi_enqueue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot_model</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">action_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">predecessor_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">from_node</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">to_node</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ResponseEnqueueActionT</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        [멀티 edgeAction을 추가]</span>
+<span class="sd">        - robot_model: 로봇</span>
+<span class="sd">        - action_id: 액션 ID (UUID)</span>
+<span class="sd">        - predecessor_id: 로봇 현재 tail의 action_id</span>
+<span class="sd">        - from_node:</span>
+<span class="sd">        - to_node:</span>
+<span class="sd">        - flow_manager_args: FlowManagerArgs 객체</span>
+<span class="sd">        - ResponseMultiPathT 객체 반환</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SDK Multi Enqueue </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">action_id</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">predecessor_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># 1) RequestEnqueueActionT 객체 생성</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="n">RequestEnqueueActionT</span><span class="p">()</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">ActionEntryT</span><span class="p">()</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">actionId</span> <span class="o">=</span> <span class="n">action_id</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">predecessorId</span> <span class="o">=</span> <span class="n">predecessor_id</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">fromNode</span> <span class="o">=</span> <span class="n">from_node</span>
+        <span class="n">action</span><span class="o">.</span><span class="n">toNode</span> <span class="o">=</span> <span class="n">to_node</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="n">action</span>
+
+        <span class="c1"># 2) 요청 전송</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">zenoh_client</span><span class="o">.</span><span class="n">query_one</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;amr/</span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">/multi/enqueue&quot;</span><span class="p">,</span>
+            <span class="n">flatbuffer_req_obj</span><span class="o">=</span><span class="n">req</span><span class="p">,</span>
+            <span class="n">flatbuffer_res_T_class</span><span class="o">=</span><span class="n">ResponseEnqueueActionT</span><span class="p">,</span>
+            <span class="n">flatbuffer_buf_size</span><span class="o">=</span><span class="mi">125</span><span class="p">,</span>
+            <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Query Err : </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;err&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SDK Multi Enqueue Response </span><span class="si">{</span><span class="n">robot_model</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;dict_payload&quot;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># 3) 결과 처리 및 반환</span>
+        <span class="k">if</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Call Multi Path failed: obj_payload is None&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;obj_payload&quot;</span><span class="p">]</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Rainbow Robotics.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0 버전으로 생성되었습니다.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.21.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
