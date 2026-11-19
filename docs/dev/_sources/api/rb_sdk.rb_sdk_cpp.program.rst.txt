@@ -1,0 +1,37 @@
+Program
+=======
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBProgramSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RpcManager
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RpcResult
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.call_event_tree
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_mc_read
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_mc_write
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_modbus_read
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_modbus_write
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_socket_connect
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_socket_read
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_socket_write
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_xgt_read
+
+.. autofunction:: rb_sdk.rb_sdk_cpp.execute_xgt_write

@@ -1,0 +1,22 @@
+Base
+====
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.ConnectOptions
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.QueuedSample
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RBBaseSDK
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+.. autoclass:: rb_sdk.rb_sdk_cpp.RawReply
+   :members:
+   :show-inheritance:
+   :undoc-members:

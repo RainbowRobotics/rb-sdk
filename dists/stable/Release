@@ -1,0 +1,31 @@
+Architectures: amd64 arm64
+Codename: stable
+Components: main
+Date: Thu, 19 Nov 2026 14:33:43 +0000
+Label: rb-sdk
+Origin: RainbowRobotics
+Suite: stable
+MD5Sum:
+ 568b0d1081d26a3015cca9b9922dcce7              151 Release
+ d4da0d205b588f2da629eb6a878dd333            15292 main/binary-amd64/Packages
+ d015ffc3e6afadc85c5fa20aea3bf82b             2943 main/binary-amd64/Packages.gz
+ 01d5b6c62f1ed00220fc5fa46ad282fe            15292 main/binary-arm64/Packages
+ 2ff4132440d9713672eb5d7545ec2a64             2940 main/binary-arm64/Packages.gz
+SHA1:
+ bf7df65b713f55a87d907223cf17cc48b7c37c18              151 Release
+ 34419f8fdbe227b83cf6921ae4c0281557fc0f35            15292 main/binary-amd64/Packages
+ 2b1b74a30614a2cc1a0c4b88b66fe871da0640a4             2943 main/binary-amd64/Packages.gz
+ 4519a6b6612d922ded3b019059bf9d383fc32d50            15292 main/binary-arm64/Packages
+ ed41beccd64e4144a4105288881a52f4d7300c44             2940 main/binary-arm64/Packages.gz
+SHA256:
+ 76625133e6c9fe5c125bec6850c25bc5f700d69bdd57eb22ba465c97faca3eaf              151 Release
+ 407c2e3cbf4dc197e56f9576603abd4be9408087580cf79464b5b28b99a52a2e            15292 main/binary-amd64/Packages
+ 151b6d5596c498b3a310f6458c4e6af64fcad4c3e13c46601c5e3e24697d27c6             2943 main/binary-amd64/Packages.gz
+ 3d6ae0704051a84699202c0b7e172f915176e0f22cb77f764ae18df6e02ce85c            15292 main/binary-arm64/Packages
+ 077dcbcff04f4d17e29ede6f7f1bd463e1b48c9c6e6d5b2f236be24aacc14e45             2940 main/binary-arm64/Packages.gz
+SHA512:
+ aed854206ae50fbe2d702f3a7140b4a2393d92bbe2ffcf7bbf91410bb9d9a2ef0e6c8f6ffdb9651212066942132cf4b7b1310c00f0427663b7effe998abb275b              151 Release
+ 76a848052d69d1bc8ac37afd5642cd9d019f3b6873a7fdcb4027bb51f0b861bea9d6d998b2b405b68067c5fad1abca43df6d5286e75e423066ed32a96d37f243            15292 main/binary-amd64/Packages
+ 35e8bfa4e65482c5e80d9909505099cb089f95e2092e4932ec7ff8bad2a224b33ed903ad2a4fb25f3f3fb9682ae74420aab3f81c323ca34b972665184cf61d02             2943 main/binary-amd64/Packages.gz
+ 80ad86d7e441484ac4f03eb1d78cea4b530e34a9bfce06e8d9eab0c789410515c13886a2b7facf685f0fe1989a2192404c12a72f0741f3a203999e1dab09cb02            15292 main/binary-arm64/Packages
+ d0568af0725c1f18ff76a22d063788abd09fb1011548d7325945718b5a5d5a922042c5ff4b46f3a102059729767dc87f5e9a5e0614264d5d167102c4a8dac881             2940 main/binary-arm64/Packages.gz

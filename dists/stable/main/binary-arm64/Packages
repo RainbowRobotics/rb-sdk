@@ -1,0 +1,370 @@
+Package: rainbow-rb-sdk
+Version: 0.11.10
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 19807
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2), rainbow-rb-zenoh (= 0.11.10)
+Filename: pool/stable/rainbow-rb-sdk_0.11.10_arm64.deb
+Size: 8316226
+MD5sum: 7ece07e43f184c1cfb24d5afeb760760
+SHA1: dec64e5390a695f4d833d5b9faa4139c54bd1e6f
+SHA256: 65d1b739d32ca39642c88645618ae77bb719d5854f175f1c9d9855508639534c
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. zenoh-c comes from rainbow-rb-zenoh. Install the matching
+ rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.11.11
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 19819
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2), rainbow-rb-zenoh (= 0.11.11)
+Filename: pool/stable/rainbow-rb-sdk_0.11.11_arm64.deb
+Size: 8319412
+MD5sum: d1183db63eb6e390e65870c9b5b7204b
+SHA1: d6f1d0a1ad0d421988b1e8d3a679db54fefb39fe
+SHA256: f87636b45e794548b12472b4d00a9d15e8af75e266553fb786117364842c1734
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. zenoh-c comes from rainbow-rb-zenoh. Install the matching
+ rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.11.12
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 19819
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2), rainbow-rb-zenoh (= 0.11.12)
+Filename: pool/stable/rainbow-rb-sdk_0.11.12_arm64.deb
+Size: 8319408
+MD5sum: 72dee9bc4a0162c3f67cd306a550ebb4
+SHA1: 461c6b0359550025da3ef7d0940927e2a4f3784b
+SHA256: b2c585357f7df8b0a84c95766a68c70f3eb143a78f8dfb6b7056c2f1ca6a045c
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. zenoh-c comes from rainbow-rb-zenoh. Install the matching
+ rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.11.13
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 19819
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2), rainbow-rb-zenoh (= 0.11.13)
+Filename: pool/stable/rainbow-rb-sdk_0.11.13_arm64.deb
+Size: 8319418
+MD5sum: a3168dba59a21e9ec08233ce40198e2b
+SHA1: a12a7f14efe5dcefdd8dbb5e6ce763e0d4a134a6
+SHA256: ea9545747d10950f705472e1fd5314609d43d85ba1ed6e3c997d357c0dd55d61
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. zenoh-c comes from rainbow-rb-zenoh. Install the matching
+ rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk
+Version: 0.11.9
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 19807
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2), rainbow-rb-zenoh (= 0.11.9)
+Filename: pool/stable/rainbow-rb-sdk_0.11.9_arm64.deb
+Size: 8316210
+MD5sum: b3b6955379bf9c7b650fc41f1ff69872
+SHA1: e4d310ddf5d08157f6327e3e79466a15632ef9fe
+SHA256: 5ef82e2f2010de9354f65fc9d8e165329abe57c8dd4703ba41dd37b93971691b
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK runtime library
+ Shared library librb_sdk.so for the Rainbow Robotics C++ SDK. Vendored
+ dependencies (libmodbus, EIPScanner, cpr, libcurl) are statically
+ embedded. zenoh-c comes from rainbow-rb-zenoh. Install the matching
+ rainbow-rb-sdk-dev package to build against it.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.11.10
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 5512
+Depends: rainbow-rb-sdk (= 0.11.10), rainbow-rb-zenoh-dev (= 0.11.10), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.11.10_arm64.deb
+Size: 803396
+MD5sum: 6de8cd01cc71967a01f3479ba0f1b5fd
+SHA1: beb9140c723b58390e5988511b043c3da17e0513
+SHA256: f229f52339f0397b3a413fc14ad1a9febc8d3769a11af66c6922b522ae61c051
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.11.11
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 5525
+Depends: rainbow-rb-sdk (= 0.11.11), rainbow-rb-zenoh-dev (= 0.11.11), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.11.11_arm64.deb
+Size: 804918
+MD5sum: 55c47dff720decc31bf6ba6e49696c2b
+SHA1: e7ed9a0997f2cf4d3f42ee88bbab8aef132573fe
+SHA256: 4de5d5197f001aed55b6d46c34030c1d9f21a5591f3468a7f64694530ec5a596
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.11.12
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 5525
+Depends: rainbow-rb-sdk (= 0.11.12), rainbow-rb-zenoh-dev (= 0.11.12), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.11.12_arm64.deb
+Size: 804928
+MD5sum: 6a6224498bfd45d3b8aec522c5bd6d94
+SHA1: 180cc076e7da264ecf0752e0a4f7ae6f8cb7aabb
+SHA256: 11ee04b0905a0b426994273fc4c8df67543b33e02907b9653ab01b78213e0979
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.11.13
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 5525
+Depends: rainbow-rb-sdk (= 0.11.13), rainbow-rb-zenoh-dev (= 0.11.13), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.11.13_arm64.deb
+Size: 804914
+MD5sum: 120d8c948b78cbca88b3778c0398f3de
+SHA1: c16c58720d69dbbf062c7df2fdb2ebab2095e498
+SHA256: d9d45bc10f98ac40e22a88d3c44d3656742c7b99a3c40bfa89efe99da264e7ff
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-sdk-dev
+Version: 0.11.9
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 5512
+Depends: rainbow-rb-sdk (= 0.11.9), rainbow-rb-zenoh-dev (= 0.11.9), libeigen3-dev
+Filename: pool/stable/rainbow-rb-sdk-dev_0.11.9_arm64.deb
+Size: 803372
+MD5sum: cb85c08f68b394beba961102e85041fd
+SHA1: c985c381af915099c3b07eb96e97aa1bed828d89
+SHA256: 45542787fb08ed2bf6b8a7331a972d0a225b98961d33f2a4d0e7e4a144a36129
+Section: libs
+Priority: optional
+Description: Rainbow Robotics C++ SDK development files
+ Public headers, vendored headers, CMake package config and pkg-config for
+ building C++ plugins and applications against the Rainbow Robotics SDK.
+ Requires the exact matching rainbow-rb-sdk runtime package.
+
+Package: rainbow-rb-zenoh
+Version: 0.11.10
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 11815
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Breaks: rainbow-rb-sdk (<< 0.11.10)
+Filename: pool/stable/rainbow-rb-zenoh_0.11.10_arm64.deb
+Size: 5482396
+MD5sum: f0155551a8d05fbf87425e870e58cbf7
+SHA1: c72b94ea534082383a2f3a4e4bb1b4b886025918
+SHA256: da0e0bb1a8d976f83a02b2299a520af144273039a3ecf3677f7cb1f4d3649db6
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client runtime library
+ Shared library librb_zenoh.so (rb_zenoh::ZenohClient) with zenoh-c statically
+ embedded. Set ZENOH_CONFIG to a zenoh.json5 file to configure the session;
+ see /usr/share/rainbow-rb-zenoh/zenoh.json5.example.
+
+Package: rainbow-rb-zenoh
+Version: 0.11.11
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 11815
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Breaks: rainbow-rb-sdk (<< 0.11.11)
+Filename: pool/stable/rainbow-rb-zenoh_0.11.11_arm64.deb
+Size: 5482392
+MD5sum: 9625cba2dc98000bb493e7d3a6089a25
+SHA1: ad9f0b3a082937d2c543cf16dd3bb3f8092204a2
+SHA256: e4f08861d9f4a7bf3696702a302eb99fecc29014f2c78e155d75d2d49efd0316
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client runtime library
+ Shared library librb_zenoh.so (rb_zenoh::ZenohClient) with zenoh-c statically
+ embedded. Set ZENOH_CONFIG to a zenoh.json5 file to configure the session;
+ see /usr/share/rainbow-rb-zenoh/zenoh.json5.example.
+
+Package: rainbow-rb-zenoh
+Version: 0.11.12
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 11815
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Breaks: rainbow-rb-sdk (<< 0.11.12)
+Filename: pool/stable/rainbow-rb-zenoh_0.11.12_arm64.deb
+Size: 5482394
+MD5sum: 207fd29751c41a32058b253bec61ab68
+SHA1: ad88692a6f5c2b49c430988d5091f97a98ee158c
+SHA256: 3aafbf01ca99a05ce7fa20ffad988b703e53193bedeea5142dfec223acd6f6f3
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client runtime library
+ Shared library librb_zenoh.so (rb_zenoh::ZenohClient) with zenoh-c statically
+ embedded. Set ZENOH_CONFIG to a zenoh.json5 file to configure the session;
+ see /usr/share/rainbow-rb-zenoh/zenoh.json5.example.
+
+Package: rainbow-rb-zenoh
+Version: 0.11.13
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 11815
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Breaks: rainbow-rb-sdk (<< 0.11.13)
+Filename: pool/stable/rainbow-rb-zenoh_0.11.13_arm64.deb
+Size: 5482394
+MD5sum: 73afbed9276a32383ffefeb67db6124b
+SHA1: 6d335e97de92e97d1708a5d77d11495851327bf4
+SHA256: b80f3e01b91a24b536f1149846b55591e4719ceac9a9c2f34e8b329b54729332
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client runtime library
+ Shared library librb_zenoh.so (rb_zenoh::ZenohClient) with zenoh-c statically
+ embedded. Set ZENOH_CONFIG to a zenoh.json5 file to configure the session;
+ see /usr/share/rainbow-rb-zenoh/zenoh.json5.example.
+
+Package: rainbow-rb-zenoh
+Version: 0.11.9
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 11815
+Depends: libc6 (>= 2.35), libstdc++6 (>= 12), libgcc-s1 (>= 4.2)
+Breaks: rainbow-rb-sdk (<< 0.11.9)
+Filename: pool/stable/rainbow-rb-zenoh_0.11.9_arm64.deb
+Size: 5482394
+MD5sum: 9979250f08f55f691d129ddd24b8b441
+SHA1: 48db8be6577b53c11785b6883cdf3b08d46e7058
+SHA256: 22f93ad1a0d9216c17075517cd70cb1662b980f07075d37b5a6baff59b0c3009
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client runtime library
+ Shared library librb_zenoh.so (rb_zenoh::ZenohClient) with zenoh-c statically
+ embedded. Set ZENOH_CONFIG to a zenoh.json5 file to configure the session;
+ see /usr/share/rainbow-rb-zenoh/zenoh.json5.example.
+
+Package: rainbow-rb-zenoh-dev
+Version: 0.11.10
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 1073
+Depends: rainbow-rb-zenoh (= 0.11.10)
+Filename: pool/stable/rainbow-rb-zenoh-dev_0.11.10_arm64.deb
+Size: 180492
+MD5sum: 3a01b7dde1a1177a2d067ad4fbf1d3a9
+SHA1: cc36c0085aae710c4f137ecf40d778f67500d115
+SHA256: 9076efefa0fa3175818e1d2e576b6ef8e58c2dc0ba1215716c76cea732a91f4f
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client development files
+ Headers, vendored zenoh-c and FlatBuffers headers, CMake package config and
+ pkg-config for building against librb_zenoh.so.
+ Requires the exact matching rainbow-rb-zenoh runtime package.
+
+Package: rainbow-rb-zenoh-dev
+Version: 0.11.11
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 1073
+Depends: rainbow-rb-zenoh (= 0.11.11)
+Filename: pool/stable/rainbow-rb-zenoh-dev_0.11.11_arm64.deb
+Size: 180484
+MD5sum: b09a7413bfa9e12e23e275712acf135f
+SHA1: 32df1370411e66fea3eb69502324f44d7bbd8ffd
+SHA256: c9cf6d5270702b59b442f04f8fab8347ec360b2d6c8525e2a6a61e1ad6a858e1
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client development files
+ Headers, vendored zenoh-c and FlatBuffers headers, CMake package config and
+ pkg-config for building against librb_zenoh.so.
+ Requires the exact matching rainbow-rb-zenoh runtime package.
+
+Package: rainbow-rb-zenoh-dev
+Version: 0.11.12
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 1073
+Depends: rainbow-rb-zenoh (= 0.11.12)
+Filename: pool/stable/rainbow-rb-zenoh-dev_0.11.12_arm64.deb
+Size: 180490
+MD5sum: 384453edd3758c95a6f12cfe6482f803
+SHA1: 88ae24b144577f28866d5fd72e1bfa402e4e0e0c
+SHA256: ec4964193d3b06aee2c56ac352cfd65f792296d9560b539585b0c32ba3e88b05
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client development files
+ Headers, vendored zenoh-c and FlatBuffers headers, CMake package config and
+ pkg-config for building against librb_zenoh.so.
+ Requires the exact matching rainbow-rb-zenoh runtime package.
+
+Package: rainbow-rb-zenoh-dev
+Version: 0.11.13
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 1073
+Depends: rainbow-rb-zenoh (= 0.11.13)
+Filename: pool/stable/rainbow-rb-zenoh-dev_0.11.13_arm64.deb
+Size: 180490
+MD5sum: fa44b09ef6c7e02b86f711f7da8d5e3c
+SHA1: c0214387a9b6d2533ae32a4aa9670f177350761d
+SHA256: c338b282fe2c31fc8bde933dae649a89da4096f62ab635bcea8b9e896bef4eed
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client development files
+ Headers, vendored zenoh-c and FlatBuffers headers, CMake package config and
+ pkg-config for building against librb_zenoh.so.
+ Requires the exact matching rainbow-rb-zenoh runtime package.
+
+Package: rainbow-rb-zenoh-dev
+Version: 0.11.9
+Architecture: arm64
+Maintainer: Rainbow Robotics SDK <sdk@rainbow-robotics.com>
+Installed-Size: 1073
+Depends: rainbow-rb-zenoh (= 0.11.9)
+Filename: pool/stable/rainbow-rb-zenoh-dev_0.11.9_arm64.deb
+Size: 180490
+MD5sum: 76ea5f61d29139ff7aedb4a92cad0b4c
+SHA1: bd1d520a5bf6ae3281b5daf988c8ab55d9137aba
+SHA256: 43fd2cbba62f6be4bb718142edf35c799a58f236d62b69b0564e371ca11d3566
+Section: libs
+Priority: optional
+Description: Rainbow Robotics zenoh client development files
+ Headers, vendored zenoh-c and FlatBuffers headers, CMake package config and
+ pkg-config for building against librb_zenoh.so.
+ Requires the exact matching rainbow-rb-zenoh runtime package.
+
