@@ -1,0 +1,38 @@
+[
+  {
+    "name": "0.11.15 (stable)",
+    "version": "0.11.15",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/latest/",
+    "preferred": true
+  },
+  {
+    "name": "0.11.14",
+    "version": "0.11.14",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/0.11.14/"
+  },
+  {
+    "name": "0.11.13",
+    "version": "0.11.13",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/0.11.13/"
+  },
+  {
+    "name": "0.11.12",
+    "version": "0.11.12",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/0.11.12/"
+  },
+  {
+    "name": "0.11.11",
+    "version": "0.11.11",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/0.11.11/"
+  },
+  {
+    "name": "dev (0.11.8.dev1)",
+    "version": "0.11.8.dev1",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/dev/"
+  },
+  {
+    "name": "0.1.4.dev1",
+    "version": "0.1.4.dev1",
+    "url": "https://rainbowrobotics.github.io/rb-sdk/docs/0.1.4.dev1/"
+  }
+]
